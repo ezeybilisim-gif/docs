@@ -1,0 +1,47 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "name": "Ezey LMS",
+  "theme": "almond",
+  "colors": {
+    "primary": "#e54424",
+    "light": "#931b3c"
+  },
+  "logo": {
+    "light": "https://media.brand.dev/bc3ce332-436b-40d8-8c57-2cddad72c3e8.png",
+    "dark": "https://media.brand.dev/bc3ce332-436b-40d8-8c57-2cddad72c3e8.png"
+  },
+  "favicon": "https://media.brand.dev/66e3bbef-401e-454f-b28a-23c05a808625.png",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Kullanım Kılavuzu",
+        "groups": [
+          {
+            "group": "Yönetici Rehberi",
+            "pages": [
+              "yonetici/panel",
+              {
+                "group": "Kullanıcılar",
+                "icon": "users",
+                "pages": [
+                  "yonetici/kullanici-yonetimi",
+                  "yonetici/egitmenler",
+                  "yonetici/ogrenciler",
+                  "yonetici/veliler",
+                  "yonetici/roller-izinler"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Yardım",
+            "pages": [
+              "yardim/sss",
+              "yardim/iletisim"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

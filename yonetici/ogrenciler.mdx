@@ -1,0 +1,86 @@
+---
+title: "Öğrenci Yönetimi: Listeleme, Ekleme ve Düzenleme"
+sidebarTitle: "Öğrenci Yönetimi"
+description: "Ezey LMS yönetici panelinde öğrenci listesini görüntüleyin, yeni öğrenci ekleyin, mevcut kayıtları düzenleyin ve profil detaylarını inceleyin."
+---
+
+Öğrenci modülüne **Kullanıcılar → Öğrenciler** menüsünden ulaşırsınız. Bu modülden öğrenci kayıtlarını listeleyebilir, yeni öğrenci ekleyebilir, mevcut kayıtları düzenleyebilir veya silebilirsiniz.
+
+## Öğrenci listesi
+
+Sayfa açıldığında sistemdeki tüm öğrenciler tabloda listelenir.
+
+<Frame>
+  ![Öğrenci listesi ekranı](/images/panel/ogrenciler-index.png)
+</Frame>
+
+Liste üzerinde şu işlemleri yapabilirsiniz:
+
+- **Arama** — Üst kısımdaki arama kutusuna ad veya e-posta yazarak filtreleyin.
+- **Durum filtresi** — "Tüm durumlar" açılır menüsüyle aktif/pasif öğrencileri ayrıştırın.
+- **Yeni Öğrenci** — Sağ üstteki mavi butondan yeni kayıt formuna geçin.
+- **İşlemler sütunu** — Her satırın sağındaki ikonlarla:
+  - 👁 **Görüntüle** — Öğrencinin profil detayına gidin.
+  - ✏️ **Düzenle** — Bilgileri güncelleyin.
+  - 🗑 **Sil** — Kaydı kaldırın.
+
+Tablo sütunları: **Adınız**, **E-posta**, **Telefon**, **Durum**, **Son Giriş** ve **İşlemler**.
+
+## Yeni öğrenci ekleme
+
+Listedeki **\+ Yeni Öğrenci** butonuna tıklayınca aşağıdaki form açılır.
+
+<Frame>
+  ![Yeni öğrenci oluşturma formu](/images/panel/ogrenciler-create.png)
+</Frame>
+
+Doldurulacak alanlar:
+
+| Alan | Açıklama |
+| --- | --- |
+| **Profil Görseli** | Opsiyonel. JPEG, PNG, GIF veya WebP; maksimum 2MB. "Profil resmini göster" anahtarı kapalıysa listelerde otomatik avatar gösterilir. |
+| **Adı Soyadı** | Öğrencinin tam adı. |
+| **E-posta** | Giriş için kullanılacak benzersiz e-posta adresi. |
+| **Telefon** | \+90 553 911 66 16 formatında telefon numarası. |
+| **Dil** | Arayüz dili kodu (örn. `tr`). |
+| **Zaman Dilimi** | Varsayılan `Europe/Istanbul`. |
+| **Özgeçmiş** | Kısa biyografi metni. |
+| **Durumu** | Aktif veya Pasif. |
+| **Parola** | İlk giriş parolası. |
+
+Formu tamamladıktan sonra **Kaydet** butonuna basın; iptal etmek için **Vazgeç**'e tıklayın.
+
+## Öğrenci düzenleme
+
+Listedeki bir satırın ✏️ ikonu ya da öğrenci detayındaki **Düzenle** butonu, düzenleme ekranını açar.
+
+<Frame>
+  ![Öğrenci düzenleme formu](/images/panel/ogrenciler-edit.png)
+</Frame>
+
+Düzenleme formu, yeni kayıt formuyla aynı alanları içerir; farklar:
+
+- Alanlar mevcut değerlerle önden doldurulmuş gelir.
+- **Parola** alanı boş bırakılırsa mevcut parola korunur; yalnızca değiştirmek istediğinizde doldurun.
+- Kaydetmek için sağ alttaki **Güncelle** butonunu kullanın.
+
+## Öğrenci detayı
+
+Listede öğrenci adına veya 👁 ikonuna tıkladığınızda profil detayı açılır.
+
+<Frame>
+  ![Öğrenci detay ekranı](/images/panel/ogrenciler-show.png)
+</Frame>
+
+Detay ekranı şu bölümlerden oluşur:
+
+- **Profil** — Ad, e-posta, telefon, kullanıcı tipi, durum, dil, zaman dilimi, son giriş ve özgeçmiş bilgileri.
+- **Meta** — Sistem ID, Company ID, oluşturulma ve güncellenme tarihleri; sağ üstte **Geri Dön / Düzenle / Sil** butonları.
+- **Enrollments** — Öğrencinin kayıtlı olduğu kurslar. Kayıt yoksa "No enrollments yet" gösterilir.
+- **Sınavlar ve Sonuçlar** — Öğrenciye atanmış sınavlar ve alınan sonuçlar.
+- **Atanan Eğitmenler** — Öğrenciye doğrudan atanmış eğitmenlerin listesi.
+- **Eğitmen Ata** — Eğitmen ve ders seçip opsiyonel not ekleyerek yeni bir eğitmen ataması yapabileceğiniz form. **\+ Ata** butonu ile atamayı kaydedin.
+
+<Tip>
+  Bir öğrenciyi silmek geri alınamaz. Silmeden önce kayıtlı kursları ve sınav sonuçlarını yedeklemeyi değerlendirin.
+</Tip>

@@ -1,0 +1,149 @@
+---
+title: "Roller & İzinler"
+sidebarTitle: "Roller & İzinler"
+description: "Ezey LMS yönetici panelinde rolleri (Admin, Eğitmen, Veli, Öğrenci, Süper Admin) inceleyin, izin gruplarını tanıyın ve her role atanmış yetkileri düzenleyin."
+icon: "shield-check"
+---
+
+Ezey LMS'de kullanıcıların panele erişimi ve panel içinde neler yapabilecekleri iki katmanlı bir yetki sistemiyle belirlenir:
+
+- **Panel erişimi** kullanıcının `user_type` alanına göre yönlendirilir. Öğrenci, eğitmen ve veli rolleri yalnızca kendi panellerine yönlendirilirken; admin ve süper admin kullanıcıları yönetici paneline erişir.
+- **Yönetici panelindeki ince yetkiler** ise Spatie tabanlı **rol & izin** sistemiyle yönetilir. Her rol, önceden tanımlı **izin grupları** üzerinden yetkilendirilir.
+
+<Info>
+  **Yönetici Paneli → Kullanıcılar → Roller & İzinler** yolunu izleyerek bu sayfaya ulaşabilirsiniz.
+</Info>
+
+## Rol Listesi
+
+Sayfanın üst kısmında sistemde tanımlı roller tablo halinde listelenir.
+
+<Frame>
+  ![Roller ve İzinler ana ekranı](/images/panel/roller-index.png)
+</Frame>
+
+Tablo aşağıdaki sütunlardan oluşur:
+
+| Sütun | Açıklama |
+| --- | --- |
+| **Rol** | Panelde görünen okunabilir rol adı (Admin / Personel, Eğitmen, Veli, Öğrenci, Süper Admin). |
+| **Sistem Adı** | Kodda kullanılan teknik rol adı (`admin`, `instructor`, `parent`, `student`, `super-admin`). |
+| **İzin Sayısı** | O role tanımlı toplam izin adedi. |
+| **İşlem** | Role ait izinleri düzenleme butonu. |
+
+### Varsayılan Roller
+
+| Rol | Sistem Adı | Açıklama |
+| --- | --- | --- |
+| **Admin / Personel** | `admin` | Yönetici paneline erişebilen personel rolüdür. Verilen izinler doğrultusunda kullanıcı, kurs, sınav, satış, CMS ve CRM modüllerini yönetir. |
+| **Eğitmen** | `instructor` | Eğitmen paneline yönlendirilir. Yalnızca kendi kurslarını, derslerini ve sınavlarını yönetir. |
+| **Veli** | `parent` | Veli paneline yönlendirilir; bağlı olduğu öğrencilerin ilerleme ve performansını görüntüler. |
+| **Öğrenci** | `student` | Öğrenci paneline yönlendirilir; kayıtlı olduğu kursları, sınavları ve ödevleri görüntüler. |
+| **Süper Admin** | `super-admin` | Tüm izinlere sahip sabit roldür. İzinleri düzenlenemez; her zaman tam yetkilidir. |
+
+<Warning>
+  **Süper Admin** rolü için "Tüm izinler (sabit)" etiketi görüntülenir ve **İzinleri Düzenle** butonu yer almaz. Bu rol her zaman tüm yetkilere sahiptir; kısıtlanamaz.
+</Warning>
+
+### Senkronize Et
+
+Sağ üst köşedeki **Senkronize Et** butonu, koddaki güncel izin tanımlarını veritabanına yansıtır. Yeni bir modül eklendiğinde veya izin adları güncellendiğinde bu butonu kullanarak sistemi güncel izin listesiyle eşitleyebilirsiniz.
+
+<Tip>
+  Yeni bir sürüm sonrasında bazı izinler görünmüyorsa önce **Senkronize Et** butonuna tıklayın, ardından rol düzenleme ekranını yeniden açın.
+</Tip>
+
+## İzin Grupları
+
+Sayfanın alt kısmında sistemdeki tüm izinler, ilgili oldukları modüle göre gruplanmış olarak listelenir. Bu görünüm salt okunurdur ve hangi anahtarın hangi işlemi temsil ettiğini gösterir.
+
+| Grup | İzinler |
+| --- | --- |
+| **Panel** | `access_admin_panel`, `view_dashboard` |
+| **Kullanıcılar & Roller** | `manage_users`, `create_users`, `edit_users`, `delete_users`, `manage_roles` |
+| **Öğrenciler** | `manage_students`, `create_students`, `edit_students`, `delete_students` |
+| **Eğitmenler** | `manage_instructors`, `create_instructors`, `edit_instructors`, `delete_instructors` |
+| **Kurslar** | `manage_courses`, `create_courses`, `edit_courses`, `delete_courses`, `publish_courses`, `manage_categories`, `create_categories`, `edit_categories`, `delete_categories`, `manage_lectures`, `create_lectures`, `edit_lectures`, `delete_lectures`, `manage_enrollments`, `create_enrollments`, `edit_enrollments`, `delete_enrollments`, `manage_classes`, `create_classes`, `edit_classes`, `delete_classes` |
+| **Sınavlar & Ödevler** | `manage_exams`, `create_exams`, `edit_exams`, `delete_exams`, `grade_exams`, `manage_assignments`, `create_assignments`, `edit_assignments`, `delete_assignments`, `grade_assignments` |
+| **Satış & Sipariş** | `view_order` |
+| **İçerik & Medya** | `manage_blog`, `create_blog_posts`, `edit_blog_posts`, `delete_blog_posts`, `publish_blog_posts`, `manage_pages`, `create_pages`, `edit_pages`, `delete_pages`, `manage_media`, `upload_media`, `delete_media`, `manage_menus`, `edit_menus` |
+| **CRM** | `manage_crm`, `manage_leads`, `view_leads`, `edit_leads`, `send_emails` |
+| **Raporlar** | `view_reports`, `export_reports` |
+| **Ayarlar & Tema** | `manage_settings`, `edit_settings`, `manage_themes`, `customize_themes` |
+
+<Tip>
+  İzin anahtarlarının adları action\_resource kalıbıyla yazılır: `manage_` tüm işlemleri, `create_` / `edit_` / `delete_` ilgili işlemleri, `view_` ise yalnızca görüntülemeyi temsil eder.
+</Tip>
+
+## İzinleri Düzenleme
+
+Herhangi bir rolün karşısındaki **İzinleri Düzenle** butonuna tıkladığınızda o role ait detaylı izin ekranı açılır.
+
+<Frame>
+  ![Admin rolü için izin düzenleme ekranı](/images/panel/roller-izinleri-duzenle.png)
+</Frame>
+
+Ekranın üst kısmında düzenlediğiniz rolün adı (**Admin / Personel — İzinler**) ve sistem adı (`admin`) görüntülenir. Sağ üstteki **Geri** butonu ile rol listesine dönebilirsiniz.
+
+İzinler, ana sayfadaki **İzin Grupları** ile aynı başlıklar altında listelenir. Her grubun başında bulunan onay kutusu, o gruptaki tüm izinleri tek seferde seçmenizi veya kaldırmanızı sağlar. Her izin satırında ise:
+
+- **İnsan tarafından okunabilen etiket** (örn. _Admin paneline erişim_, _Dashboard görüntüleme_),
+- Altında **teknik anahtar** (`access_admin_panel`, `view_dashboard`) yer alır.
+
+İstediğiniz izinleri işaretleyip **Kaydet** butonuna tıkladığınızda değişiklikler anında uygulanır ve o role sahip tüm kullanıcılar yeni yetki setiyle çalışmaya başlar.
+
+### Rol Bazlı Öneriler
+
+Yeni bir personel rolü hazırlarken aşağıdaki minimum izinlerle başlamanız önerilir:
+
+<AccordionGroup>
+  <Accordion title="Genel personel (Admin / Personel)" icon="user-tie">
+    - **Panel:** `access_admin_panel`, `view_dashboard`
+    - **Kullanıcılar & Roller:** `manage_users`, `create_users`, `edit_users`
+    - **Öğrenciler / Eğitmenler:** İlgili `manage_*`, `create_*`, `edit_*` izinleri
+    - **Raporlar:** `view_reports`
+
+    Silme (`delete_*`) izinleri yalnızca sorumlu yöneticilere verilmelidir.
+  </Accordion>
+
+  <Accordion title="Eğitim koordinatörü" icon="chalkboard-user">
+    - **Kurslar:** `manage_courses`, `edit_courses`, `publish_courses`, `manage_categories`, `manage_lectures`, `manage_enrollments`, `manage_classes`
+    - **Sınavlar & Ödevler:** `manage_exams`, `grade_exams`, `manage_assignments`, `grade_assignments`
+    - **Raporlar:** `view_reports`, `export_reports`
+  </Accordion>
+
+  <Accordion title="İçerik editörü" icon="pen-nib">
+    - **İçerik & Medya:** `manage_blog`, `create_blog_posts`, `edit_blog_posts`, `publish_blog_posts`, `manage_pages`, `create_pages`, `edit_pages`, `manage_media`, `upload_media`, `manage_menus`, `edit_menus`
+    - **Panel:** `access_admin_panel`, `view_dashboard`
+  </Accordion>
+
+  <Accordion title="Satış & CRM sorumlusu" icon="headset">
+    - **Satış & Sipariş:** `view_order`
+    - **CRM:** `manage_crm`, `manage_leads`, `view_leads`, `edit_leads`, `send_emails`
+    - **Raporlar:** `view_reports`, `export_reports`
+  </Accordion>
+</AccordionGroup>
+
+<Warning>
+  `access_admin_panel` iznini kaldırırsanız o role sahip kullanıcılar yönetici paneline giriş yapamaz. Bu izni yalnızca yönetici paneline erişmesini istemediğiniz roller için kapatın.
+</Warning>
+
+## Sık Karşılaşılan Durumlar
+
+<AccordionGroup>
+  <Accordion title="Bir kullanıcı panele giriş yapamıyor" icon="triangle-exclamation">
+    Önce kullanıcının `user_type` değerinin doğru olduğundan (örn. yönetici için `admin`) emin olun. Ardından rolüne `access_admin_panel` izninin verildiğini kontrol edin. Yeni izin eklendiyse **Senkronize Et** butonunu çalıştırın.
+  </Accordion>
+
+  <Accordion title="Menü öğeleri kullanıcıya görünmüyor" icon="eye-slash">
+    Menüler ilgili `manage_*` veya `view_*` izinlerine göre gösterilir. Örneğin **Kullanıcılar** menüsünün görünmesi için `manage_users` iznine ihtiyaç vardır. Kullanıcının rolünde ilgili izni işaretleyip **Kaydet** ile onaylayın.
+  </Accordion>
+
+  <Accordion title="Yeni bir izin eklendi ama listede görünmüyor" icon="rotate">
+    Kod tarafında yeni bir izin tanımlandıysa **Roller & İzinler** ekranındaki **Senkronize Et** butonunu kullanın. Bu işlem yeni izinleri veritabanına kaydeder ve rol düzenleme ekranında listelenmelerini sağlar.
+  </Accordion>
+</AccordionGroup>
+
+<Info>
+  Kullanıcı bazında rol atamak için [Kullanıcı Yönetimi](/yonetici/kullanici-yonetimi) sayfasındaki **Rol** alanını kullanın. Bu sayfa yalnızca rollerin sahip olduğu izinleri belirler.
+</Info>

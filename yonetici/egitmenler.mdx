@@ -1,0 +1,97 @@
+---
+title: "Eğitmen Yönetimi: Listeleme, Ekleme ve Düzenleme"
+sidebarTitle: "Eğitmen Yönetimi"
+description: "Ezey LMS yönetici panelinde eğitmenleri listeleyin, yeni eğitmen ekleyin, profil bilgilerini güncelleyin ve verdikleri kursları görüntüleyin."
+---
+
+Eğitmen Yönetimi ekranı, platformda ders veren eğitmenlerin hesaplarını yönetmek için kullanılır. Üst menüden **Kullanıcılar → Eğitmenler** yolunu izleyerek erişebilirsiniz.
+
+## Eğitmen Listesi
+
+![Eğitmenler Listesi](/images/panel/egitmenler-index.png)
+
+Liste ekranında tüm eğitmenleri görüntüleyebilir, arama ve filtreleme yapabilirsiniz.
+
+**Arama ve Filtreleme**
+
+- **Ad veya e-posta arayın**: Ad veya e-posta adresine göre hızlı arama yapar.
+- **Tüm durumlar**: Aktif/pasif filtresiyle liste daraltılır.
+- **Ara** butonu: Girilen kriterlere göre listeyi yeniden getirir.
+- **\+ Yeni Eğitmen**: Yeni eğitmen ekleme ekranını açar.
+
+**Tablo Sütunları**
+
+| Sütun | Açıklama |
+| --- | --- |
+| Adınız | Eğitmenin profil görseli, adı soyadı ve rol etiketi (Instructor). |
+| E-posta | Giriş ve iletişim için kullanılan e-posta adresi. |
+| Telefon | Kayıtlı telefon numarası. |
+| Durum | Aktif veya Pasif rozeti. |
+| Son Giriş | Eğitmenin panele en son giriş tarihi. |
+| İşlemler | Görüntüle (göz), Düzenle (kalem) ve Sil (çöp kutusu) butonları. |
+
+## Yeni Eğitmen Ekleme
+
+Liste ekranındaki **\+ Yeni Eğitmen** butonuna tıklayarak oluşturma formunu açın.
+
+![Yeni Eğitmen Oluşturma](/images/panel/egitmenler-create.png)
+
+**Form Alanları**
+
+- **Profil Görseli**: JPEG, PNG, GIF veya WebP formatında, en fazla 2MB. **Profil resmini göster** anahtarı kapalıysa listelerde ve profilde otomatik avatar gösterilir.
+- **Adı Soyadı**: Eğitmenin tam adı.
+- **E-posta**: Giriş için kullanılacak benzersiz e-posta adresi.
+- **Telefon**: İletişim numarası (örn. \+90 553 911 66 16).
+- **Dil**: Arayüz dili kodu (örn. `tr`).
+- **Zaman Dilimi**: Varsayılan `Europe/Istanbul`.
+- **Özgeçmiş**: Eğitmenin kısa biyografisi. Kurs sayfalarında görüntülenebilir.
+- **Durumu**: Aktif veya Pasif.
+- **Parola**: İlk giriş için tanımlanacak şifre.
+
+Bilgiler tamamlandıktan sonra **Kaydet** butonuna tıklayın. Vazgeçmek için **Vazgeç** butonunu kullanın.
+
+## Eğitmen Düzenleme
+
+Liste üzerindeki **kalem** ikonuna tıklayarak düzenleme ekranını açın.
+
+![Eğitmen Düzenleme](/images/panel/egitmenler-edit.png)
+
+Düzenleme formu, oluşturma formuyla aynı alanları içerir. Ek olarak:
+
+- **Parola (Korumak için boş bırakın)**: Alan boş bırakılırsa mevcut şifre değiştirilmez.
+- Sol üstteki önizleme avatarı, seçilen profil görseline veya baş harflere göre güncellenir.
+
+Değişiklikleri kaydetmek için **Güncelle** butonuna basın.
+
+## Eğitmen Detayı (Instructor Detail)
+
+Liste üzerindeki **göz** ikonuna tıklayarak eğitmenin detay sayfasını açın.
+
+![Eğitmen Detayı](/images/panel/egitmenler-show.png)
+
+**Profil Bölümü**
+
+Ad Soyad, e-posta, telefon, kullanıcı tipi (Eğitmen), durum, dil, zaman dilimi, son giriş ve özgeçmiş bilgileri listelenir.
+
+**Meta Bölümü**
+
+- **ID**: Eğitmenin sistemdeki benzersiz kimliği.
+- **Company ID**: Bağlı olduğu şirket kimliği.
+- **Created at / Updated at**: Kayıt oluşturma ve son güncelleme zaman damgaları.
+- **Back**: Liste ekranına döner.
+- **Edit**: Düzenleme ekranını açar.
+- **Delete**: Eğitmen kaydını siler.
+
+**Verdiği Kurslar**
+
+Eğitmenin atandığı kurslar, yayın durumu rozetiyle (Yayında / Taslak) birlikte listelenir. Kurs adına tıklayarak ilgili kurs detayına gidebilirsiniz.
+
+## İpuçları
+
+<Tip>
+  Pasif duruma alınan eğitmenler panele giriş yapamaz, ancak verdikleri kurslar öğrencilere görünmeye devam eder. Kursları da gizlemek için Kurs Yönetimi ekranından yayın durumunu güncelleyin.
+</Tip>
+
+<Warning>
+  Eğitmeni silmeden önce verdiği kursların başka bir eğitmene devredildiğinden emin olun. Aksi halde kurslar eğitmensiz kalabilir.
+</Warning>

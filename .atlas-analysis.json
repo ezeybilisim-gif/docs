@@ -1,0 +1,74 @@
+{
+  "projectType": "saas",
+  "projectName": "Ezey LMS",
+  "projectDescription": "Ezey, eğitim kurumları için kurs yönetimi, sınav, sertifika, e-ticaret ve CRM özelliklerini tek bir platformda sunan çevrimiçi öğrenme yönetim sistemidir.",
+  "theme": "almond",
+  "primaryColor": "#e54424",
+  "lightColor": "#931b3c",
+  "darkColor": null,
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Kullanım Kılavuzu",
+        "groups": [
+          {
+            "group": "Başlarken",
+            "pages": [
+              "introduction",
+              "baslangic/kayit-ve-giris",
+              "baslangic/panel-genel-bakis"
+            ]
+          },
+          {
+            "group": "Öğrenci Rehberi",
+            "pages": [
+              "ogrenci/kurs-bulma-ve-kayit",
+              "ogrenci/kurs-takip",
+              "ogrenci/sinavlar",
+              "ogrenci/sertifikalar",
+              "ogrenci/profil-ayarlari"
+            ]
+          },
+          {
+            "group": "Eğitmen Rehberi",
+            "pages": [
+              "egitmen/kurs-olusturma",
+              "egitmen/icerik-yonetimi",
+              "egitmen/sinav-hazirlama",
+              "egitmen/ogrenci-takibi"
+            ]
+          },
+          {
+            "group": "Yönetici Rehberi",
+            "pages": [
+              "yonetici/kullanici-yonetimi",
+              "yonetici/kurs-yonetimi",
+              "yonetici/raporlar",
+              "yonetici/platform-ayarlari"
+            ]
+          },
+          {
+            "group": "Yardım",
+            "pages": [
+              "yardim/sss",
+              "yardim/iletisim"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Kurs yönetimi ve içerik organizasyonu",
+    "Canlı ders ve video içerik desteği",
+    "Sınav oluşturma ve otomatik değerlendirme",
+    "Sertifika üretimi ve yönetimi",
+    "E-ticaret ve kurs satışı (sepet, ödeme)",
+    "Öğrenci ilerleme takibi ve raporlama",
+    "CRM ve öğrenci iletişim araçları",
+    "Koçluk ve veli raporları",
+    "Kurs kategorileri ve filtreleme",
+    "Yorum ve değerlendirme sistemi"
+  ],
+  "publicApiSurface": []
+}

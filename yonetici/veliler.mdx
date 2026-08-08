@@ -1,0 +1,184 @@
+---
+title: "Veli Yönetimi"
+sidebarTitle: "Veli Yönetimi"
+description: "Ezey LMS yönetici panelinde velilerin listelenmesi, oluşturulması, düzenlenmesi ve öğrenci ilişkilerinin yönetilmesi."
+icon: "users"
+---
+
+Veliler modülü; öğrencilerin ebeveyn/vasi bilgilerini kayıt altına almanızı, bir veliyi birden fazla öğrenciye bağlamanızı ve her öğrenci için **not** ve **devamsızlık** görüntüleme yetkilerini ayrı ayrı yönetmenizi sağlar.
+
+<Info>
+  Bu ekranlara erişmek için üst menüden **Kullanıcılar → Veliler** yolunu kullanın.
+</Info>
+
+## Veli Listesi
+
+**Veliler** sayfası sistemde kayıtlı tüm velileri tablo halinde gösterir.
+
+<Frame>
+  ![Veliler liste ekranı](/images/panel/veliler-index.png)
+</Frame>
+
+### Arama ve Filtreleme
+
+- **Ad veya e-posta arayın…** — Veli adı veya e-posta adresi ile hızlı arama.
+- **Tüm durumlar** — Aktif/pasif duruma göre filtreleme.
+- **Ara** — Arama ve filtreleri uygular.
+- **\+ Yeni Veli** — Yeni veli oluşturma formunu açar.
+
+### Tablo Sütunları
+
+| Sütun | Açıklama |
+| --- | --- |
+| **Adınız** | Velinin adı soyadı ve `Parent` (veli) rol etiketi. |
+| **E-posta** | Giriş ve iletişim e-posta adresi. |
+| **Telefon** | Kayıtlı telefon numarası (yoksa `—`). |
+| **Öğrenci Sayısı** | Veliye bağlı öğrenci sayısı (ör. `3 öğrenci`). |
+| **Durum** | `Active` veya `Passive` rozeti. |
+| **Son Giriş** | Velinin sisteme en son giriş tarihi. |
+| **İşlemler** | Görüntüle, düzenle ve sil butonları. |
+
+## Yeni Veli Oluşturma
+
+**\+ Yeni Veli** butonuna tıklayarak veli oluşturma formuna ulaşabilirsiniz.
+
+<Frame>
+  ![Yeni veli oluşturma formu](/images/panel/veliler-create.png)
+</Frame>
+
+### Form Alanları
+
+<AccordionGroup>
+  <Accordion title="Profil Görseli">
+    - **Dosya Seç** — JPEG, PNG, GIF veya WebP formatında en fazla **2 MB** boyutunda profil görseli yükleyin.
+    - **Profil resmini göster** — Kapalıysa listelerde ve profilde otomatik avatar (baş harfler) gösterilir.
+  </Accordion>
+
+  <Accordion title="Kimlik ve İletişim">
+    - **Adı Soyadı** — Velinin tam adı (zorunlu).
+    - **E-posta** — Giriş için kullanılacak benzersiz e-posta adresi.
+    - **Telefon** — İletişim numarası. Örnek biçim: `+90 553 911 66 16`.
+  </Accordion>
+
+  <Accordion title="Yerelleştirme">
+    - **Dil** — Arayüz dili (ör. `tr`).
+    - **Zaman Dilimi** — Varsayılan `Europe/Istanbul`.
+    - **Özgeçmiş** — Veli hakkında kısa not/biyografi (opsiyonel).
+  </Accordion>
+
+  <Accordion title="Hesap Ayarları">
+    - **Durumu** — `Aktif` velisi giriş yapabilir, `Pasif` velisi yapamaz.
+    - **Parola** — Velinin ilk giriş parolası. Güvenli bir parola belirleyin ve veliye iletin.
+  </Accordion>
+</AccordionGroup>
+
+<Tip>
+  Kaydet butonuna basmadan önce e-posta ve parola alanlarının doğru olduğundan emin olun. Veli, oluşturulduktan sonra bu bilgilerle sisteme giriş yapabilir.
+</Tip>
+
+### Öğrenci İlişkileri
+
+Form altındaki **Öğrenci İlişkileri** bölümünden veliyi bir veya birden fazla öğrenciye bağlayabilirsiniz.
+
+- **\+ Öğrenci Ekle** — Yeni bir öğrenci ilişkisi satırı ekler.
+- Her satırda öğrenciyi arayıp seçerek, **Yakınlık Derecesi** (Anne, Baba, Vasi vb.) ve yetkileri belirleyebilirsiniz.
+
+<Note>
+  Veli oluşturulduktan sonra da düzenleme ekranından istediğiniz kadar öğrenci ekleyip çıkarabilirsiniz.
+</Note>
+
+## Veli Düzenleme
+
+Liste ekranındaki **kalem** ikonuna tıklayarak bir velinin bilgilerini düzenleyebilirsiniz.
+
+<Frame>
+  ![Veli düzenleme formu](/images/panel/veliler-edit.png)
+</Frame>
+
+Oluşturma formuyla aynı alanlar mevcuttur. Ek olarak:
+
+- **Parola (Korumak için boş bırakın)** — Parolayı değiştirmek istemiyorsanız alanı boş bırakın; mevcut parola korunur.
+- **Öğrenci İlişkileri** kartı; kayıtlı tüm öğrenci bağlarını gösterir ve şu alanları düzenlemenizi sağlar:
+
+| Alan | Açıklama |
+| --- | --- |
+| **Öğrenci** | İlişkilendirilecek öğrenciyi seçin. |
+| **Yakınlık Derecesi** | Anne, Baba, Vasi vb. |
+| **Ana Veli** | İşaretlendiğinde bu veli, öğrencinin **birincil** velisi olur. Bildirimler öncelikli olarak bu veliye gider. |
+| **Notları Görebilir** | Veli, öğrencinin sınav ve ödev notlarını görüntüleyebilir. |
+| **Devamsızlık Görebilir** | Veli, öğrencinin devamsızlık kayıtlarını görüntüleyebilir. |
+| **Kaldır** | Bu öğrenci–veli bağını siler. |
+
+<Warning>
+  Bir öğrencinin yalnızca **bir tane** Ana Veli'si olabilir. Yeni bir veliyi Ana Veli olarak işaretlerseniz, aynı öğrenciye bağlı diğer velilerdeki Ana Veli işareti otomatik olarak kaldırılır.
+</Warning>
+
+## Veli Detayı
+
+Listedeki **göz** ikonuna tıklayarak bir velinin tüm ayrıntılarını görüntüleyebilirsiniz.
+
+<Frame>
+  ![Veli detay ekranı](/images/panel/veliler-show.png)
+</Frame>
+
+Detay ekranı üç ana bölümden oluşur:
+
+### Profil Bilgileri
+
+Adı Soyadı, E-posta, Telefon, **Kullanıcı Tipi** (`Parent` rozeti), Durum, Dil, Zaman Dilimi, Son Giriş ve Biyografi alanlarını gösterir.
+
+### Meta Bilgiler
+
+- **ID** ve **Şirket ID** — Sistem tanımlayıcıları.
+- **Toplam Öğrenci** — Veliye bağlı öğrenci sayısı.
+- **Oluşturulma / Güncellenme** — Kayıt tarihleri.
+- **Geri / Düzenle / Sil** — Hızlı işlem butonları.
+
+### Öğrenciler ve Yetkiler
+
+Veliye bağlı tüm öğrenciler ve her biri için tanımlı yetkiler bir tabloda listelenir:
+
+- **Öğrenci Bilgileri** — Ad, e-posta ve telefon.
+- **Yakınlık** — Anne / Baba / Vasi vb.
+- **Ana Veli** — Bu öğrencinin birincil velisi mi.
+- **Yetkiler** — `Notları Görebilir`, `Devamsızlık Görebilir` rozetleri.
+- **Kayıtlı Kurslar** — Öğrencinin kayıtlı olduğu kurslar ve tamamlanma yüzdeleri.
+- **İşlemler** — Öğrenci detayına gitmek için göz ikonu.
+
+### Öğrenci Performans Özeti
+
+Detay ekranının altında, veliye bağlı her öğrenci için performans kartı görüntülenir:
+
+- **Toplam Kurs** — Öğrencinin kayıtlı olduğu tüm kurs sayısı.
+- **Aktif Kurs** — Devam eden kurs sayısı.
+- **Ortalama İlerleme** — Kurslardaki tamamlanma yüzdesi.
+- **Sınıf** — Öğrencinin sınıfı (ör. `7-A`).
+- **Detaylı Görüntüle** — Öğrenci detay sayfasına yönlendirir.
+
+<Tip>
+  Bu özet sayesinde veli görüşmelerinden önce öğrencinin genel durumunu tek ekranda hızlıca değerlendirebilirsiniz.
+</Tip>
+
+## Sık Yapılan İşlemler
+
+<CardGroup cols={2}>
+  <Card title="Veliyi öğrenciye bağlama" icon="link">
+    Veli düzenleme ekranında **\+ Öğrenci Ekle** ile yeni satır açın, öğrenciyi seçin ve yakınlık ile yetkileri belirleyip **Güncelle** butonuna basın.
+  </Card>
+
+  <Card title="Ana Veli değiştirme" icon="star">
+    Yeni Ana Veli olacak veliyi düzenleyip ilgili öğrenci satırında **Ana Veli** kutucuğunu işaretleyin. Diğer velilerdeki işaret otomatik kalkar.
+  </Card>
+
+  <Card title="Parolayı sıfırlama" icon="key">
+    Veli düzenleme ekranında **Parola** alanına yeni parolayı yazıp **Güncelle** butonuna basın. Boş bırakırsanız mevcut parola korunur.
+  </Card>
+
+  <Card title="Yetkileri kısıtlama" icon="shield">
+    Öğrenci ilişkisi satırında **Notları Görebilir** veya **Devamsızlık Görebilir** kutucuklarını kaldırarak veliye özel yetki verebilirsiniz.
+  </Card>
+</CardGroup>
+
+<Warning>
+  Bir veliyi silmek, tüm öğrenci ilişkilerini de kaldırır. Silmek yerine hesabı **Pasif** duruma almak, geçmiş ilişkileri korumak açısından daha güvenlidir.
+</Warning>

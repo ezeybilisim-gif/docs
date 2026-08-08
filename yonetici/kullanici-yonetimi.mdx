@@ -1,0 +1,209 @@
+---
+title: "Kullanıcı Yönetimi: Hesap, Rol ve Erişim İşlemleri"
+sidebarTitle: "Kullanıcı Yönetimi"
+description: "Ezey LMS yönetici panelinde yeni kullanıcı ekleyin, rol atayın, hesapları aktif/pasif yapın ve şifre sıfırlama bağlantısı gönderin."
+---
+
+Ezey LMS'de her kullanıcı — öğrenci, eğitmen veya yönetici — platforma kendi kişisel hesabıyla giriş yapar. Yönetici olarak siz de kendi hesabınızla oturum açar, ardından merkezi kullanıcı paneli üzerinden tüm hesapları oluşturabilir, güncelleyebilir, askıya alabilir ya da kalıcı olarak silebilirsiniz.
+
+## Kullanıcı Listesini Görüntüleme
+
+**Yönetici Paneli → Kullanıcılar → Tüm Kullanıcılar** yolunu izleyerek platforma kayıtlı tüm kullanıcıları listeleyebilirsiniz.
+
+Liste sayfasında her kullanıcı için şu bilgiler görünür:
+
+| Alan | Açıklama |
+|---|---|
+| **Ad Soyad** | Kullanıcının tam adı |
+| **E-posta** | Giriş için kullanılan e-posta adresi |
+| **Rol** | Öğrenci, Eğitmen veya Yönetici |
+| **Kayıt Tarihi** | Hesabın oluşturulduğu tarih |
+| **Durum** | Aktif veya Pasif |
+| **Son Giriş** | Kullanıcının en son sisteme giriş yaptığı tarih |
+
+Kullanıcıları ada, e-postaya, role veya duruma göre filtreleyebilir ve arama kutusunu kullanarak hızlıca bulabilirsiniz.
+
+<Tip>
+Büyük platformlarda kullanıcı listesi çok uzun olabilir. Sayfanın üst kısmındaki **Filtrele** seçeneklerini kullanarak yalnızca belirli bir role ait kullanıcıları görüntüleyebilirsiniz.
+</Tip>
+
+---
+
+## Yeni Kullanıcı Ekleme
+
+Platforma manuel olarak yeni bir kullanıcı eklemek için aşağıdaki adımları izleyin:
+
+<Steps>
+  <Step title="Kullanıcılar Sayfasına Gidin">
+    Sol menüden **Kullanıcılar → Tüm Kullanıcılar** seçeneğine tıklayın.
+  </Step>
+  <Step title="Yeni Kullanıcı Butonuna Tıklayın">
+    Sayfanın sağ üst köşesindeki **+ Yeni Kullanıcı** butonuna tıklayın. Kullanıcı oluşturma formu açılır.
+  </Step>
+  <Step title="Kullanıcı Bilgilerini Doldurun">
+    Açılan formda aşağıdaki alanları doldurun:
+    - **Ad:** Kullanıcının adı
+    - **Soyad:** Kullanıcının soyadı
+    - **E-posta Adresi:** Giriş yapmak için kullanılacak benzersiz e-posta
+    - **Telefon Numarası** *(isteğe bağlı)*
+    - **Rol:** Öğrenci, Eğitmen veya Yönetici
+    - **Geçici Şifre:** Kullanıcının ilk girişte kullanacağı şifre
+  </Step>
+  <Step title="E-posta Bildirimi Seçeneğini Belirleyin">
+    **"Hoş Geldiniz e-postası gönder"** kutucuğunu işaretlerseniz sistem, kullanıcıya otomatik olarak giriş bilgilerini içeren bir e-posta gönderir.
+  </Step>
+  <Step title="Kaydet">
+    Formu doldurmayı tamamladıktan sonra **Kaydet** butonuna tıklayın. Kullanıcı hesabı hemen oluşturulur ve listeye eklenir.
+  </Step>
+</Steps>
+
+<Note>
+E-posta adresi platforma özgüdür; aynı e-posta ile ikinci bir hesap açılamaz. Yeni kullanıcı oluştururken sistemde zaten kayıtlı olmayan bir e-posta kullandığınızdan emin olun.
+</Note>
+
+---
+
+## Rol Atama ve Değiştirme
+
+Ezey LMS'de üç temel kullanıcı rolü bulunur:
+
+<CardGroup cols={3}>
+  <Card title="Öğrenci" icon="graduation-cap">
+    Kurslara kaydolabilir, içeriklere erişebilir, sınavlara girebilir ve sertifika alabilir. Yönetim paneline erişimi yoktur.
+  </Card>
+  <Card title="Eğitmen" icon="chalkboard-teacher">
+    Kurs oluşturabilir ve düzenleyebilir, öğrenci ilerlemesini izleyebilir. Sınırlı düzeyde yönetim paneli erişimine sahiptir.
+  </Card>
+  <Card title="Yönetici" icon="shield-halved">
+    Tüm platform ayarlarına, kullanıcı yönetimine, raporlara ve e-ticaret ayarlarına tam erişim hakkına sahiptir.
+  </Card>
+</CardGroup>
+
+Bir kullanıcının rolünü değiştirmek için:
+
+<Steps>
+  <Step title="Kullanıcıyı Bulun">
+    **Kullanıcılar → Tüm Kullanıcılar** listesinde ilgili kullanıcının satırına tıklayın.
+  </Step>
+  <Step title="Düzenle Butonuna Tıklayın">
+    Kullanıcı detay sayfasında **Düzenle** butonuna tıklayın.
+  </Step>
+  <Step title="Rolü Güncelleyin">
+    **Rol** alanındaki açılır menüden yeni rolü seçin.
+  </Step>
+  <Step title="Kaydedin">
+    **Değişiklikleri Kaydet** butonuna tıklayın. Rol değişikliği anında etkinleşir; kullanıcı bir sonraki girişinde yeni rol yetkilerine sahip olur.
+  </Step>
+</Steps>
+
+<Warning>
+Bir kullanıcıya **Yönetici** rolü atamak, o kullanıcıya platforma tam erişim yetkisi verir. Bu rolü yalnızca güvendiğiniz kişilere atayın.
+</Warning>
+
+---
+
+## Kullanıcı Bilgilerini Düzenleme
+
+Mevcut bir kullanıcının ad, soyad, e-posta veya telefon numarasını güncellemek için:
+
+1. **Kullanıcılar → Tüm Kullanıcılar** listesinde ilgili kullanıcının yanındaki **⋮ (Seçenekler)** simgesine tıklayın.
+2. Açılan menüden **Düzenle** seçeneğini seçin.
+3. İlgili alanları güncelleyin.
+4. **Kaydet** butonuna tıklayın.
+
+<Note>
+Kullanıcının e-posta adresi değiştirildiğinde, kullanıcıya yeni e-posta adresine bir doğrulama bağlantısı gönderilir. Doğrulama tamamlanana kadar kullanıcı eski e-postasıyla giriş yapmaya devam eder.
+</Note>
+
+---
+
+## Hesabı Askıya Alma (Pasif Yapma)
+
+Bir kullanıcının platforma erişimini geçici olarak engellemek istediğinizde hesabı kalıcı silmek yerine pasife alabilirsiniz.
+
+<Steps>
+  <Step title="Kullanıcıyı Seçin">
+    Kullanıcı listesinden ilgili kullanıcının yanındaki **⋮** simgesine tıklayın.
+  </Step>
+  <Step title="Pasife Al">
+    Menüden **Hesabı Askıya Al** seçeneğine tıklayın. Bir onay diyaloğu belirir.
+  </Step>
+  <Step title="Onaylayın">
+    Onay kutusunda **Evet, Askıya Al** butonuna tıklayın. Kullanıcı durumu anında **Pasif** olarak güncellenir.
+  </Step>
+</Steps>
+
+Pasif durumdaki kullanıcılar sisteme giriş yapamaz; ancak tüm verileri (kurs kayıtları, sınav sonuçları, sertifikalar) korunur. Hesabı tekrar aktif etmek için aynı adımları izleyerek **Hesabı Aktif Et** seçeneğini seçin.
+
+<Tip>
+Toplu işlem yapmak için kullanıcı listesinde birden fazla kullanıcıyı onay kutularıyla seçebilir ve üst kısımdaki **Toplu İşlemler** menüsünden **Seçilenleri Askıya Al** seçeneğini kullanabilirsiniz.
+</Tip>
+
+---
+
+## Şifre Sıfırlama Bağlantısı Gönderme
+
+Kullanıcılar şifrelerini unuttuklarında veya şifrelerini sıfırlamaları gerektiğinde, yönetici olarak onlara sıfırlama bağlantısı gönderebilirsiniz:
+
+<Steps>
+  <Step title="Kullanıcıyı Bulun">
+    **Kullanıcılar → Tüm Kullanıcılar** listesinde ilgili kullanıcıyı bulun.
+  </Step>
+  <Step title="Şifre Sıfırla Seçeneğini Seçin">
+    Kullanıcının yanındaki **⋮** simgesine tıklayın ve **Şifre Sıfırlama Gönder** seçeneğini seçin.
+  </Step>
+  <Step title="Gönderin">
+    Açılan diyalogda **Bağlantıyı Gönder** butonuna tıklayın. Sistem, kullanıcının kayıtlı e-posta adresine 24 saat geçerli bir sıfırlama bağlantısı gönderir.
+  </Step>
+</Steps>
+
+<Note>
+Sıfırlama e-postası gönderilmeden önce kullanıcının e-posta adresinin doğru olduğundan emin olun. Kullanıcı e-postayı almıyorsa spam/gereksiz posta klasörünü kontrol etmesini önerin.
+</Note>
+
+Alternatif olarak, kullanıcı detay sayfasındaki **Güvenlik** sekmesinden yönetici olarak doğrudan yeni bir şifre belirleyebilirsiniz.
+
+---
+
+## Kullanıcı Silme
+
+Bir kullanıcı hesabını kalıcı olarak silmek için:
+
+<Steps>
+  <Step title="Kullanıcıyı Seçin">
+    Kullanıcı listesinde silmek istediğiniz kullanıcının yanındaki **⋮** simgesine tıklayın.
+  </Step>
+  <Step title="Sil Seçeneğini Seçin">
+    Açılan menüden **Kullanıcıyı Sil** seçeneğini tıklayın.
+  </Step>
+  <Step title="Onaylayın">
+    Sistem sizi uyarır: bu işlem geri alınamaz. Onay kutusunu işaretleyerek **Kalıcı Olarak Sil** butonuna tıklayın.
+  </Step>
+</Steps>
+
+<Warning>
+Kullanıcı silindiğinde o kullanıcıya ait tüm veriler — kurs kayıtları, sınav sonuçları, sertifikalar ve satın alma geçmişi — kalıcı olarak silinir. Bu işlem **geri alınamaz**. Geçici bir engelleme için silmek yerine hesabı **Pasife Al** seçeneğini tercih edin.
+</Warning>
+
+---
+
+## Sık Sorulan Sorular
+
+<AccordionGroup>
+  <Accordion title="Bir kullanıcı e-posta adresini kendisi değiştirebilir mi?">
+    Evet, kullanıcılar kendi profil sayfalarından e-posta adreslerini güncelleyebilir. Ancak yeni adresin doğrulanması gerekir. Yönetici olarak siz de kullanıcı adına e-posta değişikliği yapabilirsiniz.
+  </Accordion>
+  <Accordion title="Aynı anda kaç yönetici hesabı olabilir?">
+    Ezey LMS'de yönetici hesabı sayısı için bir üst sınır yoktur. Ancak güvenlik açısından yönetici rolünü yalnızca ihtiyaç duyan kişilerle sınırlı tutmanız önerilir.
+  </Accordion>
+  <Accordion title="Silinen bir kullanıcının verileri kurtarılabilir mi?">
+    Hayır. Kullanıcı silme işlemi kalıcıdır ve veriler kurtarılamaz. Veri kurtarma taleplerinde [destek ekibimizle](mailto:destek@ezeyyazilim.com) iletişime geçin.
+  </Accordion>
+  <Accordion title="Pasif kullanıcılar lisans veya kota hesabına dahil edilir mi?">
+    Pasif kullanıcılar sistem kayıtlarında bulunmaya devam eder ancak aktif kullanıcı kotanıza dahil edilmez. Faturalama ayrıntıları için abonelik planınızı kontrol edin.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+Daha fazla yardım için **[destek@ezeyyazilim.com](mailto:destek@ezeyyazilim.com)** adresine e-posta gönderin veya **+90 555 123 45 67** numaralı hattı arayın.
