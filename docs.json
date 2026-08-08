@@ -30,6 +30,22 @@
                   "yonetici/veliler",
                   "yonetici/roller-izinler"
                 ]
+              },
+              {
+                "group": "Kurs Yönetimi",
+                "icon": "graduation-cap",
+                "pages": [
+                  "yonetici/kurslar/tum-kurslar",
+                  "yonetici/kurslar/kategoriler",
+                  "yonetici/kurslar/etiketler",
+                  "yonetici/kurslar/bolumler",
+                  "yonetici/kurslar/dersler",
+                  "yonetici/kurslar/kayitli-ogrenciler",
+                  "yonetici/kurslar/yorumlar",
+                  "yonetici/kurslar/siniflar",
+                  "yonetici/kurslar/ders-konulari",
+                  "yonetici/kurslar/ders-saatleri"
+                ]
               }
             ]
           },
