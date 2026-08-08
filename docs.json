@@ -44,7 +44,9 @@
                   "yonetici/kurslar/yorumlar",
                   "yonetici/kurslar/siniflar",
                   "yonetici/kurslar/ders-konulari",
-                  "yonetici/kurslar/ders-saatleri"
+                  "yonetici/kurslar/ders-saatleri",
+                  "yonetici/kurslar/ders-programlari",
+                  "yonetici/kurslar/yoklama"
                 ]
               }
             ]
