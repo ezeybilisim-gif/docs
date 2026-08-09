@@ -1,0 +1,25 @@
+---
+title: "Ödemeler"
+sidebarTitle: "Ödemeler"
+description: "Ödeme hareketlerini yönetin."
+---
+
+Ödemeler ekranı, siparişlere bağlı tüm ödeme hareketlerini listeler. Üst menüden **Satış → Ödemeler** ile açılır.
+
+## Ödeme Listesi
+
+- **Ödeme No**
+- **Sipariş No**
+- **Müşteri**
+- **Tutar**
+- **Yöntem** (Kredi kartı, Havale, iyzico, Stripe vs.)
+- **Durum** (Başarılı, Bekliyor, Başarısız, İade)
+- **Tarih**
+
+## İade İşlemi
+
+Başarılı ödemeler üzerinde **İade** butonu bulunur. İade tutarı tam ya da kısmi olarak işlenebilir. İade ödeme sağlayıcısına (iyzico / Stripe) API üzerinden gönderilir.
+
+## Dekont Yönetimi
+
+Havale ile yapılan ödemelerde müşteri yüklediği dekonta buradan erişebilir, **Onayla** veya **Reddet** ile durum değiştirebilirsiniz.

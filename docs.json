@@ -46,7 +46,83 @@
                   "yonetici/kurslar/ders-konulari",
                   "yonetici/kurslar/ders-saatleri",
                   "yonetici/kurslar/ders-programlari",
-                  "yonetici/kurslar/yoklama"
+                  "yonetici/kurslar/yoklama",
+                  "yonetici/kurslar/sertifikalar",
+                  "yonetici/kurslar/duyurular",
+                  "yonetici/kurslar/canli-dersler",
+                  "yonetici/kurslar/canli-entegrasyon"
+                ]
+              },
+              {
+                "group": "Ödev & Sınav",
+                "icon": "clipboard-list",
+                "pages": [
+                  "yonetici/odev-sinav/odevler",
+                  "yonetici/odev-sinav/odev-degerlendirme",
+                  "yonetici/odev-sinav/sinavlar",
+                  "yonetici/odev-sinav/soru-bankasi",
+                  "yonetici/odev-sinav/mufredat",
+                  "yonetici/odev-sinav/sinav-raporlari"
+                ]
+              },
+              {
+                "group": "Satış",
+                "icon": "shopping-cart",
+                "pages": [
+                  "yonetici/satis/siparisler",
+                  "yonetici/satis/odemeler",
+                  "yonetici/satis/odeme-yontemleri",
+                  "yonetici/satis/kuponlar",
+                  "yonetici/satis/faturalar",
+                  "yonetici/satis/raporlar"
+                ]
+              },
+              {
+                "group": "CMS",
+                "icon": "newspaper",
+                "pages": [
+                  "yonetici/cms/genel-ayarlar",
+                  "yonetici/cms/tema-yonetimi",
+                  "yonetici/cms/menu-yonetimi",
+                  "yonetici/cms/footer-yonetimi",
+                  "yonetici/cms/popup-yonetimi",
+                  "yonetici/cms/header-bildirimler",
+                  "yonetici/cms/sayfalar",
+                  "yonetici/cms/blog-yazilari",
+                  "yonetici/cms/blog-kategorileri",
+                  "yonetici/cms/blog-etiketleri",
+                  "yonetici/cms/media-kutuphanesi"
+                ]
+              },
+              {
+                "group": "CRM",
+                "icon": "user-focus",
+                "pages": [
+                  "yonetici/crm/dashboard",
+                  "yonetici/crm/leadler",
+                  "yonetici/crm/pipeline",
+                  "yonetici/crm/kaynaklar",
+                  "yonetici/crm/form-talepleri",
+                  "yonetici/crm/mail-gonderimi",
+                  "yonetici/crm/mail-sablonlari"
+                ]
+              },
+              {
+                "group": "Eğitim Koçluğu",
+                "icon": "target",
+                "pages": [
+                  "yonetici/kocluk/anasayfa",
+                  "yonetici/kocluk/ogrencilerim",
+                  "yonetici/kocluk/deneme-analizi",
+                  "yonetici/kocluk/haftalik-planlar",
+                  "yonetici/kocluk/grup-plani",
+                  "yonetici/kocluk/kaynak-havuzu",
+                  "yonetici/kocluk/gorusmeler",
+                  "yonetici/kocluk/mesajlar",
+                  "yonetici/kocluk/ai-analiz",
+                  "yonetici/kocluk/veli-raporlari",
+                  "yonetici/kocluk/kurumsal-kpi",
+                  "yonetici/kocluk/motivasyon"
                 ]
               }
             ]
