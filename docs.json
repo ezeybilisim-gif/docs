@@ -133,6 +133,187 @@
               "yardim/sss",
               "yardim/iletisim"
             ]
+          },
+          {
+            "group": "Eğitmen Rehberi",
+            "icon": "chalkboard-teacher",
+            "pages": [
+              "egitmen/panel",
+              {
+                "group": "Kurslarım",
+                "icon": "graduation-cap",
+                "pages": [
+                  "egitmen/kurslar/tum-kurslarim",
+                  "egitmen/kurslar/yeni-kurs",
+                  "egitmen/kurslar/canli-dersler"
+                ]
+              },
+              {
+                "group": "Öğrenciler",
+                "icon": "users",
+                "pages": [
+                  "egitmen/ogrenciler/tum-ogrencilerim",
+                  "egitmen/ogrenciler/ogrenci-tanimla",
+                  "egitmen/ogrenciler/veli-tanimla",
+                  "egitmen/ogrenciler/siniflarim",
+                  "egitmen/ogrenciler/yoklama",
+                  "egitmen/ogrenciler/ogrenci-havuzu",
+                  "egitmen/ogrenciler/kurs-kayitlari"
+                ]
+              },
+              {
+                "group": "Duyurular",
+                "icon": "megaphone",
+                "pages": [
+                  "egitmen/duyurular/tum-duyurularim",
+                  "egitmen/duyurular/yeni-duyuru"
+                ]
+              },
+              {
+                "group": "Ödev & Sınav",
+                "icon": "clipboard-list",
+                "pages": [
+                  "egitmen/odev-sinav/odev-yonetimi",
+                  "egitmen/odev-sinav/yeni-odev",
+                  "egitmen/odev-sinav/bekleyen-degerlendirmeler",
+                  "egitmen/odev-sinav/tum-sinavlarim",
+                  "egitmen/odev-sinav/yeni-sinav",
+                  "egitmen/odev-sinav/hizli-sinav",
+                  "egitmen/odev-sinav/soru-bankam",
+                  "egitmen/odev-sinav/sinav-raporlari"
+                ]
+              },
+              {
+                "group": "Raporlar",
+                "icon": "chart-line",
+                "pages": [
+                  "egitmen/raporlar/yorumlar",
+                  "egitmen/raporlar/gelir-raporu",
+                  "egitmen/raporlar/kurs-performansi",
+                  "egitmen/raporlar/ogrenci-sorulari"
+                ]
+              },
+              {
+                "group": "Eğitim Koçluğu",
+                "icon": "target",
+                "pages": [
+                  "egitmen/kocluk/anasayfa",
+                  "egitmen/kocluk/ogrencilerim",
+                  "egitmen/kocluk/haftalik-planlar",
+                  "egitmen/kocluk/gorusmeler",
+                  "egitmen/kocluk/mesajlar",
+                  "egitmen/kocluk/ai-analiz",
+                  "egitmen/kocluk/kurumsal-kpi",
+                  "egitmen/kocluk/motivasyon"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Öğrenci Rehberi",
+            "icon": "student",
+            "pages": [
+              "ogrenci/panel",
+              "ogrenci/ders-programi",
+              "ogrenci/canli-dersler",
+              {
+                "group": "Kurslarım",
+                "icon": "books",
+                "pages": [
+                  "ogrenci/kurslar/tum-kurslarim",
+                  "ogrenci/kurslar/devam-eden",
+                  "ogrenci/kurslar/tamamlanan",
+                  "ogrenci/kurslar/sertifikalarim"
+                ]
+              },
+              "ogrenci/duyurular",
+              {
+                "group": "Ödevlerim",
+                "icon": "files",
+                "pages": [
+                  "ogrenci/odev-sinav/tum-odevler",
+                  "ogrenci/odev-sinav/bekleyen-odevler",
+                  "ogrenci/odev-sinav/teslim-ettiklerim",
+                  "ogrenci/odev-sinav/degerlendirilenler",
+                  "ogrenci/odev-sinav/tum-sinavlar",
+                  "ogrenci/odev-sinav/yaklasan-sinavlar",
+                  "ogrenci/odev-sinav/sinav-sonuclarim"
+                ]
+              },
+              {
+                "group": "Alışveriş",
+                "icon": "shopping-cart",
+                "pages": [
+                  "ogrenci/alisveris/sepetim",
+                  "ogrenci/alisveris/istek-listem",
+                  "ogrenci/alisveris/siparislerim",
+                  "ogrenci/alisveris/faturalarim"
+                ]
+              },
+              {
+                "group": "Destek",
+                "icon": "headset",
+                "pages": [
+                  "ogrenci/destek/destek-taleplerim",
+                  "ogrenci/destek/yeni-destek-talebi"
+                ]
+              },
+              {
+                "group": "Koçluğum",
+                "icon": "target",
+                "pages": [
+                  "ogrenci/kocluk/panel",
+                  "ogrenci/kocluk/haftalik-planim",
+                  "ogrenci/kocluk/kucuk-islerim",
+                  "ogrenci/kocluk/deneme-sonuclarim",
+                  "ogrenci/kocluk/kaynaklarim",
+                  "ogrenci/kocluk/mesajlar"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Veli Rehberi",
+            "icon": "users-four",
+            "pages": [
+              "veli/panel",
+              {
+                "group": "Çocuklarım",
+                "icon": "users-three",
+                "pages": [
+                  "veli/cocuklarim/tum-cocuklarim"
+                ]
+              },
+              {
+                "group": "Kurslar & İlerleme",
+                "icon": "books",
+                "pages": [
+                  "veli/kurslar/ders-programi",
+                  "veli/kurslar/sinif-yoklamasi",
+                  "veli/kurslar/odevler",
+                  "veli/kurslar/sinav-notlar",
+                  "veli/kurslar/kurslar",
+                  "veli/kurslar/ilerleme"
+                ]
+              },
+              {
+                "group": "Notlar & Devamsızlık",
+                "icon": "star",
+                "pages": [
+                  "veli/notlar/notlar",
+                  "veli/notlar/devamsizlik",
+                  "veli/notlar/aktivite-takibi"
+                ]
+              },
+              {
+                "group": "Koçluk Özeti",
+                "icon": "target",
+                "pages": [
+                  "veli/kocluk/kocluk-ozeti",
+                  "veli/kocluk/mesajlar"
+                ]
+              }
+            ]
           }
         ]
       }
