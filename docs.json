@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "name": "Ezey LMS",
-  "theme": "almond",
+  "theme": "mint",
   "colors": {
     "primary": "#e54424",
     "light": "#931b3c"
