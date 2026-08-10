@@ -4,176 +4,352 @@ sidebarTitle: "SSS"
 description: "Ezey LMS hakkında merak ettiğiniz her şey: hesap oluşturma, kurs kaydı, ödeme, sertifika ve teknik destek sorularına yanıt bulun."
 ---
 
-Bu sayfada Ezey LMS platformuna ilişkin en çok merak edilen soruların yanıtlarını bulabilirsiniz. Hesap oluşturma, kurs kaydı ve ödeme işlemlerinden sınav, sertifika ve teknik konulara kadar her başlık aşağıda ele alınmaktadır. Her kullanıcı platforma kendi kişisel hesabıyla giriş yapar; hesabınız size özel kurs ilerlemelerini, sertifikalarınızı ve ödeme geçmişinizi saklar. Aradığınız yanıtı bulamazsanız [destek ekibimizle iletişime geçin](/yardim/iletisim).
+Bu sayfa; **yönetici, eğitmen, öğrenci ve veli panellerinde** en sık karşılaşılan soruları ve pratik çözümleri bir arada sunar. Aradığınız yanıtı bulamazsanız [destek ekibimizle iletişime geçin](/yardim/iletisim).
 
 ---
 
-## Hesap & Giriş
+## Genel Panel Kullanımı
 
 <AccordionGroup>
-  <Accordion title="Hesap nasıl oluşturabilirim?">
-    Ezey LMS'e üye olmak tamamen ücretsizdir. Aşağıdaki adımları izleyerek birkaç dakika içinde hesabınızı oluşturabilirsiniz:
+  <Accordion title="Panele nasıl giriş yaparım?">
+    Panel giriş adresi: **`https://<kurum-domaininiz>/login`**
 
     <Steps>
-      <Step title="Kayıt sayfasını açın">
-        [https://lmsdemo.ezeyyazilim.com/register](https://lmsdemo.ezeyyazilim.com/register) adresine gidin.
+      <Step title="E-posta ve şifre">
+        Yönetici tarafından size tanımlanmış e-posta ve şifreyi girin.
       </Step>
-      <Step title="Bilgilerinizi doldurun">
-        Ad, soyad, geçerli bir e-posta adresi ve güçlü bir şifre girin.
+      <Step title="Rolünüze göre yönlendirme">
+        Sistem sizi otomatik olarak rolünüzün paneline yönlendirir: **Yönetici**, **Eğitmen**, **Öğrenci** veya **Veli**.
       </Step>
-      <Step title="E-postanızı doğrulayın">
-        Kayıt sırasında girdiğiniz adrese bir doğrulama e-postası gönderilir. E-postadaki bağlantıya tıklayarak hesabınızı etkinleştirin.
-      </Step>
-      <Step title="Platforma giriş yapın">
-        [https://lmsdemo.ezeyyazilim.com/login](https://lmsdemo.ezeyyazilim.com/login) adresinden e-posta ve şifrenizle giriş yapın.
+      <Step title="İki faktörlü doğrulama (opsiyonel)">
+        Kurumsal ayarlarda 2FA aktifse e-posta veya SMS ile gelen kodu girin.
       </Step>
     </Steps>
 
     <Tip>
-      Üye olduktan sonra bir eğitmenden ücretsiz tanışma dersi talep edebilirsiniz. Bu ders, platforma ve içeriklere alışmanız için harika bir fırsattır.
+      Şifrenizi unuttuysanız giriş ekranındaki **Şifremi Unuttum** bağlantısını kullanın. Bağlantı 30 dakika geçerlidir.
     </Tip>
   </Accordion>
 
-  <Accordion title="Şifremi unuttum, ne yapmalıyım?">
-    Şifrenizi unuttuysanız endişelenmeyin; birkaç adımda sıfırlayabilirsiniz:
+  <Accordion title="Rolüme göre hangi panel açılır?">
+    - **Platform sahibi / Süper yönetici** → Süper Yönetici Paneli
+    - **Kurum yöneticisi** → Yönetici Paneli
+    - **Eğitmen** → Eğitmen Paneli
+    - **Öğrenci** → Öğrenci Paneli
+    - **Veli** → Veli Paneli
 
-    1. [Giriş sayfasına](https://lmsdemo.ezeyyazilim.com/login) gidin.
-    2. **"Şifremi Unuttum"** bağlantısına tıklayın.
-    3. Hesabınıza kayıtlı e-posta adresini girin ve **"Sıfırlama Bağlantısı Gönder"** düğmesine basın.
-    4. Gelen kutunuza birkaç dakika içinde bir şifre sıfırlama e-postası ulaşacaktır.
-    5. E-postadaki bağlantıya tıklayarak yeni şifrenizi belirleyin.
-
-    <Note>
-      Şifre sıfırlama bağlantısı **30 dakika** geçerlidir. Bağlantının süresi dolarsa işlemi tekrarlayın. E-posta gelmiyorsa spam/gereksiz posta klasörünüzü de kontrol etmeyi unutmayın.
-    </Note>
+    Bir kullanıcının birden fazla rolü varsa sağ üstteki profil menüsünden panel değiştirebilir.
   </Accordion>
 
-  <Accordion title="Birden fazla cihazdan giriş yapabilir miyim?">
-    Evet, Ezey LMS hesabınıza aynı anda bilgisayar, tablet ve akıllı telefon gibi farklı cihazlardan giriş yapabilirsiniz. Platformun duyarlı (responsive) tasarımı sayesinde her cihazda rahat bir kullanım deneyimi yaşarsınız.
+  <Accordion title="Şifremi nasıl değiştiririm?">
+    1. Sağ üstteki profil menüsüne tıklayın.
+    2. **Ayarlar → Güvenlik** bölümüne gidin.
+    3. Mevcut şifrenizi ve yeni şifrenizi girin, **Kaydet** butonuna basın.
 
-    Bununla birlikte, hesap güvenliğiniz açısından şunlara dikkat etmenizi öneririz:
-
-    - Paylaşımlı veya herkese açık cihazlarda oturumu kapattığınızdan emin olun.
-    - Hesabınızda olağandışı bir etkinlik fark ederseniz şifrenizi hemen değiştirin ve [destek ekibimize](/yardim/iletisim) bildirin.
+    Şifreniz en az 8 karakter, en az bir büyük harf, bir küçük harf ve bir rakam içermelidir.
   </Accordion>
 
-  <Accordion title="Hesabımı nasıl silebilirim?">
-    Hesabınızı kalıcı olarak silmek istiyorsanız aşağıdaki adımları izleyin:
+  <Accordion title="Bildirimleri nasıl yönetirim?">
+    Sağ üstteki **zil** ikonu bildirimleri gösterir. **Ayarlar → Bildirim Tercihleri** bölümünden:
 
-    1. Platforma giriş yapın ve sağ üst köşedeki profil simgenize tıklayın.
-    2. **Ayarlar > Hesap** bölümüne gidin.
-    3. Sayfanın altında yer alan **"Hesabımı Sil"** seçeneğine tıklayın.
-    4. Silme işlemini onaylamak için şifrenizi girin.
-
-    <Note>
-      Hesabınızı sildiğinizde tüm kurs ilerlemeleriniz, sertifikalarınız ve satın alma geçmişiniz **kalıcı olarak silinir** ve geri alınamaz. İşlemi gerçekleştirmeden önce sertifikalarınızı indirmenizi tavsiye ederiz.
-    </Note>
-
-    Hesap silme konusunda sorun yaşıyorsanız [destek ekibimizle iletişime geçin](/yardim/iletisim).
+    - E-posta bildirimlerini aç/kapat
+    - Panel içi bildirim türlerini seç
+    - SMS bildirimlerini yapılandır (kurumsal ayarlara bağlı)
   </Accordion>
 </AccordionGroup>
 
 ---
 
-## Kurs & Ödeme
+## Yönetici Paneli
 
 <AccordionGroup>
-  <Accordion title="Bir kursa nasıl kaydolurum?">
-    Kurslara kaydolmak için önce platforma giriş yapmış olmanız gerekir. Ardından şu adımları takip edin:
-
+  <Accordion title="Yeni bir eğitmen nasıl eklerim?">
     <Steps>
-      <Step title="Kurs kataloğuna göz atın">
-        Ana sayfadaki **Kurslar** menüsünden ilgilendiğiniz kategoriyi seçin veya arama çubuğunu kullanın.
+      <Step title="Kullanıcılar menüsüne gidin">
+        Sol menüden **Kullanıcılar → Eğitmenler** sayfasını açın.
       </Step>
-      <Step title="Kurs detay sayfasını inceleyin">
-        Kursun içeriğini, eğitmenini, süresini ve fiyatını inceleyin. Ücretsiz tanışma dersine başvurmak için **"Ücretsiz Tanışma Dersi Talep Et"** düğmesine tıklayabilirsiniz.
+      <Step title="Yeni Eğitmen">
+        Sağ üstteki **Yeni Eğitmen** butonuna tıklayın.
       </Step>
-      <Step title="Satın alma işlemini tamamlayın">
-        **"Kursa Kaydol"** veya **"Satın Al"** düğmesine tıklayın; ödeme bilgilerinizi girerek işlemi tamamlayın.
+      <Step title="Bilgileri doldurun">
+        Ad, soyad, e-posta, telefon, uzmanlık alanları ve komisyon oranı bilgilerini girin.
       </Step>
-      <Step title="Kursa erişin">
-        Ödeme onaylandıktan hemen sonra kurs panonuzda görünür ve içeriklere erişebilirsiniz.
+      <Step title="Kaydet">
+        Sisteme kaydedin. E-posta ile giriş bilgileri otomatik gönderilir.
       </Step>
     </Steps>
-
-    <Tip>
-      Her sınıf en fazla **10 öğrenci** kapasitelidir. Kontenjan dolmadan kaydolmanızı tavsiye ederiz.
-    </Tip>
   </Accordion>
 
-  <Accordion title="Ödeme yöntemleri neler?">
-    Ezey LMS üzerinde aşağıdaki ödeme yöntemlerini kullanabilirsiniz:
+  <Accordion title="Kurs kategorileri nasıl yönetilir?">
+    **Kurs Yönetimi → Kategoriler** ekranından kategori ekleyebilir, düzenleyebilir ve silebilirsiniz. Her kategoriye:
 
-    | Ödeme Yöntemi | Açıklama |
-    |---|---|
-    | Kredi / Banka Kartı | Visa, Mastercard ve Troy kartlarla güvenli ödeme |
-    | Havale / EFT | Banka havalesi ile ödeme; onay 1 iş günü sürebilir |
-    | Online Ödeme Sistemleri | Desteklenen dijital cüzdanlar üzerinden ödeme |
+    - Ad ve slug (URL)
+    - Üst kategori (hiyerarşi için)
+    - Kapak görseli
+    - SEO meta bilgileri
 
-    Tüm ödemeler **256-bit SSL şifreleme** ile güvence altındadır. Kurs fiyatları **199₺ ile 3.000₺** arasında değişmekte olup her kurs sayfasında güncel fiyat bilgisi yer almaktadır.
+    tanımlayabilirsiniz.
   </Accordion>
 
-  <Accordion title="İade politikası nedir?">
-    Satın aldığınız bir kurstan memnun kalmamanız durumunda iade talebinde bulunabilirsiniz:
+  <Accordion title="Ödeme yöntemlerini nasıl yapılandırırım?">
+    **Satış → Ödeme Yöntemleri** ekranından:
 
-    - **İlk 7 gün içinde** herhangi bir kurs içeriğine erişmediyseniz tam iade hakkınız bulunmaktadır.
-    - Kurs içeriklerine erişim sağlandıktan sonra iade değerlendirmesi bireysel olarak yapılır.
-    - İade taleplerinizi [destek ekibimize](/yardim/iletisim) **e-posta veya panel içi mesajlaşma** yoluyla iletebilirsiniz.
+    - Iyzico, Stripe, PayTR gibi sağlayıcıları etkinleştirin
+    - API anahtarlarını girin (test ve canlı ayrı)
+    - Havale / EFT için banka hesap bilgilerini ekleyin
+    - Taksit seçeneklerini yapılandırın
 
-    <Note>
-      İade süreciniz onaylandıktan sonra ödemeniz, kullandığınız ödeme yöntemine göre **3–10 iş günü** içinde hesabınıza iade edilir.
-    </Note>
+    <Warning>
+      API anahtarlarını canlıya almadan önce mutlaka test modunda deneyin.
+    </Warning>
   </Accordion>
 
-  <Accordion title="Kursa ne zaman erişebilirim?">
-    Ödemeniz başarıyla tamamlandığı anda kurs panonuzda görünür hale gelir ve içeriklere **anında erişebilirsiniz**. Ödeme onayı genellikle birkaç saniye içinde gerçekleşir.
+  <Accordion title="Ana sayfa ve tema nasıl düzenlenir?">
+    **CMS → Tema Yönetimi** altında sayfa bloklarını (slider, öne çıkan kurslar, kategoriler, testimonial vb.) sürükle-bırak ile düzenleyebilirsiniz. **CMS → Sayfalar** üzerinden hakkımızda, iletişim gibi statik sayfaları oluşturup yayınlayabilirsiniz.
+  </Accordion>
 
-    Havale/EFT ile ödeme yapıyorsanız ödemenizin banka tarafından işlenmesi **1 iş günü** sürebilir. Bu süre zarfında erişim beklemede kalabilir. Ödemenizi gerçekleştirdiğinizde dekontunuzu [destek ekibimize](/yardim/iletisim) iletirseniz erişiminizi daha hızlı açabiliriz.
+  <Accordion title="Rol ve yetki tanımlama nasıl yapılır?">
+    **Kullanıcılar → Rol ve Yetkiler** ekranından özel rol tanımlayabilir, her role modül bazında (kurslar, satış, CMS, CRM vb.) yetki atayabilirsiniz. Bir kullanıcıya birden fazla rol atanabilir.
+  </Accordion>
+
+  <Accordion title="Toplu öğrenci içe aktarımı (Excel) nasıl yapılır?">
+    <Steps>
+      <Step title="Şablon indirin">
+        **Kullanıcılar → Öğrenciler → İçe Aktar** ekranından örnek Excel şablonunu indirin.
+      </Step>
+      <Step title="Doldurun">
+        Ad, soyad, e-posta, telefon, sınıf vb. alanları doldurun.
+      </Step>
+      <Step title="Yükleyin">
+        Dosyayı yükleyin; sistem hatalı satırları önce raporlar.
+      </Step>
+      <Step title="Onaylayın">
+        Raporu inceleyip aktarımı tamamlayın. Öğrencilere otomatik e-posta gider.
+      </Step>
+    </Steps>
+  </Accordion>
+
+  <Accordion title="Faturaları nasıl kesip gönderirim?">
+    **Satış → Faturalar** ekranından her siparişe otomatik veya manuel e-fatura oluşturabilirsiniz. Entegrasyon aktifse (Foriba, e-Finans vb.) faturalar GİB'e otomatik iletilir ve müşteriye e-posta ile gönderilir.
   </Accordion>
 </AccordionGroup>
 
 ---
 
-## Sınav & Sertifika
+## Eğitmen Paneli
 
 <AccordionGroup>
-  <Accordion title="Sınavı geçemezsem ne olur?">
-    Sınavlarda başarısız olmanız durumunda paniğe kapılmanıza gerek yok! Ezey LMS, öğrencilerin konuları tam anlamıyla özümsemesini desteklemek için esnek bir sınav politikası sunmaktadır:
-
-    - **Yeniden girme hakkı:** Başarısız olduğunuz sınavı belirli bir bekleme süresinin ardından tekrar girebilirsiniz. Her kursun yeniden giriş koşulları kurs sayfasında belirtilmektedir.
-    - **Ders tekrarı:** Sınav öncesinde ilgili ders kayıtlarını istediğiniz kadar tekrar izleyebilirsiniz.
-    - **Eğitmen desteği:** Sınavda zorlandığınız konuları eğitmeninizle panel içi mesajlaşma üzerinden paylaşabilir, ek açıklama talep edebilirsiniz.
-
-    <Tip>
-      Sınava girmeden önce konu özetlerini gözden geçirin ve eğitmeninizin paylaştığı pratik alıştırmaları tamamlayın.
-    </Tip>
-  </Accordion>
-
-  <Accordion title="Sertifikam ne zaman hazır olur?">
-    Bir kursu başarıyla tamamladığınızda (tüm dersleri izlediğinizde ve varsa sınavdan geçer not aldığınızda) sertifikanız **otomatik olarak oluşturulur**. Sertifika genellikle başarı koşullarını sağladıktan hemen sonra, en geç **24 saat** içinde panelinizde hazır olur.
-
-    Sertifikanıza ulaşmak için:
-    1. Platforma giriş yapın.
-    2. Sol menüden **"Sertifikalarım"** bölümüne gidin.
-    3. İlgili kursa ait sertifikayı göreceksiniz.
-  </Accordion>
-
-  <Accordion title="Sertifikamı nasıl indirebilirim?">
-    Sertifikanızı indirmek için şu adımları izleyin:
-
+  <Accordion title="Yeni kurs nasıl oluştururum?">
     <Steps>
-      <Step title="Sertifikalarım bölümüne gidin">
-        Platforma giriş yaptıktan sonra sol menüden **"Sertifikalarım"** seçeneğine tıklayın.
+      <Step title="Yeni Kurs">
+        Üst menüden **Kurslarım → Yeni Kurs Oluştur** butonuna tıklayın.
       </Step>
-      <Step title="Sertifikanızı seçin">
-        İndirmek istediğiniz kursa ait sertifikaya tıklayın.
+      <Step title="Genel bilgiler">
+        Kurs adı, açıklama, kategori, dil, seviye ve kapak görselini girin.
       </Step>
-      <Step title="PDF olarak indirin">
-        Açılan sertifika önizlemesinde **"PDF İndir"** düğmesine basarak sertifikanızı bilgisayarınıza kaydedin.
+      <Step title="Müfredat">
+        Sürükle-bırak ile bölüm ve dersler ekleyin. Video, PDF, quiz gibi içerik tipleri desteklenir.
+      </Step>
+      <Step title="Fiyatlandırma & ayarlar">
+        Fiyat, indirim, sertifika ve ön koşulları belirleyin.
+      </Step>
+      <Step title="Yayınlayın">
+        Taslak kaydedebilir veya doğrudan yayına alabilirsiniz.
+      </Step>
+    </Steps>
+  </Accordion>
+
+  <Accordion title="Öğrencilerimin ilerlemesini nasıl takip ederim?">
+    **Raporlar → Kurs Performansı** ekranında her kurs için:
+
+    - Kayıtlı öğrenci sayısı
+    - Ortalama tamamlanma yüzdesi
+    - Bölüm bazlı ilerleme
+    - En çok / en az izlenen dersler
+
+    bilgilerini görebilirsiniz. Öğrenci detay sayfasında bireysel ilerleme de mevcuttur.
+  </Accordion>
+
+  <Accordion title="Ödevleri nasıl değerlendiririm?">
+    **Ödev & Sınav → Bekleyen Değerlendirmeler** menüsünde teslim edilmiş ancak değerlendirilmemiş ödevler listelenir. Her teslime tıkladığınızda:
+
+    - Öğrenci teslim metni ve dosyaları
+    - Puanlama alanı
+    - Rubrik (varsa) kriter bazı puanlama
+    - Geri bildirim kutusu
+
+    açılır. Kaydettiğinizde öğrenciye bildirim gider.
+  </Accordion>
+
+  <Accordion title="Canlı ders oturumu nasıl planlarım?">
+    **Kurslarım → Canlı Dersler → Yeni Canlı Ders** ile:
+
+    - Başlık, tarih, saat, süre
+    - Kurs / sınıf hedef kitlesi
+    - Platform (Zoom / Google Meet / Microsoft Teams)
+
+    seçerek oturum planlayabilirsiniz. Öğrencilere otomatik davetiye ve hatırlatma bildirimi gider.
+
+    <Note>
+      Platform entegrasyonlarının yönetici tarafından yapılandırılmış olması gerekir.
+    </Note>
+  </Accordion>
+
+  <Accordion title="Hızlı optik (kağıt) sınav sonuçlarını nasıl yüklerim?">
+    **Ödev & Sınav → Hızlı Sınav (Optik)** ekranını kullanın:
+
+    1. Sınav adı, kurs / sınıf, tarih girin.
+    2. Cevap anahtarını oluşturun (A/B/C/D/E ve puan).
+    3. Öğrenci cevaplarını manuel veya toplu Excel ile yükleyin.
+    4. Sistem otomatik puanlar ve konu bazlı analiz üretir.
+  </Accordion>
+
+  <Accordion title="Gelirlerimi ve komisyonlarımı nasıl takip ederim?">
+    **Raporlar → Gelir Raporu** ekranı:
+
+    - Bu ay ve toplam kazancınız
+    - Ödenen / bekleyen tutar
+    - Sipariş bazlı komisyon detayı
+
+    Ödeme talebi (hakediş) oluşturabilir, geçmiş taleplerinizi görebilirsiniz. İşlem kurumsal ayarlara bağlıdır.
+  </Accordion>
+
+  <Accordion title="Soru bankama Excel'den nasıl soru aktarırım?">
+    **Ödev & Sınav → Soru Bankam → İçe Aktar** ile örnek şablonu indirin, sorularınızı (soru metni, seçenekler, doğru cevap, konu, zorluk) doldurup yükleyin. Sistem toplu içe aktarma yapar ve hatalı satırları raporlar.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Öğrenci Paneli
+
+<AccordionGroup>
+  <Accordion title="Bir kursa nasıl başlarım?">
+    Üst menüden **Kurslarım → Tüm Kurslarım** ile size atanmış / satın aldığınız kursların listesini görürsünüz. Her kartta **Devam Et** butonu son izlediğiniz dersten kaldığınız yere götürür.
+  </Accordion>
+
+  <Accordion title="Ödevimi nasıl teslim ederim?">
+    <Steps>
+      <Step title="Ödev sayfasını açın">
+        **Ödevlerim → Bekleyen Ödevler** listesinden ilgili ödeve tıklayın.
+      </Step>
+      <Step title="Teslim formunu doldurun">
+        Teslim metni girin ve gerekli dosyaları yükleyin (çoklu dosya desteklenir).
+      </Step>
+      <Step title="Teslim Et">
+        Butona bastığınızda durum "Teslim" olur ve eğitmene bildirim gider.
       </Step>
     </Steps>
 
-    Sertifikalarınız; adınızı, kurs adını, tamamlama tarihini ve benzersiz bir doğrulama kodunu içerir. Bu kod sayesinde işverenler veya kurumlar sertifikanızın gerçekliğini Ezey LMS üzerinden doğrulayabilir.
+    <Tip>
+      Geç teslim izni olan ödevlerde son tarih sonrası da teslim yapabilirsiniz; durum "Geç Teslim" olarak işaretlenir.
+    </Tip>
+  </Accordion>
+
+  <Accordion title="Online sınava nasıl girerim?">
+    **Ödevlerim → Tüm Sınavlar** listesinde aktif sınavın yanında **Başla** butonu belirir. Butona bastıktan sonra:
+
+    - Kalan süre ekranın üst kısmında geri sayar
+    - Cevaplar otomatik kaydedilir
+    - Süre bitince sınav otomatik teslim edilir
+
+    <Warning>
+      Sınav başladıktan sonra sekmeyi kapatmayın; sistem hile tespit ederse sınavı geçersiz sayabilir.
+    </Warning>
+  </Accordion>
+
+  <Accordion title="Sertifikamı nereden indiririm?">
+    **Kurslarım → Sertifikalarım** ekranında tüm kazandığınız sertifikaları görebilir, PDF olarak indirebilirsiniz. Her sertifika benzersiz bir doğrulama linkine sahiptir; işverenler bu linkten sertifikanın gerçekliğini doğrulayabilir.
+  </Accordion>
+
+  <Accordion title="Canlı derse nasıl katılırım?">
+    **Canlı Dersler** menüsünden yaklaşan oturumları görebilirsiniz. Oturum başlangıç saatinde **Katıl** butonu aktif olur ve sizi ilgili platforma (Zoom / Meet / Teams) yönlendirir.
+
+    <Tip>
+      Oturumdan 10 dakika önce panel ve e-posta bildirimi alırsınız.
+    </Tip>
+  </Accordion>
+
+  <Accordion title="Sepete ekledim ama ödeme yapamıyorum, ne yapmalıyım?">
+    Şu adımları kontrol edin:
+
+    1. Fatura bilgilerinin eksiksiz olduğundan emin olun.
+    2. Ödeme yöntemi olarak seçtiğiniz kartın 3D Secure aktif olması gerekir.
+    3. Tarayıcı reklam engelleyicilerini geçici olarak kapatın.
+    4. Farklı bir tarayıcı veya cihazdan deneyin.
+
+    Sorun devam ederse **Destek → Yeni Destek Talebi** oluşturun.
+  </Accordion>
+
+  <Accordion title="Faturalarımı nereden indirebilirim?">
+    **Alışveriş → Faturalarım** ekranında tüm siparişleriniz için kesilen e-faturaları listeler. PDF ve XML olarak indirebilirsiniz.
+  </Accordion>
+
+  <Accordion title="Ders programımı nereden görebilirim?">
+    Üst menüden **Ders Programı** ile günlük, haftalık ve aylık görünümlerde tüm derslerinizi (yüz yüze \+ canlı) görebilirsiniz.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Veli Paneli
+
+<AccordionGroup>
+  <Accordion title="Çocuğumu hesabıma nasıl bağlarım?">
+    Öğrenci kaydını eğitmen veya yönetici oluştururken sizi veli olarak tanımlamış olmalıdır. Bağlı çocuklarınızı **Çocuklarım → Tüm Çocuklarım** ekranında görebilirsiniz.
+
+    Bağlantı eksikse [destek ekibiyle iletişime geçin](/yardim/iletisim); kimlik doğrulaması sonrası bağlantı kurulur.
+  </Accordion>
+
+  <Accordion title="Çocuğumun notlarını ve devamsızlığını nasıl takip ederim?">
+    - **Notlar & Devamsızlık → Notlar** ders ve sınav bazlı tüm notları gösterir.
+    - **Notlar & Devamsızlık → Devamsızlık** mazeretli/mazeretsiz devamsızlık kayıtlarını ve oranı gösterir.
+    - **Notlar & Devamsızlık → Aktivite Takibi** platformda geçirilen süre ve tamamlanan görevleri gösterir.
+  </Accordion>
+
+  <Accordion title="Birden fazla çocuğum var, panelde nasıl yönetirim?">
+    Panel üstündeki **çocuk seçici** ile aktif çocuğu değiştirebilirsiniz. Menüdeki tüm sayfalar (ders programı, ödevler, notlar) seçili çocuk için filtrelenir. Dashboard'da ise tüm çocukların karşılaştırmalı özeti gösterilir.
+  </Accordion>
+
+  <Accordion title="Öğretmenle nasıl iletişime geçerim?">
+    Eğitim koçluğu modülü aktifse **Mesajlar** menüsünden çocuğunuzun koçuyla birebir mesajlaşabilirsiniz. Sınıf öğretmenleriyle iletişim için **Destek → Yeni Destek Talebi** açarak konuya öğretmeni etiketleyin.
+  </Accordion>
+
+  <Accordion title="Ödev ve sınav bildirimlerini nasıl açarım?">
+    **Ayarlar → Bildirim Tercihleri** ekranından e-posta ve SMS bildirimlerini çocuk bazlı ayarlayabilirsiniz. Kritik bildirimler (devamsızlık uyarısı, düşük not) varsayılan olarak açıktır.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Eğitim Koçluğu (Opsiyonel Modül)
+
+<AccordionGroup>
+  <Accordion title="Eğitim Koçluğu modülünü nasıl açarım?">
+    Modül kurumsal ayara bağlıdır. Yönetici olarak **Ayarlar → Modüller** ekranından **Eğitim Koçluğu** modülünü etkinleştirin. Aktif olduğunda ilgili menüler yönetici, eğitmen, öğrenci ve veli panellerinde görünmeye başlar.
+  </Accordion>
+
+  <Accordion title="Haftalık plan nasıl oluşturulur?">
+    Koç rolündeki eğitmen, **Eğitim Koçluğu → Haftalık Planlar → Yeni Plan** ile:
+
+    - Öğrenci ve hafta aralığı
+    - Günlük görevler (ders, konu, kaynak, süre, öncelik)
+    - Denemeler / testler
+    - Notlar
+
+    tanımlar. Öğrenci kendi panelinde **Koçluğum → Haftalık planım** ile takip eder ve görevleri tamamladıkça yüzde artar.
+  </Accordion>
+
+  <Accordion title="AI Analiz & Risk skoru neye göre hesaplanır?">
+    Sistem şu verileri kullanır:
+
+    - Devamsızlık oranı
+    - Deneme ve sınav performans trendi
+    - Haftalık plan tamamlama yüzdesi
+    - Görüşme sıklığı
+    - Motivasyon göstergeleri (XP, aktivite)
+
+    Yüksek risk skorlu öğrenciler otomatik uyarı olarak koçluk anasayfasında ve yöneticinin KPI panelinde görünür.
   </Accordion>
 </AccordionGroup>
 
@@ -182,47 +358,100 @@ Bu sayfada Ezey LMS platformuna ilişkin en çok merak edilen soruların yanıtl
 ## Teknik Sorunlar
 
 <AccordionGroup>
-  <Accordion title="Video dersleri neden açılmıyor?">
-    Video derslerinin açılmamasının birkaç yaygın nedeni olabilir. Aşağıdaki adımları sırayla deneyin:
-
-    1. **İnternet bağlantınızı kontrol edin.** Stabil bir bağlantıya ihtiyaç duyulur; video kalitesini düşürmeyi deneyin.
-    2. **Tarayıcınızı güncelleyin.** En iyi deneyim için Google Chrome, Mozilla Firefox veya Microsoft Edge'in güncel sürümünü kullanın.
-    3. **Tarayıcı önbelleğini temizleyin.** Ayarlar > Geçmiş > Önbelleği Temizle adımlarını izleyin.
-    4. **Tarayıcı uzantılarını devre dışı bırakın.** Özellikle reklam engelleyiciler (AdBlock vb.) video oynatıcıyla çakışabilir.
-    5. **Farklı bir tarayıcı veya cihaz deneyin.** Sorunun cihaza özgü olup olmadığını test edin.
-
-    <Note>
-      Yukarıdaki adımlar sorunu çözmezse ekran görüntüsü veya kısa bir hata açıklamasıyla [destek ekibimize](/yardim/iletisim) başvurun; en kısa sürede yardımcı olalım.
-    </Note>
+  <Accordion title="Video dersleri açılmıyor / donuyor">
+    <Steps>
+      <Step title="İnternet hızınızı test edin">
+        [fast.com](https://fast.com) veya [speedtest.net](https://speedtest.net) üzerinden bağlantınızı ölçün. HD video için en az 5 Mbps önerilir.
+      </Step>
+      <Step title="Video kalitesini düşürün">
+        Oynatıcı üzerindeki ayar (⚙) ikonundan 480p / 360p seçin.
+      </Step>
+      <Step title="Tarayıcı önbelleğini temizleyin">
+        Chrome / Edge: `Ctrl+Shift+Del` → önbelleği temizle.
+      </Step>
+      <Step title="Reklam engelleyiciyi kapatın">
+        AdBlock, uBlock gibi eklentiler video oynatıcıyla çakışabilir.
+      </Step>
+      <Step title="Farklı tarayıcı deneyin">
+        Chrome, Firefox veya Edge'in güncel sürümünü kullanın.
+      </Step>
+    </Steps>
   </Accordion>
 
-  <Accordion title="Mobil cihazdan kullanabilir miyim?">
-    Evet! Ezey LMS, mobil uyumlu (responsive) bir tasarıma sahiptir. Akıllı telefonunuzun veya tabletinizin tarayıcısı üzerinden platforma erişebilir, ders izleyebilir, sınav çözebilir ve eğitmeninizle mesajlaşabilirsiniz.
-
-    En iyi mobil deneyim için önerilen tarayıcılar:
-    - **iOS:** Safari (güncel sürüm) veya Chrome
-    - **Android:** Chrome veya Firefox
-
-    <Tip>
-      Mobil veri kullanımını azaltmak için mümkünse Wi-Fi bağlantısını tercih edin ve video kalitesini düşürün.
-    </Tip>
+  <Accordion title="Panele giriş yapamıyorum / e-posta doğrulama gelmedi">
+    - Spam / gereksiz posta klasörünüzü kontrol edin.
+    - Şifremi Unuttum ile sıfırlama bağlantısı isteyin (30 dk geçerli).
+    - Kurum yöneticinize e-posta gönderim servisinin (SMTP) çalışıp çalışmadığını sorun.
+    - Halen sorun yaşıyorsanız [destek talebi](/yardim/iletisim) oluşturun.
   </Accordion>
 
-  <Accordion title="Teknik sorun için kime ulaşabilirim?">
-    Teknik bir sorunla karşılaştığınızda destek ekibimize aşağıdaki kanallardan ulaşabilirsiniz:
+  <Accordion title="Dosya yükleyemiyorum">
+    - Maksimum dosya boyutu kurumsal ayarlara bağlıdır (varsayılan 50 MB).
+    - Desteklenen formatlar: PDF, DOCX, XLSX, JPG, PNG, MP4, ZIP.
+    - Farklı bir tarayıcı veya mobil cihaz deneyin.
+    - Dosya adında Türkçe karakter veya özel karakter (?, \*, /) varsa değiştirin.
+  </Accordion>
 
-    <CardGroup cols={3}>
-      <Card title="WhatsApp" icon="whatsapp">
-        Hızlı teknik sorularınız için WhatsApp hattımıza mesaj gönderin: **+90 555 123 45 67**
-      </Card>
-      <Card title="Panel İçi Mesajlaşma" icon="message">
-        Platforma giriş yaptıktan sonra sağ alt köşedeki **destek simgesine** tıklayarak doğrudan mesaj gönderebilirsiniz.
-      </Card>
-      <Card title="E-posta" icon="envelope">
-        Detaylı sorunlarınızı ekran görüntüleriyle birlikte **[email protected]** adresine iletebilirsiniz.
-      </Card>
-    </CardGroup>
+  <Accordion title="Ödeme yaptım ama kurs açılmadı">
+    - Ödeme onayı genellikle 1-2 dakika içinde gelir.
+    - Havale / EFT ile ödediyseniz 1 iş günü sürebilir; dekontu **Destek → Yeni Destek Talebi** ile iletin.
+    - Kredi kartı ile ödediyseniz **Alışveriş → Siparişlerim** ekranında sipariş durumunu kontrol edin.
+    - "Beklemede" görünüyorsa 3D Secure adımı tamamlanmamış olabilir; sipariş detayından tekrar deneyin.
+  </Accordion>
 
-    Destek ekibimiz hafta içi **09:00 – 18:00** saatleri arasında hizmet vermekte olup yanıt süresi genellikle **1 iş günü**dür.
+  <Accordion title="Canlı derse katılamıyorum">
+    - Toplantı platformu (Zoom / Meet / Teams) uygulamasının veya web tarayıcı sürümünün güncel olduğundan emin olun.
+    - Kamera ve mikrofon izinlerini tarayıcı üstünden verin.
+    - VPN veya kurumsal ağ oturumu engelliyor olabilir; farklı bir ağ deneyin.
+    - Toplantı linki geçersiz görünüyorsa eğitmeninize bildirin.
+  </Accordion>
+
+  <Accordion title="Bildirimlerim gelmiyor">
+    Sırayla kontrol edin:
+
+    1. **Ayarlar → Bildirim Tercihleri** aktif mi?
+    2. Spam klasörünü ve engellenen göndericileri kontrol edin.
+    3. Tarayıcı bildirimleri için tarayıcı ayarlarından siteye izin verildiğinden emin olun.
+    4. Mobil push için tarayıcının veya mobil uygulamanın bildirim izni olmalı.
   </Accordion>
 </AccordionGroup>
+
+---
+
+## Süper Yönetici / Kurumsal
+
+<AccordionGroup>
+  <Accordion title="Yeni bir alt kurum (multi-tenant) nasıl açarım?">
+    Süper Yönetici panelinden **Kurumlar → Yeni Kurum** ile alt kurum oluşturabilirsiniz. Her kurumun ayrı subdomain, tema, kullanıcı havuzu ve raporları bulunur.
+  </Accordion>
+
+  <Accordion title="Kurum bazlı raporları nereden görürüm?">
+    **Analitik → Kurum Raporları** ekranında:
+
+    - Aktif kullanıcı sayısı
+    - Kurs satışları ve gelir
+    - Sertifika üretim istatistikleri
+    - Modül kullanım oranları (Koçluk, CRM, CMS)
+
+    kurum kırılımlı olarak sunulur.
+  </Accordion>
+
+  <Accordion title="Backup / veri yedekleme nasıl yapılır?">
+    **Ayarlar → Yedekleme** ekranından:
+
+    - Manuel yedek oluşturun (DB \+ dosyalar)
+    - Otomatik yedek zamanlaması yapın (günlük / haftalık)
+    - S3 veya harici disk hedefi tanımlayın
+    - Önceki yedeklerden geri yükleme yapın
+  </Accordion>
+
+  <Accordion title="Modül lisansı süresi doldu, ne olur?">
+    Süresi dolan modülün menüleri kilitlenir; mevcut veriler silinmez. Lisansı yenilediğinizde modül kaldığı yerden çalışmaya devam eder. Lisans durumunu **Ayarlar → Lisans** ekranından takip edebilirsiniz.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+<Note>
+  Bu SSS listesinde bulamadığınız bir sorunuz varsa lütfen [destek ekibimizle iletişime geçin](/yardim/iletisim). Yanıt süremiz genellikle **1 iş günüdür**.
+</Note>
