@@ -4,20 +4,41 @@ sidebarTitle: "Yorumlar"
 description: "Kurslara bırakılan yorumları ve puanları yönetin, onaylayın veya kaldırın."
 ---
 
-Yorumlar ekranı (reviews), öğrencilerin kurslara bıraktığı puan ve yorumları yönetmenizi sağlar. Üst menüden **Kurs Yönetimi → Yorumlar & Değerlendirmeler** ile açılır.
+Yorumlar ekranı, öğrencilerin kurslara bıraktığı puan ve yorumları yönetmenizi sağlar. Üst menüden **Kurs Yönetimi → Yorumlar & Değerlendirmeler** ile açılır.
 
-Menüde bekleyen onay sayısını gösteren bir bildirim rozeti bulunur.
+![Yorumlar & Değerlendirmeler listesi](/images/yonetici/kurslar/yorumlar/liste.png)
+
+## Filtreler
+
+Sayfanın üst kısmındaki filtre paneli ile listeyi daraltabilirsiniz:
+
+- **Kurs** — Belirli bir kursa ait yorumları görüntüler (varsayılan: Tüm kurslar).
+- **Puan** — 1–5 yıldız aralığında filtreleme yapar (varsayılan: Tüm puanlar).
+- **Onay** — Onay durumuna göre filtreler (Tümü / Onaylı / Onay Bekliyor).
+- **Filtrele** butonu seçilen kriterleri uygular, **Temizle** butonu filtreleri sıfırlar.
 
 ## Yorum Listesi
 
-- **Öğrenci Adı**
-- **Kurs**
-- **Puan** (1–5 yıldız)
-- **Yorum Metni**
-- **Tarih**
-- **Durum** (Onaylı / Onay Bekliyor)
-- **İşlemler** (Onayla, Reddet, Sil)
+Tabloda her yorum için aşağıdaki sütunlar yer alır:
+
+| Sütun | Açıklama |
+| --- | --- |
+| **Kurs** | Yorumun bırakıldığı kursun adı. |
+| **Öğrenci** | Yorumu yazan öğrencinin adı ve avatarı. |
+| **Puan** | Öğrencinin verdiği yıldız puanı (örn. 5/5). |
+| **Yorum** | Öğrencinin yazdığı yorum metni. |
+| **Durum** | Onaylı / Onay Bekliyor rozeti. |
+| **Tarih** | Yorumun bırakıldığı tarih ve saat. |
+| **İşlem** | Yorumu reddetme (×) ve silme (çöp kutusu) butonları. |
 
 ## Onay Süreci
 
-Her yorum yayına girmeden önce yönetici onayından geçer. Yorum üzerinden **Onayla** butonu ile yayınlayabilir, **Reddet** ile gizleyebilir veya tamamen silebilirsiniz.
+Öğrenciler tarafından bırakılan her yorum, yayına girmeden önce yönetici onayından geçer. Menüde bekleyen onay sayısını gösteren bir bildirim rozeti bulunur.
+
+- **Onayla** — Yorumu yayınlar ve kurs sayfasında herkese görünür hale getirir.
+- **Reddet (×)** — Yorumu gizler; öğrenciye görünmeye devam eder ancak kurs sayfasında yayınlanmaz.
+- **Sil (çöp kutusu)** — Yorumu kalıcı olarak siler. Bu işlem geri alınamaz.
+
+<Tip>
+  Kurs sayfalarındaki genel puan ortalaması, yalnızca **Onaylı** durumundaki yorumlardan hesaplanır.
+</Tip>
