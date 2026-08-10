@@ -8,32 +8,134 @@ Kurs listesi ekranı, platformdaki tüm kursları görüntülemek ve yönetmek i
 
 ## Kurs Listesi
 
-Listede her kurs için şu bilgiler yer alır:
+![Tüm Kurslar Listesi](/images/yonetici/kurslar/liste.png)
 
-- **Kurs Adı ve Görseli**
-- **Kategori**
-- **Eğitmen**
-- **Fiyat**
-- **Kayıtlı Öğrenci Sayısı**
-- **Durum** (Yayında / Taslak / Pasif)
-- **İşlemler** (Düzenle, Sil, Önizle)
+Üst kısımdaki araçlar:
 
-## Filtreler
+- **Arama kutusu** — Kurs adı veya slug ile arama yapar.
+- **Tüm durumlar** — Yayında / Taslak / Pasif durumuna göre filtreler.
+- **Tüm eğitmenler** — Eğitmene göre filtreler.
+- **Tüm kategoriler** — Kategoriye göre filtreler.
+- **Ara / Temizle** — Filtreleri uygular veya sıfırlar.
+- **Yeni Kurs** — Kurs oluşturma sayfasını açar.
 
-Üst kısımdaki arama ve filtreleme araçları:
+Tablo sütunları:
 
-- Kurs adı veya eğitmen adı ile arama
-- Kategoriye göre filtreleme
-- Duruma göre filtreleme (Tümü, Yayında, Taslak)
+| Sütun | Açıklama |
+| --- | --- |
+| **ID** | Kursun sistem kimliği. |
+| **Kurs Adı** | Kapak görseli, kurs adı ve slug bağlantısı. |
+| **Eğitmen** | Kursu veren eğitmen. |
+| **Kategoriler** | Kursun bağlı olduğu kategori(ler). |
+| **Fiyat** | Normal ve varsa indirimli fiyat. |
+| **Seviye** | Başlangıç / Orta / İleri. |
+| **Durum** | Yayında / Taslak / Pasif. |
+| **İşlemler** | Önizle, Müfredat, Düzenle, Kopyala, Sil. |
 
 ## Yeni Kurs Oluşturma
 
-Sağ üstteki **Yeni Kurs** butonuna tıklayarak kurs oluşturma sihirbazını başlatabilirsiniz. Kurs oluşturma çok adımlı bir süreçtir:
+Sağ üstteki **Yeni Kurs** butonuna tıklandığında kurs oluşturma sayfası açılır. Form beş sekmeden oluşur: **Temel Bilgiler**, **Çeviriler**, **Fiyatlandırma**, **Ayarlar** ve **SEO**.
 
-1. **Genel Bilgiler** — Kurs adı, açıklama, kategori, eğitmen, dil.
-2. **Fiyatlandırma** — Ücretsiz / Ücretli, indirim ayarları.
-3. **Görsel & Medya** — Kapak görseli, tanıtım videosu.
-4. **Müfredat** — Bölümler ve dersler.
-5. **Ayarlar** — Sertifika, ön koşullar, hedef kitle.
+Sayfanın altında üç işlem butonu yer alır:
 
-Her adımda **Kaydet ve Devam Et** ya da **Taslak Olarak Kaydet** seçenekleri bulunur.
+- **Vazgeç** — Değişiklikleri kaydetmeden listeye döner.
+- **Kaydet** — Kursu kaydeder ve aynı sayfada kalır.
+- **Kaydet ve Müfredata Geç** — Kursu kaydeder ve müfredat düzenleme ekranına yönlendirir.
+
+### Temel Bilgiler
+
+![Yeni Kurs - Temel Bilgiler](/images/yonetici/kurslar/yeni-temel-bilgiler.png)
+
+Bu sekmede kursun ana bilgileri girilir:
+
+- **Eğitmen** _(zorunlu)_ — Kursu verecek eğitmen. Liste **Kullanıcılar → Eğitmenler** bölümünden gelir.
+- **Seviye** _(zorunlu)_ — Başlangıç, Orta veya İleri.
+- **Varsayılan Dil** — Kursun ana dili.
+- **Slug (URL)** — Boş bırakılırsa kurs adından otomatik oluşturulur.
+- **Kurs Süresi (dk)** — Toplam kurs süresi, dakika cinsinden.
+- **Sıralama** — Listeleme sırası.
+- **Kapak Resmi** — Önerilen boyut 1280×720 piksel (16:9).
+- **Kategoriler** — **Kurs Yönetimi → Kategoriler** bölümünden gelir. Çoklu seçim yapılabilir.
+- **Etiketler** — **Kurs Yönetimi → Etiketler** bölümünden gelir. Var olan etiketleri seçebilir veya yazıp Enter ile yeni etiket ekleyebilirsiniz.
+- **Yayınla** — Açık olduğunda kurs canlıya alınır.
+- **Sertifika Var** — Açık olduğunda kursu tamamlayan öğrencilere sertifika verilir.
+
+<Tip>
+  Kategori veya eğitmen listesi boş görünüyorsa önce ilgili bölümden kayıt oluşturmanız gerekir.
+</Tip>
+
+### Çeviriler
+
+![Yeni Kurs - Çeviriler](/images/yonetici/kurslar/yeni-ceviriler.png)
+
+Kursun dile göre içerik alanlarını buradan doldurursunuz. Her dil için ayrı bir bölüm açılır (ör. **Türkçe (TR)**):
+
+- **Kurs Adı** _(zorunlu)_ — İlgili dildeki kurs başlığı.
+- **Kısa Açıklama** — Kurs kartlarında ve listelerde görünen özet metin.
+- **Genel Bakış (Overview)** — Zengin metin editörü ile hazırlanan detaylı kurs tanıtımı. Başlık, liste, tablo, link, görsel ve video eklenebilir.
+- **Müfredat Metni** — Kursun içeriğini özetleyen açıklama.
+
+<Tip>
+  Birden fazla dil desteklenen kurslarda her dil için ayrı sekme doldurmanız önerilir. Doldurulmayan dillerde varsayılan dilin metni gösterilir.
+</Tip>
+
+### Fiyatlandırma
+
+![Yeni Kurs - Fiyatlandırma](/images/yonetici/kurslar/yeni-fiyatlandirma.png)
+
+Kursun ücret bilgileri buradan yönetilir:
+
+- **Fiyat** _(zorunlu)_ — Normal satış fiyatı ve para birimi (TRY, USD, EUR vb.).
+- **İndirimli Fiyat** — Opsiyonel. Girilirse normal fiyattan düşük olmalıdır. Kurs sayfasında normal fiyat üzeri çizili gösterilir.
+- **Erişim Süresi (Gün)** — Öğrencinin kursa kaç gün erişebileceği. Boş bırakılırsa sınırsız erişim tanımlanır.
+
+<Info>
+  Ücretsiz kurs oluşturmak için **Fiyat** alanına `0` girin.
+</Info>
+
+### Ayarlar
+
+![Yeni Kurs - Ayarlar](/images/yonetici/kurslar/yeni-ayarlar.png)
+
+Kursun davranışını belirleyen genel ayarlar:
+
+**Genel Ayarlar**
+
+- **Yorumlar Aktif** — Öğrenciler kursa ve derslere yorum yapabilir.
+- **Dersleri Kilitli Göster** — Sıralı ilerleme veya drip content nedeniyle erişilemeyen dersler öğrencide kilitli görünür.
+- **Sıralı İlerleme (Kurs Geneli)** — Öğrenci bir dersi tamamlamadan sonraki derse geçemez.
+
+**Drip Content (Kademeli Yayınlama)**
+
+- **Drip Content Aktif** — İçerik belirli bir zaman planına göre kademeli açılır.
+
+<Warning>
+  Drip content aktifse öğrenciler her dersi kayıt/başlangıç tarihinden itibaren belirtilen süre sonunda görebilir. Süreleri her ders bazında müfredat ekranından ayarlayın.
+</Warning>
+
+### SEO
+
+![Yeni Kurs - SEO](/images/yonetici/kurslar/yeni-seo.png)
+
+Arama motorlarında kursun nasıl görüneceğini belirler:
+
+- **Meta Başlık** — Google sonuçlarında görünen başlık. 60 karakteri geçmemelidir.
+- **Meta Açıklama** — Google sonuçlarında görünen açıklama. 155–160 karakter arası önerilir.
+
+<Tip>
+  Meta başlık ve açıklamayı kursun anahtar kelimelerini içerecek şekilde yazın. Boş bırakırsanız kurs adı ve kısa açıklama otomatik kullanılır.
+</Tip>
+
+## Kurs İşlemleri
+
+Liste tablosundaki her satırda bulunan işlem butonları:
+
+- **Önizle** — Kursun öğrenci tarafındaki görünümünü yeni sekmede açar.
+- **Müfredat** — Kursun bölüm ve derslerini düzenleme ekranına gider.
+- **Düzenle** — Yukarıdaki beş sekmeli kurs formunu açar.
+- **Kopyala** — Kursu tüm ayarlarıyla çoğaltır (yeni bir taslak oluşur).
+- **Sil** — Kursu kaldırır. Kayıtlı öğrencisi olan kurslarda dikkatli olun.
+
+<Warning>
+  Silinen kurslar geri alınamaz. Kayıtlı öğrencisi bulunan bir kursu silmek yerine **Durum → Pasif** yapmanız önerilir.
+</Warning>
