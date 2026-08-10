@@ -139,3 +139,74 @@ Liste tablosundaki her satırda bulunan işlem butonları:
 <Warning>
   Silinen kurslar geri alınamaz. Kayıtlı öğrencisi bulunan bir kursu silmek yerine **Durum → Pasif** yapmanız önerilir.
 </Warning>
+
+## Kurs Detay Sayfası
+
+Liste tablosundaki bir kursun adına tıkladığınızda kurs detay sayfası açılır. Detay sayfası beş sekmeden oluşur: **Bilgiler**, **Müfredat**, **Öğrenciler**, **Yorumlar**, **SSS**. Her sekmenin yanındaki sayı, o sekmedeki kayıt sayısını gösterir.
+
+### Bilgiler
+
+![Kurs Detay - Bilgiler](/images/yonetici/kurslar/detay-bilgiler.png)
+
+Kursun tüm ayarlarını okunur formatta özetler:
+
+- **Temel Bilgiler** — Kurs adı, slug, kategori, seviye, dil ve durum.
+- **Çeviriler** — Kursa eklenmiş dillerin listesi ve her dilin başlık/açıklama özeti.
+- **Müfredat Özeti** — Toplam bölüm ve ders sayısı, tahmini süre.
+- **Kurs Ayarları** — Yorumlar, kilitli ders gösterimi, sıralı ilerleme ve drip content durumu.
+- **Meta Bilgiler** — SEO başlığı ve açıklaması.
+
+Sağdaki **İşlemler** panelinden hızlı erişim butonları:
+
+- **Düzenle** — Kursu beş sekmeli formda açar.
+- **Müfredat Builder** — Bölüm ve ders düzenleme ekranına gider.
+- **SSS Yönet** — SSS sekmesine gider.
+- **Kopyala** — Kursu çoğaltır.
+- **Geri Dön** — Kurs listesine döner.
+- **Sil** — Kursu kaldırır.
+
+### Müfredat
+
+Kursun bölüm ve dersleri **Müfredat Builder** üzerinden yönetilir. Bu sekme sizi doğrudan bölüm/ders düzenleme ekranına yönlendirir.
+
+<Info>
+  Bölüm ve ders yönetiminin detayları için [Bölümler](/yonetici/kurslar/bolumler) ve [Dersler](/yonetici/kurslar/dersler) sayfalarına bakın.
+</Info>
+
+### Öğrenciler
+
+![Kurs Detay - Öğrenciler](/images/yonetici/kurslar/detay-ogrenciler.png)
+
+Kursa kayıtlı tüm öğrencileri listeler. Tabloda **Öğrenci**, **Durum**, **İlerleme**, **Başlangıç** ve **İşlem** sütunları bulunur.
+
+Sağ üstteki **Öğrenci ekle** butonu, bir öğrenciyi bu kursa manuel olarak kaydeder.
+
+<Info>
+  Manuel kayıt akışının detayları için [Kayıtlı Öğrenciler → Manuel Kayıt](/yonetici/kurslar/kayitli-ogrenciler) sayfasına bakın.
+</Info>
+
+### Yorumlar
+
+![Kurs Detay - Yorumlar](/images/yonetici/kurslar/detay-yorumlar.png)
+
+Öğrencilerin bu kursa bıraktığı yorumları listeler. Tablo sütunları: **Öğrenci**, **Puan**, **Yorum**, **Durum**, **İşlem**.
+
+Sağ üstteki **Tümünü yönet** butonu sizi tüm yorumların yönetildiği [Yorumlar](/yonetici/kurslar/yorumlar) sayfasına götürür.
+
+### SSS
+
+![Kurs Detay - SSS](/images/yonetici/kurslar/detay-sss.png)
+
+Bu sekmede eklediğiniz SSS'ler, kursun frontend'deki (öğrenci tarafındaki) detay sayfasında **Sıkça Sorulan Sorular** bölümünde görünür.
+
+**SSS eklemek için:**
+
+1. Alt kısımdaki **Yeni soru...** alanına soruyu yazın.
+2. **Cevap (isteğe bağlı)** alanına cevabı yazın. Boş bırakabilirsiniz.
+3. **Ekle** butonuna tıklayın.
+
+Bir kursa birden fazla SSS ekleyebilirsiniz. Eklenen SSS'ler **SSS Listesi** altında listelenir ve **Sürükleyerek sıralayın** özelliğiyle sırasını değiştirebilirsiniz.
+
+<Tip>
+  Kursla ilgili sık gelen soruları (süre, sertifika, önkoşul, hedef kitle, vs.) buraya ekleyerek öğrencilerin kayıt öncesi kararını kolaylaştırın.
+</Tip>
