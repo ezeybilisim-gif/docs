@@ -10,19 +10,104 @@ Bölümler (section), bir kursu konu başlıklarına göre gruplamak için kulla
 
 ## Bölüm Listesi
 
-- **Bölüm Adı**
-- **Ait Olduğu Kurs**
-- **Ders Sayısı**
-- **Sıra**
-- **İşlemler**
+![Tüm Bölümler](/images/yonetici/kurslar/bolumler/liste.png)
+
+Sistemdeki tüm kursların bölümleri tek bir tabloda listelenir. Üst kısımda toplam bölüm sayısı gösterilir.
+
+**Filtreler:**
+
+- **Kurs** — Belirli bir kursa ait bölümleri filtreler. Varsayılan: **Tüm kurslar**.
+- **Ara** — Bölüm başlığında arama yapar.
+- **Filtrele** — Seçilen filtreleri uygular.
+- **Temizle** — Aktif filtreleri sıfırlar.
+
+**Tablo sütunları:**
+
+- **ID** — Bölümün sistem numarası.
+- **Bölüm Başlığı** — Tıklanınca bölüm detayına gider.
+- **Kurs** — Bölümün ait olduğu kurs (tıklanabilir).
+- **Sıra** — Bölümün kurs içindeki görünme sırası.
+- **Ders Sayısı** — Bölüme bağlı toplam ders adedi.
+- **İşlemler** — Görüntüle, Dersler, Düzenle, Sil butonları.
 
 ## Yeni Bölüm Ekleme
 
-**Yeni Bölüm** butonu ile:
+Sağ üstteki **\+ Yeni Bölüm** butonuna tıkladığınızda **Hangi kursa eklensin?** açılır listesi görünür. Buradan bölümü ekleyeceğiniz kursu seçin.
 
-- **Kurs** (açılır listeden seçin)
-- **Bölüm Adı**
-- **Açıklama**
-- **Sıra** (bölümün kurs içindeki görünme sırası)
+![Yeni Bölüm - Kurs seçimi](/images/yonetici/kurslar/bolumler/yeni-kurs-secim.png)
 
-Bölümlere ders eklemek için **Dersler** ekranını kullanın.
+Kurs seçildikten sonra bölüm ekleme formu açılır.
+
+<Tip>
+  Üstteki **Kurs** filtresinden bir kurs seçip **Filtrele** derseniz, **\+ Yeni Bölüm** butonu doğrudan o kursa bölüm ekleyen forma yönlenir; kurs seçim adımı atlanır.
+</Tip>
+
+### Bölüm Formu
+
+![Yeni Bölüm Formu](/images/yonetici/kurslar/bolumler/yeni-form.png)
+
+Yeni bölüm formunda doldurulacak alanlar:
+
+- **Bölüm Başlığı** — Bölümün adı (zorunlu). Örn: "Giriş ve Temel Kavramlar".
+- **Sıra Numarası** — Bölümün kurs içindeki görünme sırası. Varsayılan olarak `1` gelir.
+
+Formun üst kısmındaki breadcrumb (**Anasayfa / Kurslar / \[Kurs Adı\] / Bölümler / Oluştur**) ile hangi kursa bölüm eklediğinizi görebilirsiniz. Sağ üstteki etiket de aktif kursu gösterir.
+
+Kaydettikten sonra bölüm listesine dönersiniz ve **Dersler** butonuyla bölüme ders eklemeye başlayabilirsiniz.
+
+<Info>
+  Bölüm başlıkları öğrenci tarafında müfredat listesinde göründüğü için kısa ve konuyu yansıtan isimler tercih edin (ör. "Giriş", "Temel Kavramlar", "İleri Konular").
+</Info>
+
+## Bölüm Detay Sayfası
+
+Liste tablosundan bir bölüme veya **Görüntüle** butonuna tıkladığınızda bölüm detay sayfası açılır.
+
+![Bölüm Detay Sayfası](/images/yonetici/kurslar/bolumler/detay.png)
+
+Sayfa üç ana panelden oluşur:
+
+**Dersler paneli (sol):**
+
+Bölüme bağlı tüm dersler sıra numarasıyla listelenir. Her ders satırında:
+
+- **Sıra numarası** (`#1`, `#2`...) ve ders başlığı
+- **Süre** — Dersin dakika cinsinden uzunluğu
+- **Durum etiketleri** — **Aktif** (yayında), **Önizleme** (kurs satın alınmadan izlenebilir)
+
+Üstteki **\+ Yeni Ders** butonu doğrudan bu bölüme ders ekler.
+
+**İşlemler paneli (sağ üst):**
+
+- **Ders Ekle** — Yeni ders ekleme formunu açar.
+- **Düzenle** — Bölüm başlığı ve sırasını değiştirir.
+- **Bölüm Listesine Dön** — Tüm bölümler tablosuna döner.
+- **Kursa Dön** — Bölümün ait olduğu kursun detay sayfasına gider.
+- **Sil** — Bölümü ve altındaki tüm dersleri kaldırır.
+
+**İstatistikler paneli (sağ):**
+
+- **Toplam Ders** sayısı
+- **Aktif** ve **Önizleme** ders sayıları
+- **Toplam Süre** (tüm derslerin toplamı, dakika)
+
+**Meta Bilgiler paneli (sağ alt):**
+
+Bölümün **ID**'si, ait olduğu **Kurs** (tıklanabilir), **Sıra**, **Oluşturulma** ve **Güncellenme** tarihleri.
+
+## Bölüm İşlemleri
+
+Liste tablosundaki her satırda bulunan işlem butonları:
+
+- **Görüntüle** (göz) — Bölüm detay sayfasını açar.
+- **Dersler** (liste) — Bölüme bağlı dersleri listeler; buradan ders ekleyebilirsiniz.
+- **Düzenle** (kalem) — Bölüm adını, açıklamasını ve sırasını değiştirir.
+- **Sil** (çöp) — Bölümü kaldırır.
+
+<Warning>
+  Bir bölümü sildiğinizde altındaki dersler de silinir. Dersleri kaybetmek istemiyorsanız önce dersleri başka bir bölüme taşıyın.
+</Warning>
+
+<Info>
+  Bölümlere ders eklemek için [Dersler](/yonetici/kurslar/dersler) ekranını kullanabilir veya bölümün **Dersler** butonuyla doğrudan o bölüme ders ekleyebilirsiniz.
+</Info>

@@ -4,29 +4,173 @@ sidebarTitle: "Dersler"
 description: "Kurslara ait video derslerini, kaynakları ve içerikleri yönetin."
 ---
 
-Dersler (lectures), bir kurs bölümüne ait tekil video / içerik birimidir. Üst menüden **Kurs Yönetimi → Dersler** ile erişirsiniz.
+Bir ders, her zaman bir **bölüme** bağlıdır. Üst menüden **Kurs Yönetimi → Dersler** ile ders listesine erişirsiniz. Yeni ders eklemek istiyorsanız ilgili **Bölüm** sayfasından **\+ Ders Ekle** butonunu kullanın; bu sayfa yalnızca listeleme amaçlıdır.
 
 ## Ders Listesi
 
-- **Ders Adı**
-- **Ait Olduğu Kurs / Bölüm**
-- **Tür** (Video, Metin, PDF, Canlı vs.)
-- **Süre**
-- **Ücretsiz Önizleme** (evet/hayır)
-- **İşlemler**
+<Frame>
+  ![Tüm dersler listesi](/images/yonetici/kurslar/dersler/liste.png)
+</Frame>
 
-## Yeni Ders Ekleme
+Sayfa üstünde toplam ders sayısı ve bilgilendirme kutusu yer alır. Bilgi kutusu, yeni ders eklemek için izlenecek yolu (Bölümler → ilgili bölüm → **Dersleri Görüntüle** veya **\+ Ders Ekle**, ya da alternatif olarak **Kurslar → Müfredat → Bölüm → Yeni Ders**) hatırlatır.
 
-**Yeni Ders** butonu ile açılan formda:
+**Filtreler**
 
-- **Kurs** ve **Bölüm** seçimi
-- **Ders Adı**
-- **İçerik Türü** (Video URL, dosya yükleme, metin, embed vs.)
-- **Video / Dosya**
-- **Açıklama**
-- **Süre** (dakika)
-- **Ücretsiz önizleme** ayarı
+- **Kurs** — Tek bir kursun derslerini listelemek için kurs seçin.
+- **Bölüm** — Seçilen kursa bağlı bölüm filtresi.
+- **Ara** — Ders başlığına göre metin araması.
+- **Filtrele** ve **Temizle** butonları.
 
-## Ders Kaynakları
+**Tablo sütunları**
 
-Her dersin altına PDF, sunum veya diğer ek dosyalar yükleyebilirsiniz. Bu işlem düzenleme ekranındaki **Kaynaklar** sekmesinden yapılır.
+- **ID**
+- **Ders Başlığı** — Yanında **Önizleme** rozeti ders ücretsiz önizlemeye açıksa görünür.
+- **Kurs**
+- **Bölüm** — Bölüm detayına giden bağlantı.
+- **Süre** (dk:sn)
+- **Durum** — **Aktif** / **Pasif**.
+- **İşlemler** — **Görüntüle** (göz), **Düzenle** (kalem), **Sil** (çöp).
+
+Dersler, ait oldukları kursa göre gruplanır; her kurs başlığının yanında **Bu kursu filtrele** kısayolu bulunur.
+
+## Ders Detay Sayfası
+
+<Frame>
+  ![Ders detay sayfası](/images/yonetici/kurslar/dersler/detay.png)
+</Frame>
+
+Ders satırındaki **Görüntüle** ikonu ile açılan ekranda ders bilgilerini, atanmış sınavları ve ders kaynaklarını yönetirsiniz.
+
+### Ders Detayları
+
+- **Ders Başlığı**
+- **Slug**
+- **Bölüm** — bölüm sayfasına bağlantı
+- **Kurs** — kurs detayına bağlantı
+- **Süre** (dakika ve saniye)
+- **Sıra** (#numara)
+- **Önizleme** — _Evet (Herkes izleyebilir)_ / _Hayır_
+- **Sıralı İlerleme** — _Kurs ayarını uygula_, _Zorunlu_, _Serbest_
+- **Durum** — **Aktif** / **Pasif**
+
+### İşlemler paneli
+
+Sağ üstteki İşlemler kutusundan hızlı eylemler:
+
+- **\+ Kaynak Ekle** — Yeni kaynak ekleme formunu açar.
+- **Düzenle** — Ders bilgilerini düzenler.
+- **Ders Listesine Dön**
+- **Bölüme Dön**
+- **Sınav Ekle** — Derse sınav atama ekranını açar.
+- **Dersi Sil**
+
+### İstatistikler
+
+Kaynak ve Sınav sayılarını gösterir.
+
+### Meta Bilgiler
+
+ID, Company ID, Slug, Section ID, Oluşturulma ve Güncellenme tarihleri.
+
+### Atanmış Sınavlar
+
+Bu derse atanmış quiz / sınavların listesi. Sağ üstteki **Sınav Yönet** butonu ile derse ait sınavları toplu düzenleyebilirsiniz. Boşsa **Henüz sınav atanmamış** mesajı ve **\+ Sınav Ekle** butonu görünür.
+
+<Tip>
+  "Dersten çıkar" işlemi sınavı **silmez**, yalnızca bu dersten ayırır.
+</Tip>
+
+### Ders Kaynakları
+
+Öğrencinin derste göreceği içerikler (video, PDF, resim, link vb.) burada listelenir.
+
+**Tablo sütunları**
+
+- **Önizleme** — Kaynağın küçük görseli.
+- **Kaynak Tipi** — Örneğin _Embed Kodu_, _Video Link_, _PDF_.
+- **Dosya/Link** — Kaynak adı ve link/embed ikonu.
+- **Boyut** — Yüklenen dosya boyutu (yalnızca sunucuya yüklenenler için).
+- **Tarih** — Yükleme tarihi.
+- **İşlemler** — **Oynat** (video), **Düzenle**, **Sil**.
+
+## Kaynak Ekleme (Yeni Kaynak)
+
+Detay sayfasındaki **\+ Kaynak Ekle** butonu, kaynak oluşturma formunu açar.
+
+<Frame>
+  ![Yeni kaynak ekleme formu](/images/yonetici/kurslar/dersler/kaynak-ekle.png)
+</Frame>
+
+Üstte breadcrumb (Anasayfa / Kurslar / Kurs / Bölüm / Ders / Oluştur) ve **Derse Dön / Bölüme Dön / Ders Listesi / Kursa Dön** kısayolları bulunur. Kaynağın hangi derse ekleneceği form üstünde belirtilir.
+
+### Kaynak Tipi
+
+Aşağıdaki tiplerden biri seçilir (seçime göre form alanları değişir):
+
+| Tip | Açıklama |
+| --- | --- |
+| **Video Yükle (sunucu)** | Sunucuya video dosyası yüklenir (maks. **500 MB**). |
+| **Bulut Depolama — Video / Doküman (R2)** | R2 bulut depolamaya yüklenir; büyük dosyalar için uygundur. |
+| **Video Link (YouTube/Vimeo)** | YouTube veya Vimeo video linki eklenir. |
+| **Video Embed Kodu (iframe)** | YouTube, Vimeo, Wistia, Dailymotion gibi platformlardan alınan `<iframe>` embed kodu yapıştırılır. |
+| **PDF Döküman (sunucu)** | Sunucuya PDF yüklenir (maks. **50 MB**). |
+| **Resim** | Görsel dosyası yüklenir. |
+| **Metin İçerik** | Markdown veya HTML formatında metin içeriği girilir. |
+| **Harici Link** | Google Drive, harici bir sayfa veya benzeri URL eklenir. |
+| **Ek Dosya (sunucu)** | Slayt, örnek dosya, arşiv gibi ek dosyalar yüklenir. |
+
+### Ortak alanlar
+
+- **Video/Link URL** _(Video Link ve Harici Link için zorunlu)_ — YouTube, Vimeo, Google Drive veya direkt video linki.
+- **Embed Kodu** _(Video Embed için zorunlu)_ — Iframe kodu; girildikçe altında önizleme oluşur.
+- **Dosya Yükle** _(Video Yükle, Bulut Depolama, PDF, Resim, Ek Dosya için)_ — Dosya seçme alanı.
+- **Metin İçerik** _(Metin İçerik için)_ — Markdown/HTML alanı.
+- **Video Poster/Thumbnail** _(Video Yükle ve Video Link için)_ — **Poster Seç** butonu ile video başlamadan önce gösterilecek 1280×720 kapak resmi seçilir.
+
+### Gelişmiş Ayarlar (Opsiyonel)
+
+- **Extra JSON Data** — Video kalitesi, altyazı dili gibi ekstra bilgiler JSON formatında eklenebilir. Örnek: `{"quality": "1080p", "subtitles": "tr"}`.
+
+### Önemli notlar
+
+- Video dosyaları için maksimum boyut: **500 MB**.
+- PDF dosyaları için maksimum boyut: **50 MB**.
+- Yükleme süresi dosya boyutuna göre değişir.
+- Büyük dosyalar için harici link (YouTube, Vimeo) kullanılması önerilir.
+
+Form altındaki **Kaydet** butonu kaynağı ekler ve ders detayına geri döndürür.
+
+## Derse Sınav Atama
+
+Ders detay sayfasındaki **Sınav Ekle** (veya **Sınav Yönet**) butonu, **Derse Sınav Atama** ekranını açar.
+
+<Frame>
+  ![Derse sınav atama ekranı](/images/yonetici/kurslar/dersler/sinav-ekle.png)
+</Frame>
+
+Üstte ders bilgisi (Bölüm / Ders) ve sağda **Atanmış Sınav Sayısı** rozeti bulunur.
+
+### Atanmış Sınavlar
+
+Bu derse atanmış quiz / sınavlar listelenir. Boşsa **Henüz sınav atanmamış** mesajı görüntülenir.
+
+### Eklenebilir Sınavlar
+
+Bu kursa tanımlı ancak henüz bu derse atanmamış sınavlar burada listelenir. Her kart üzerinde:
+
+- **Sınav başlığı**
+- Rozetler: **Quiz** türü, **Soru sayısı**, **Puan**
+- Alt satır: **Geçme %**, **Deneme sayısı**, **Süre (dk)**
+- **\+ Ekle** butonu
+
+**\+ Ekle** butonu ile ilgili sınav derse eklenir ve solda **Atanmış Sınavlar** listesine geçer.
+
+### Toplu Sınav Seçimi
+
+Alt panelde kursa ait tüm sınavlar checkbox listesi olarak görüntülenir. İstediklerinizi işaretleyip **Kaydet** butonuna basarak toplu atama yapabilirsiniz.
+
+<Warning>
+  Seçmediğiniz sınavlar otomatik olarak dersten çıkarılır. Bu işlem sınavı **silmez**, yalnızca bu dersten ayırır.
+</Warning>
+
+Sağ üstteki **Geri Dön** butonu ile ders detayına dönebilirsiniz.

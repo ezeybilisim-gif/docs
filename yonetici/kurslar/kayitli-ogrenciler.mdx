@@ -4,25 +4,165 @@ sidebarTitle: "Kayıtlı Öğrenciler"
 description: "Kurslara kayıtlı öğrencileri görüntüleyin, manuel kayıt ekleyin ve ilerlemeleri takip edin."
 ---
 
-Kayıtlı Öğrenciler ekranı (enrollments), her kursa kimlerin kayıtlı olduğunu ve ilerlemelerini gösterir. Üst menüden **Kurs Yönetimi → Kayıtlı Öğrenciler** ile açılır.
+**Kurs Kayıtları** ekranı, her kursa kimlerin kayıtlı olduğunu, kayıt türünü, ilerleme yüzdesini ve erişim sürelerini tek yerden yönetmenizi sağlar. Üst menüden **Kurs Yönetimi → Kayıtlı Öğrenciler** ile açılır.
 
 ## Kayıt Listesi
 
-- **Öğrenci Adı & E-posta**
-- **Kurs**
-- **Kayıt Tarihi**
-- **İlerleme %**
-- **Son Aktivite**
-- **Durum** (Aktif, Tamamlandı, İptal)
-- **İşlemler**
+<Frame>
+  ![Kurs Kayıtları listesi](/images/yonetici/kurslar/kayitli-ogrenciler/liste.png)
+</Frame>
+
+Sayfanın üst kısmında toplam kayıt sayısı ve durum bazlı sayaçlar bulunur:
+
+- **Toplam Kayıt** — Sistemdeki tüm kurs kayıtlarının sayısı.
+- **Aktif** — Erişim süresi devam eden kayıtlar.
+- **Süresi Dolmuş** — Erişim süresi sona ermiş kayıtlar.
+- **İptal Edilmiş** — Yönetici tarafından iptal edilmiş kayıtlar.
+
+### Filtreler
+
+- **Tüm kurslar** — Belirli bir kursa göre filtreleyin.
+- **Tüm durumlar** — Aktif, süresi dolmuş veya iptal edilmiş kayıtları gösterin.
+- **Tüm kayıt türleri** — Manuel, satın alma, hediye vb. kayıt türüne göre filtreleyin.
+- **Ara** — Seçilen filtreleri uygular.
+- **Temizle** — Tüm filtreleri sıfırlar.
+
+### Tablo Sütunları
+
+| Sütun | Açıklama |
+| --- | --- |
+| **ID** | Kayıt numarası. |
+| **Öğrenci** | Öğrencinin adı, e-postası ve avatarı. |
+| **Kurs** | Öğrencinin kayıtlı olduğu kursun başlığı. |
+| **Durum** | Aktif, Süresi Dolmuş veya İptal Edilmiş. |
+| **İlerleme** | Kurstaki tamamlanma yüzdesi (görsel bar ile). |
+| **Kayıt Türü** | Manuel, Satın Alma, Hediye vb. |
+| **Başlangıç** | Erişimin başladığı tarih. |
+| **Bitiş** | Erişimin sona ereceği tarih veya **Sınırsız**. |
+| **İşlemler** | Görüntüle, Düzenle, Sil. |
+
+### Üst Aksiyonlar
+
+- **Manuel Kayıt** — Tek bir öğrenciyi seçtiğiniz kursa manuel olarak kaydeder.
+- **Toplu Kayıt** — CSV dosyası ile birden fazla öğrenciyi aynı anda kaydeder.
 
 ## Manuel Kayıt
 
-**Yeni Kayıt** butonu ile:
+Sağ üstteki **Manuel Kayıt** butonu tek öğrenciyi seçilen kursa kaydetmek için kullanılır.
 
-- **Öğrenci** (arayarak seçin)
-- **Kurs**
-- **Kayıt Türü** (Ücretli, hediye, promosyon)
-- **Geçerlilik Tarihi** (opsiyonel)
+<Frame>
+  ![Manuel Kayıt formu](/images/yonetici/kurslar/kayitli-ogrenciler/manuel-kayit.png)
+</Frame>
 
-Bu ekrandan bir kayıtı iptal edebilir veya öğrencinin ilerlemesini sıfırlayabilirsiniz.
+### Öğrenci Bilgileri
+
+- **Öğrenci** (zorunlu) — Kayıtlı öğrenciler arasından seçim yapın.
+
+### Kurs Bilgileri
+
+- **Kurs** (zorunlu) — Öğrencinin kaydedileceği kursu seçin.
+
+### Erişim Ayarları
+
+- **Başlangıç Tarihi** — Erişimin başlayacağı tarih. Boş bırakılırsa bugünden itibaren başlar.
+- **Erişim Süresi (Gün)** — Öğrencinin kursa erişebileceği gün sayısı (örn: 365). Boş bırakılırsa **sınırsız erişim** verilir.
+
+Sağ kolondaki **Yardım** paneli adımları özetler:
+
+1. Öğrenciyi seçin
+2. Kursu seçin
+3. Erişim süresini belirleyin (opsiyonel)
+4. Boş bırakırsanız sınırsız erişim olur
+
+Kayıt oluşturulduktan sonra **Kayıt Bilgileri** kartında durum ve ilerleme bilgileri görüntülenir.
+
+## Toplu Kayıt
+
+Birden fazla öğrenciyi tek seferde kaydetmek için sağ üstteki **Toplu Kayıt** butonunu kullanın.
+
+<Frame>
+  ![Toplu Kurs Kaydı ekranı](/images/yonetici/kurslar/kayitli-ogrenciler/toplu-kayit.png)
+</Frame>
+
+### CSV Sütunları
+
+| Sütun | Zorunluluk | Açıklama |
+| --- | --- | --- |
+| `email` | Zorunlu | Kaydedilecek öğrencinin e-posta adresi. |
+| `course_slug` | Opsiyonel | Kayıt yapılacak kursun slug değeri. Boş bırakılırsa **Varsayılan kurs** kullanılır. |
+| `access_duration_days` | Opsiyonel | Erişim süresi (gün). Boş bırakılırsa **Varsayılan erişim süresi** kullanılır. |
+| `starts_at` | Opsiyonel | Erişim başlangıç tarihi (`Y-m-d` formatı, örn: `2026-07-16`). |
+
+### Şablon
+
+Sağ üstteki **Şablon indir** butonu ile örnek CSV dosyasını indirebilirsiniz. Şablon içeriği:
+
+```csv enrollment-template.csv
+email,course_slug,access_duration_days,starts_at
+ogrenci@ornek.com,ornek-kurs-slug,30,2026-07-16
+```
+
+### Form Alanları
+
+- **CSV Dosyası** (zorunlu) — Hazırladığınız CSV dosyasını seçin.
+- **Varsayılan kurs** — CSV'de `course_slug` boş olan satırlar için kullanılacak kurs.
+- **Varsayılan erişim süresi (gün)** — CSV'de `access_duration_days` boş olan satırlar için gün sayısı.
+
+**İçe aktar** butonu ile dosya işlenir ve toplu kayıt tamamlanır. **Vazgeç** ile listeye dönebilirsiniz.
+
+<Tip>
+  Öğrenci e-postası sistemde kayıtlı olmalıdır. Kayıtlı olmayan e-postalar atlanır ve içe aktarım sonunda raporlanır.
+</Tip>
+
+## Kayıt Detay Sayfası
+
+Listedeki **Görüntüle** ikonu ile kaydın detay sayfası açılır.
+
+<Frame>
+  ![Kayıt detay sayfası](/images/yonetici/kurslar/kayitli-ogrenciler/detay.png)
+</Frame>
+
+### Öğrenci Bilgileri
+
+- Adı, avatarı, e-posta adresi ve telefon numarası.
+
+### Kurs Bilgileri
+
+- Kurs kapak görseli, başlığı, seviyesi (Beginner/Intermediate/Advanced) ve fiyatı.
+- Kurs açıklaması ve toplam süresi.
+- **Kursu Görüntüle** butonu ile kurs sayfasına gidebilirsiniz.
+
+### Kayıt Durumu (Sağ Panel)
+
+- **Durum** — Aktif, Süresi Dolmuş veya İptal Edilmiş.
+- **Kayıt Türü** — Manuel, Satın Alma, Hediye vb.
+- **Başlangıç Tarihi** — Erişimin başladığı tarih ve saat.
+- **Bitiş Tarihi** — Erişimin sona ereceği tarih ve saat.
+- **Kayıt Tarihi** — Kaydın oluşturulduğu tarih.
+- **Son Güncelleme** — Kayıt üzerinde yapılan son değişiklik tarihi.
+
+### İlerleme Detayı
+
+- **Tamamlanan Dersler** — Toplam ders sayısına göre tamamlanma oranı (örn: 1/4, %25).
+- **Ders Tablosu** — Her ders için:
+  - **Ders** adı
+  - **Başlangıç** tarihi
+  - **Tamamlama** tarihi
+  - **Durum** (Tamamlandı, Devam Ediyor, Başlanmadı)
+
+### Bu Kurstaki Sınavlar ve Sonuçlar
+
+Öğrencinin bu kurs kapsamında girdiği sınavlar ve puanları listelenir. Sınav yoksa "Bu kapsamda sınav kaydı bulunamadı." mesajı gösterilir.
+
+### İşlemler Paneli
+
+Sağ alt köşedeki işlemler paneli:
+
+- **Kaydı İptal Et** — Kaydı iptal eder, öğrencinin erişimini keser.
+- **Süreyi Uzat** — Erişim süresine ek gün ekler.
+- **Öğrenciye Özel Sınavlar** — Yalnızca bu öğrenci için sınav ataması yapılır.
+- **Kaydı Sil** — Kaydı kalıcı olarak siler. Bu işlem geri alınamaz.
+
+<Warning>
+  **Kaydı Sil** işlemi öğrencinin bu kurstaki tüm ilerleme ve sınav geçmişini kalıcı olarak siler. İptal etmek istiyorsanız önce **Kaydı İptal Et** seçeneğini kullanın.
+</Warning>
