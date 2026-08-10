@@ -8,24 +8,48 @@ Kategoriler, kursları konu başlıklarına göre gruplamak için kullanılır. 
 
 ## Kategori Listesi
 
-Her kategori için:
+![Kategori Listesi](/images/yonetici/kategoriler/liste.png)
 
-- **Ad**
-- **Slug** (URL için kullanılan kısa ad)
-- **Üst Kategori** (varsa)
-- **Kurs Sayısı**
-- **Sıra**
-- **İşlemler**
+Sayfada arama, durum filtresi ve üst kategori filtresi ile tüm kategorileri görüntüleyebilirsiniz. Her kategori için:
+
+- **ID**
+- **Kategori Adı** (görsel, ad ve slug ile)
+- **Üst Kategori**
+- **Slug**
+- **Alt Kategoriler**
+- **Kurslar** (bağlı kurs sayısı)
+- **Durum** (Aktif / Pasif)
+- **İşlemler** (Görüntüle, Düzenle, Sil)
 
 ## Yeni Kategori Ekleme
 
-**Yeni Kategori** butonu ile:
+![Yeni Kategori](/images/yonetici/kategoriler/yeni.png)
 
-- **Ad** (zorunlu)
-- **Slug** (otomatik oluşur, elle değiştirilebilir)
-- **Açıklama**
-- **Üst Kategori** (iç içe yapı için)
-- **İkon / Görsel**
-- **Sıra**
+Sağ üstteki **Yeni Kategori** butonu ile kategori oluşturma formuna gidin:
 
-Hiyerarşik kategori yapısı destekler; alt kategoriler oluşturabilirsiniz.
+- **Kategori Adı** (zorunlu)
+- **Slug (URL)** (boş bırakılırsa otomatik oluşturulur)
+- **Kategori Görseli** (önerilen boyut: 1280×720 piksel, 16:9 oran)
+- **Kategori İkonu** (Phosphor ikon adı; boş bırakılırsa page builder varsayılanı kullanılır)
+- **Üst Kategori** (alt kategori oluşturmak için üst kategori seçin)
+- **Durum** (Aktif / Pasif)
+
+Hiyerarşik kategori yapısı desteklenir; istediğiniz kadar alt kategori oluşturabilirsiniz.
+
+## Kategori Detayı
+
+![Kategori Detayı](/images/yonetici/kategoriler/detay.png)
+
+Listede bir kategoriye tıkladığınızda detay sayfası açılır. Bu sayfada:
+
+- **Temel Bilgiler**: görsel, ad, slug, üst kategori ve durum
+- **İşlemler**: Düzenle, Geri Dön, Sil
+- **İstatistikler**: alt kategori ve kurs sayısı
+- **Meta Bilgiler**: ID, oluşturulma ve güncellenme tarihleri
+- **Kurslar**: kategoriye bağlı kursların listesi (eğitmen ve fiyat bilgisi ile)
+
+## Kategori Düzenleme
+
+![Kategori Düzenle](/images/yonetici/kategoriler/duzenle.png)
+
+Düzenleme sayfasında tüm alanları güncelleyebilir, üst kategoriyi değiştirebilir veya kategoriyi pasife alabilirsiniz. **Güncelle** ile kaydedin, **Vazgeç** ile listeye dönün.
