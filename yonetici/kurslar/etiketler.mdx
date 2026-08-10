@@ -4,15 +4,55 @@ sidebarTitle: "Etiketler"
 description: "Kursları anahtar kelimelerle etiketleyerek arama ve filtreleme deneyimini iyileştirin."
 ---
 
-Etiketler kursları kategori dışı anahtar kelimelerle işaretlemenizi sağlar. Üst menüden **Kurs Yönetimi → Etiketler** yolunu kullanın.
+Etiketler, kursları kategori dışı anahtar kelimelerle işaretleyerek arama ve filtreleme deneyimini iyileştirmenizi sağlar. Üst menüden **Kurs Yönetimi → Etiketler** yolunu kullanın.
 
 ## Etiket Listesi
 
-- **Ad**
-- **Slug**
-- **Kullanılan Kurs Sayısı**
-- **İşlemler**
+![Etiket Listesi](/images/yonetici/etiketler/liste.png)
 
-## Etiket Ekleme
+Sayfanın üst kısmında etiket adı veya slug'a göre arama yapabileceğiniz bir arama kutusu ile **Ara**, **Temizle** ve **Yeni Etiket** butonları bulunur.
 
-**Yeni Etiket** butonu ile ad ve slug girin. Etiketler kurs oluşturma / düzenleme ekranında çoklu seçim olarak kullanılır.
+Tabloda gösterilen sütunlar:
+
+- **ID** — Etiket kimliği.
+- **Etiket Adı** — Etiketin adı (tıklanınca detay sayfasına gider).
+- **Slug** — URL'de kullanılan benzersiz kısa ad.
+- **Kurs Sayısı** — Bu etiketi kullanan kurs adedi.
+- **Oluşturulma** — Etiketin oluşturulma tarihi ve saati.
+- **İşlemler** — Görüntüle, düzenle ve sil butonları.
+
+## Yeni Etiket Ekleme
+
+![Yeni Etiket](/images/yonetici/etiketler/yeni.png)
+
+**Yeni Etiket** butonuna tıklayarak açılan formda aşağıdaki alanları doldurun:
+
+- **Etiket Adı** (zorunlu) — Örn: "React", "Vue.js", "Başlangıç Seviye".
+- **Slug (URL)** — Boş bırakırsanız etiket adından otomatik oluşturulur.
+
+**Kaydet** butonu ile etiketi oluşturun, **Vazgeç** ile listeye dönün.
+
+<Tip>
+  Etiketler kurs oluşturma ve düzenleme ekranında çoklu seçim olarak kullanılır; bir kurs birden fazla etikete sahip olabilir.
+</Tip>
+
+## Etiket Detayı
+
+![Etiket Detayı](/images/yonetici/etiketler/detay.png)
+
+Detay sayfasında etiketle ilgili tüm bilgiler ve ilgili kurslar görüntülenir:
+
+- **Bu Etiketi Kullanan Kurslar** — Etiketin atandığı kursların listesi (eğitmen, fiyat, durum ve seviye rozetleriyle).
+- **İşlemler** — **Düzenle**, **Geri Dön** ve **Sil** butonları.
+- **İstatistikler** — Toplam kurs sayısı, yayında ve taslak kurs adetleri.
+- **Meta Bilgiler** — ID, Company ID, Slug, oluşturulma ve güncellenme tarihleri.
+
+## Etiket Düzenleme
+
+![Etiket Düzenle](/images/yonetici/etiketler/duzenle.png)
+
+Listeden veya detay sayfasından **Düzenle** butonuna tıklayarak etiket adı ve slug alanlarını güncelleyebilirsiniz. **Güncelle** ile değişiklikleri kaydedin.
+
+<Warning>
+  Bir etiketi sildiğinizde, o etiketin atandığı kurslardan bağlantı otomatik olarak kaldırılır. Kurslar silinmez.
+</Warning>
