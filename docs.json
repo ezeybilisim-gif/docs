@@ -42,12 +42,12 @@
                   "yonetici/kurslar/dersler",
                   "yonetici/kurslar/kayitli-ogrenciler",
                   "yonetici/kurslar/yorumlar",
+                  "yonetici/kurslar/sertifikalar",
                   "yonetici/kurslar/siniflar",
                   "yonetici/kurslar/ders-konulari",
                   "yonetici/kurslar/ders-saatleri",
                   "yonetici/kurslar/ders-programlari",
                   "yonetici/kurslar/yoklama",
-                  "yonetici/kurslar/sertifikalar",
                   "yonetici/kurslar/duyurular",
                   "yonetici/kurslar/canli-dersler",
                   "yonetici/kurslar/canli-entegrasyon"

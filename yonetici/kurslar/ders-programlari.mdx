@@ -4,23 +4,97 @@ sidebarTitle: "Ders Programları"
 description: "Sınıfların haftalık ders programını oluşturun."
 ---
 
-Ders Programları (Timetables) ekranı, her sınıfın haftalık ders çizelgesini yönetmenizi sağlar. Üst menüden **Kurs Yönetimi → Ders Programları** ile açılır.
+Ders Programları ekranı, her sınıfın haftalık ders çizelgesini yönetmenizi sağlar. Üst menüden **Kurs Yönetimi → Ders Programları** ile açılır.
 
-## Liste
+<Info>
+  **Akış:** Dersler → Ders Saatleri → **Ders Programları (bu sayfa)** → Yoklama. Bu sayfayı doldurmadan yoklama alınamaz.
+</Info>
 
-- **Sınıf**
-- **Geçerlilik Başlangıç / Bitiş**
-- **Durum** (Aktif / Geçmiş)
-- **İşlemler**
+## Sınıf Listesi
 
-## Program Oluşturma
+<Frame caption="Ders Programları listesi">
+  ![Ders programları liste ekranı](/images/yonetici/kurslar/ders-programlari/index.png)
+</Frame>
 
-Bir sınıfın programı haftanın günleri (Pzt-Cmt) ve **Ders Saatleri** ekranında tanımlı periyotlardan oluşan bir grid üzerinde düzenlenir.
+Ekranda tüm sınıflar ve program dolum durumları listelenir.
 
-Her hücreye:
+**Sütunlar**
 
-- **Ders Konusu** (Matematik, Türkçe vb.)
-- **Eğitmen**
-- **Derslik / Salın**
+| Sütun | Açıklama |
+| --- | --- |
+| **ID** | Sınıf kimliği |
+| **Sınıf** | Sınıf adı (tıklanınca sınıf detayına gider) |
+| **Kod** | Sınıf kısa kodu (örn. `7A`) |
+| **Öğrenci** | Sınıftaki öğrenci sayısı |
+| **Program** | Dolu slot sayısı (örn. `30 slot`). Boşsa uyarı rozeti gösterilir. |
+| **İşlemler** | **Programı Düzenle** (mavi takvim) ve **PDF indir** (kırmızı PDF) |
 
-seti atanır. Grid sürükle-bırak ile değiştirilebilir. Program yayına alınınca öğrenci ve eğitmen panellerinde otomatik görünür.
+**Arama & filtreleme**
+
+- **Sınıf adı veya kod ara** kutusundan hızlı arama yapabilirsiniz.
+- **Ara** ile filtreyi uygular, **Temizle** ile sıfırlarsınız.
+- Üst sağdan **Ders Saatleri** ve **Dersler** sayfalarına doğrudan geçebilirsiniz.
+
+## Haftalık Program Düzenleme
+
+Bir sınıfın satırındaki **Düzenle** (takvim) butonuna basınca haftalık grid açılır.
+
+<Frame caption="Haftalık program düzenleme ekranı">
+  ![Haftalık program düzenleme ekranı](/images/yonetici/kurslar/ders-programlari/duzenle.png)
+</Frame>
+
+Sayfanın üstünde sınıf adı ve haftalık program başlığı görünür. Sağ üstteki butonlar:
+
+- **Hafta içi örnek doldur** — Boş grid'i örnek bir dağılımla doldurur (hızlı başlangıç).
+- **PDF indir** — Programı PDF olarak indirir.
+- **Ders saatleri** — Dilim tanımlarını düzenlemek için Ders Saatleri sayfasına gider.
+- **Sınıfa dön** — Sınıf detayına döner.
+
+### Hafta Sonu Anahtarı
+
+<Tip>
+  Grid'in üstündeki **"Bu sınıfta hafta sonu dersi var"** anahtarını açtığınızda Cumartesi ve Pazar sütunları da eklenir. Kapatırsanız hafta sonu planı ve PDF'te hafta sonu bölümü gösterilmez; kayıtlı hafta sonu slotları silinir.
+</Tip>
+
+### Grid Yapısı
+
+- **Satırlar:** Ders Saatleri sayfasında tanımlı **ders** dilimleri (teneffüs/öğle dilimleri grid'de görünmez).
+- **Sütunlar:** Hafta içi için Pazartesi–Cuma. Hafta sonu açıksa Cumartesi–Pazar da eklenir.
+- **Sol tarafta:** Dilim sırası ve saat aralığı (örn. `1. Ders / 09:00 – 09:40`).
+
+### Hücre Doldurma
+
+Her hücrede üç alan vardır:
+
+| Alan | Açıklama |
+| --- | --- |
+| **Ders** | Ders Konuları'nda tanımlı dersler (Matematik, Fizik, Türkçe, Diğer, vb.) |
+| **Öğretmen** | Bu ders için görevli eğitmen |
+| **Salon** | Serbest metin (örn. `101`, `Fizik Lab`). Boş bırakılabilir. |
+
+<Info>
+  **"Diğer"** ders seçeneği; etüt, rehberlik, sosyal etkinlik gibi standart dışı slotlar için kullanılır.
+</Info>
+
+### Kaydetme
+
+Sol alttaki **Programı Kaydet** butonuna basmadan yaptığınız değişiklikler kalıcı olmaz. Kaydettikten sonra program:
+
+- Öğrenci panelinde haftalık programda,
+- Eğitmen panelinde ders takviminde,
+- **Yoklama** ekranında ders saati listesinde
+
+otomatik görünür.
+
+## PDF Çıktısı
+
+Listede veya düzenleme ekranında **PDF indir** butonu ile sınıfın haftalık programını yazdırılabilir tek sayfa halinde indirebilirsiniz. Hafta sonu kapalıysa PDF'te de görünmez.
+
+## İpuçları
+
+<Tip>
+  - Programı doldurmadan önce **Ders Saatleri** sayfasında dilimlerin doğru olduğundan emin olun. Sonradan dilim eklenirse grid'e yeni satırlar eklenir ancak eski slotlar korunur.
+  - **Hafta içi örnek doldur** ile başlayıp elle düzenlemek en hızlı yöntemdir.
+  - Aynı öğretmenin aynı saatte iki sınıfta olmamasına dikkat edin. Sistem uyarı verse de son kontrol yöneticidedir.
+  - Program yayınlanınca öğrencilere ve eğitmenlere bildirim gönderilebilir (Bildirim ayarları CMS → Header Bildirimler'de).
+</Tip>

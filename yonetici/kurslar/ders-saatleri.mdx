@@ -4,16 +4,117 @@ sidebarTitle: "Ders Saatleri"
 description: "Günlük ders zil programını tanımlayın."
 ---
 
-Ders Saatleri ekranı, kurumunuzun günlük zil programını tanımlamanızı sağlar. Bu ayarlar ders programlarında otomatik olarak kullanılır.
+**Ders Saatleri & Teneffüs**, kurumunuzun **zil şablonunu** tanımladığınız sayfadır. Gün içinde kaçıncı dersin hangi saatlerde olduğunu ve teneffüsleri buradan ayarlarsınız (ör. 1. Ders 09:00–09:40, teneffüs 09:40–09:50).
 
-Üst menüden **Kurs Yönetimi → Ders Saatleri** ile açılır.
+Üst menüden **Kurs Yönetimi → Ders Saatleri** yolu ile açılır.
 
-## Ayarlar
+<Info>
+  **Akış:** Dersler → **Ders saatleri (bu sayfa)** → Ders programları → Yoklama
 
-- **Ders Süresi** (dakika)
-- **Teneffüs Süresi** (dakika)
-- **Gün Başlangıcı** (saat)
-- **Ders Sayısı**
-- **Öğle Arası** (varsa başlangıç ve süre)
+  Bu sayfada _"Pazartesi 1. ders = Fizik"_ gibi eşleştirmeler **yapılmaz**. O işlem **Ders Programları**nda sınıf seçilerek yapılır.
+</Info>
 
-Her ders periyodu için başlangıç ve bitiş saati otomatik hesaplanıp listelenir. Bu bilgiler sınıf ders programlarında hakim zaman şablonu olarak kullanılır.
+## Ekran Görünümü
+
+<Frame>
+  ![Ders Saatleri & Teneffüs sayfası](/images/yonetici/kurslar/ders-saatleri/index.png)
+</Frame>
+
+Sayfanın sağ üst köşesinde şu butonlar bulunur:
+
+- **Dersler** — Ders kataloğu sayfasına gider.
+- **Ders Programları** — Sınıf bazlı program oluşturma sayfasına gider.
+- **Kaydet** — Yapılan tüm değişiklikleri kaydeder.
+- **Programlara Geç** — Kaydettikten sonra doğrudan Ders Programları sayfasına yönlendirir.
+
+## Hızlı Başlangıç
+
+İlk kurulumda hızlıca örnek satırlar eklemek için sihirbaz butonlarını kullanabilirsiniz:
+
+- **Hafta içi örnek doldur** — Pazartesi–Cuma için tipik bir ders/teneffüs şablonu ekler.
+- **Hafta sonu örnek doldur** — Cumartesi–Pazar için örnek bir şablon ekler.
+
+<Warning>
+  Sihirbazlar **mevcut satırları silip yeniden oluşturur**. Elle düzenleme yaptıysanız önce yedek almanız veya sadece boş tabloda kullanmanız önerilir. Örnek eklendikten sonra satırları düzenleyip kaydedebilirsiniz.
+</Warning>
+
+## Çalışma Saatleri
+
+Sayfa üstünde iki blok halinde genel çalışma penceresini belirlersiniz:
+
+### Hafta içi çalışma saatleri
+
+- **Başlangıç** — Hafta içi ilk dersin başlama saati (ör. 09:00)
+- **Bitiş** — Hafta içi son dersin bitiş saati (ör. 14:30)
+
+### Hafta sonu çalışma saatleri
+
+- **Başlangıç** — Hafta sonu ilk dersin başlama saati (ör. 10:00)
+- **Bitiş** — Hafta sonu son dersin bitiş saati (ör. 13:40)
+
+<Tip>
+  Bu saatler, satırların hangi zaman aralığında olması gerektiğini gösteren bir çerçevedir. Aşağıdaki dilim satırları bu aralık içinde kalmalıdır.
+</Tip>
+
+## Hafta İçi Dilimler
+
+**Pazartesi–Cuma** için ders ve teneffüs dilimlerini tek tek tanımladığınız tablodur. Sağ üstteki **\+ Satır Ekle** butonu ile yeni satır eklenir.
+
+### Tablo sütunları
+
+| Sütun | Açıklama |
+| --- | --- |
+| **Ad** | Satırın görünen adı (ör. `1. Ders`, `Teneffüs`, `Öğle paydosu`) |
+| **Tür** | Dilim türü: **Ders**, **Teneffüs** veya **Öğle paydosu** |
+| **Başlangıç** | Dilimin başlama saati (HH:MM) |
+| **Bitiş** | Dilimin bitiş saati (HH:MM) |
+| **Sıra** | Gün içindeki sıralama numarası (1, 2, 3, …) |
+| **İşlem** | Kırmızı çöp kutusu ile satırı siler |
+
+### Örnek hafta içi şablonu
+
+| Ad | Tür | Başlangıç | Bitiş | Sıra |
+| --- | --- | --- | --- | --- |
+| 1. Ders | Ders | 09:00 | 09:40 | 1 |
+| Teneffüs | Teneffüs | 09:40 | 09:50 | 2 |
+| 2. Ders | Ders | 09:50 | 10:30 | 3 |
+| Teneffüs | Teneffüs | 10:30 | 10:40 | 4 |
+| 3. Ders | Ders | 10:40 | 11:20 | 5 |
+| Teneffüs | Teneffüs | 11:20 | 11:30 | 6 |
+| 4. Ders | Ders | 11:30 | 12:10 | 7 |
+| Öğle paydosu | Öğle paydosu | 12:10 | 13:00 | 8 |
+| 5. Ders | Ders | 13:00 | 13:40 | 9 |
+| Teneffüs | Teneffüs | 13:40 | 13:50 | 10 |
+| 6. Ders | Ders | 13:50 | 14:30 | 11 |
+
+## Hafta Sonu Dilimler
+
+**Cumartesi–Pazar** için ders ve teneffüs dilimlerinin tanımlandığı tablodur. Sütunlar hafta içi ile birebir aynıdır; farklı olan yalnızca satır sayısı ve saatleridir.
+
+### Örnek hafta sonu şablonu
+
+| Ad | Tür | Başlangıç | Bitiş | Sıra |
+| --- | --- | --- | --- | --- |
+| 1. Ders | Ders | 10:00 | 10:40 | 1 |
+| Teneffüs | Teneffüs | 10:40 | 10:50 | 2 |
+| 2. Ders | Ders | 10:50 | 11:30 | 3 |
+| Teneffüs | Teneffüs | 11:30 | 11:40 | 4 |
+| 3. Ders | Ders | 11:40 | 12:20 | 5 |
+| Öğle paydosu | Öğle paydosu | 12:20 | 13:00 | 6 |
+| 4. Ders | Ders | 13:00 | 13:40 | 7 |
+
+## Kaydetme
+
+Değişikliklerinizi uygulamak için sağ üstteki **Kaydet** butonuna tıklayın. Kaydettikten sonra:
+
+- Aynı sayfada kalıp düzenlemeye devam edebilirsiniz.
+- **Programlara Geç** butonu ile doğrudan **Ders Programları** sayfasına geçip sınıf bazlı atamalar yapabilirsiniz.
+
+## İpuçları
+
+<Tip>
+  - Satır sıralamasını **Sıra** sütunu belirler; saati değiştirseniz de sıra numarasını güncellemeyi unutmayın.
+  - **Tür** alanı raporlama ve yoklama davranışını etkiler: teneffüs ve öğle paydosu dilimlerinde yoklama alınmaz.
+  - Bir dilimin **Bitiş** saati, bir sonraki dilimin **Başlangıç** saati ile aynı olmalıdır; aksi hâlde programda boşluk oluşur.
+  - Hafta içi ve hafta sonu için ayrı şablon tuttuğunuz için, iki bloğu da kurumunuzun gerçek çalışma düzenine göre doldurun.
+</Tip>

@@ -4,22 +4,98 @@ sidebarTitle: "Meet / Teams Bağlantısı"
 description: "Canlı ders sağlayıcı entegrasyonlarını yapılandırın."
 ---
 
-Bu ekran, canlı ders sağlayıcıları (Google Meet, Zoom, Microsoft Teams) ile platform arasındaki OAuth / API bağlantısını yönetmenizi sağlar. Üst menüden **Kurs Yönetimi → Meet / Teams Bağlantısı** ile açılır.
+Bu ekran, firmanızın kendi **Google Cloud** ve **Microsoft Azure** uygulamaları üzerinden Google Meet ve Microsoft Teams entegrasyonlarını yönetmenizi sağlar. Üst menüden **Kurs Yönetimi → Canlı Entegrasyon** ile açılır. Sağ üstteki **Canlı Dersler** butonu ile ders listesine hızlıca geçebilirsiniz.
 
-## Sağlayıcılar
+<Info>
+  Redirect URI'ları Google Cloud Console ve Azure portalında **birebir aynı** tanımlanmalıdır. Aksi halde OAuth akışı hata verir.
+</Info>
 
-Her sağlayıcı için şu bilgiler tutulur:
+<Frame>
+  ![Canlı ders entegrasyonları ekranı](/images/yonetici/kurslar/canli-entegrasyon/index.png)
+</Frame>
 
-- **Sağlayıcı** (Google Meet, Zoom, MS Teams)
-- **Durum** (Bağlı / Bağlı Değil)
-- **Hesap Adı** (bağlı hesabın e-posta / kullanıcı adı)
-- **Son Yenileme**
-- **İşlemler** (Bağlan / Bağlantıyı Kes)
+## Google Meet
 
-## Bağlaşklık Kurma
+Google Meet entegrasyonu için Google Cloud Console'da bir **OAuth Client** oluşturmanız ve **Google Calendar API**'yi etkinleştirmeniz gerekir.
 
-1. Sağlayıcı kartındaki **Bağlan** butonuna tıklayın.
-2. Açılan OAuth ekranında kurumsal hesabınızla giriş yapın ve gerekli izinleri verin.
-3. Bağlantı tamamlandığında durum **Bağlı** olarak güncellenir.
+**Redirect URI**
 
-Bağlantı kurulduktan sonra canlı ders oluştururken bu sağlayıcıyı seçebilir ve otomatik toplantı linki oluşturabilirsiniz.
+```text
+https://SIZIN-DOMAIN/admin/live-integrations/google/callback
+```
+
+Bu URI'yı Google Cloud Console → OAuth Client → **Authorized redirect URIs** listesine ekleyin.
+
+**Gereksinimler**
+
+- **Google Calendar API** etkin olmalı.
+- **Scope:** `calendar.events`
+
+**Form alanları**
+
+| Alan | Açıklama |
+| --- | --- |
+| **Client ID** | Google Cloud'dan aldığınız OAuth istemci kimliği. |
+| **Client Secret** | OAuth istemci gizli anahtarı. Değiştirmek için doldurun; boş bırakırsanız mevcut değer korunur. |
+| **Aktif** | Entegrasyonu aktif/pasif eden anahtar. |
+
+**Adımlar**
+
+1. Client ID ve Client Secret alanlarını doldurun, **Aktif** anahtarını açın.
+2. **Kaydet** butonuna tıklayın.
+3. **Hesabı Bağla** butonu ile Google OAuth ekranına yönlendirilirsiniz; kurumsal hesabınızla giriş yapıp izinleri onaylayın.
+4. Bağlantı başarılı olduğunda sağ üstteki etiket **Bağlı** olarak güncellenir.
+
+## Microsoft Teams
+
+Microsoft Teams entegrasyonu için Azure Entra (Azure AD) üzerinde bir **App registration** oluşturmanız gerekir.
+
+**Redirect URI**
+
+```text
+https://SIZIN-DOMAIN/admin/live-integrations/teams/callback
+```
+
+Bu URI'yı Azure Entra → App registration → **Authentication → Redirect URI (Web)** kısmına ekleyin.
+
+**API izinleri (delegated)**
+
+- `OnlineMeetings.ReadWrite`
+- `User.Read`
+- `offline_access`
+- **Admin consent** verilmiş olmalıdır.
+
+**Form alanları**
+
+| Alan | Açıklama |
+| --- | --- |
+| **Application (Client) ID** | Azure uygulamasının istemci kimliği. |
+| **Client Secret** | Uygulama için oluşturulan gizli anahtar. |
+| **Directory (Tenant) ID** | Azure dizin (tenant) kimliği. |
+| **Aktif** | Entegrasyonu aktif/pasif eden anahtar. |
+
+**Adımlar**
+
+1. Client ID, Client Secret ve Tenant ID alanlarını doldurun, **Aktif** anahtarını açın.
+2. **Kaydet** butonuna tıklayın.
+3. Kart üstünde **Hesabı Bağla** görünürse tıklayarak Microsoft OAuth ekranından yetkilendirin.
+4. Bağlantı tamamlandığında etiket **Bağlı** olur.
+
+## Durum Etiketleri
+
+Her sağlayıcı kartının sağ üstünde bağlantı durumu gösterilir:
+
+- **Bağlı değil** — kimlik bilgileri eksik veya OAuth akışı tamamlanmamış.
+- **Bağlı** — kimlik bilgileri kaydedildi ve hesap yetkilendirildi.
+
+## İpuçları
+
+<Tip>
+  Client Secret alanı güvenlik gereği maskelenir. Mevcut değeri değiştirmek istemiyorsanız boş bırakıp diğer alanları kaydedebilirsiniz.
+</Tip>
+
+<Warning>
+  Redirect URI'da tek bir karakter farkı (örn. `http` vs `https`, sondaki `/`) bile OAuth hatasına yol açar. Cloud Console / Azure'da kayıtlı değerle uygulamadaki değeri karşılaştırın.
+</Warning>
+
+Entegrasyon aktif olduğunda [Canlı Dersler](/yonetici/kurslar/canli-dersler) sayfasında ders oluştururken ilgili platformu seçip **otomatik olarak katılım linki oluştur** seçeneğini kullanabilirsiniz.

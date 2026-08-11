@@ -4,24 +4,91 @@ sidebarTitle: "Sınıflar"
 description: "Öğrencileri sınıflara atayın, sınıf bazında ders programı ve yoklama yönetin."
 ---
 
-Sınıflar modulü, yüz yüze / hibrit eğitim veren kurumlar için öğrencileri fiziksel ya da mantıksal sınıflara gruplamanızı sağlar. Üst menüden **Kurs Yönetimi → Sınıflar** ile açılır.
+Sınıflar modülü, öğrencileri fiziksel ya da mantıksal sınıflara (şubelere) gruplamanızı sağlar. Üst menüden **Kurs Yönetimi → Sınıflar** ile açılır.
 
 ## Sınıf Listesi
 
-- **Sınıf Adı**
-- **Seviye / Kademe**
-- **Öğretmen** (varsa)
-- **Öğrenci Sayısı**
-- **İşlemler**
+<Frame>
+  ![Sınıflar listesi](/images/yonetici/kurslar/siniflar/liste.png)
+</Frame>
+
+Sayfanın üstünde arama kutusu (**Sınıf adı veya kod ara**), durum filtresi (**Tüm durumlar**) ve **Ara / Temizle / Yeni Sınıf** butonları bulunur.
+
+Özet kartları:
+
+- **Toplam Sınıf**
+- **Aktif Sınıf**
+- **Toplam Öğrenci**
+- **Ort. Öğrenci (sayfa)**
+
+Tablo sütunları:
+
+| Sütun | Açıklama |
+| --- | --- |
+| **ID** | Sınıf numarası |
+| **Sınıf Adı** | Ad ve kısa açıklama |
+| **Kod** | Sınıf kısa kodu (ör. 7A) |
+| **Öğrenci** | Kayıtlı öğrenci sayısı |
+| **Durum** | Aktif / Pasif rozeti |
+| **Oluşturulma** | Oluşturulma tarihi |
+| **İşlemler** | Ders programı, Görüntüle, Düzenle, Sil |
 
 ## Yeni Sınıf
 
-**Yeni Sınıf** butonu ile:
+<Frame>
+  ![Yeni sınıf oluşturma formu](/images/yonetici/kurslar/siniflar/olustur.png)
+</Frame>
 
-- **Sınıf Adı** (ör. 9-A, 10-B)
-- **Seviye / Kademe**
-- **Kapasite**
-- **Öğretmen**
-- **Açıklama**
+**Yeni Sınıf** butonu ile oluşturma formu açılır:
 
-Oluşturulan sınıflara **Öğrenci Ekle** ve **Ders Programı** işlemleri sınıf detay sayfasından yapılır.
+- **Sınıf Adı** (zorunlu, ör. `10-A`)
+- **Sınıf Kodu** (opsiyonel, ör. `10A`)
+- **Durum** — Aktif / Pasif geçişi
+- **Açıklama** — Sınıf hakkında kısa not
+
+<Tip>
+  \* işaretli alanlar zorunludur. **Kaydet** ile sınıf oluşturulur; **Vazgeç** formu kapatır.
+</Tip>
+
+## Sınıf Detayı
+
+<Frame>
+  ![Sınıf detay sayfası](/images/yonetici/kurslar/siniflar/detay.png)
+</Frame>
+
+Listedeki **Görüntüle** ikonu ile açılan detay sayfasında sınıfın tüm yönetimi yapılır.
+
+### Üst Bilgi ve İşlem Butonları
+
+Sınıf adı, kodu, açıklaması ve durum rozetleri (Aktif, öğrenci sayısı, eğitmen sayısı) gösterilir. Sağ üstteki butonlar:
+
+- **Ders programı** — Sınıfın haftalık ders programını aç.
+- **Program PDF** — Ders programını PDF olarak indir.
+- **Toplu plan** — Birden fazla derse aynı anda plan oluştur.
+- **Düzenle** — Sınıf bilgilerini güncelle.
+- **Sil** — Sınıfı sil.
+
+### Sınıf Eğitmenleri
+
+Sınıfa atanmış eğitmenleri listeler. Her eğitmenin adı, e-postası ve rolü (**primary** / yardımcı) görünür. Kırmızı **×** butonu ile eğitmen sınıftan çıkarılır.
+
+### Eğitmen Ata
+
+Yeni eğitmen ataması bu bölümden yapılır:
+
+- **Eğitmen seçin** — Sistemdeki eğitmenlerden birini seç.
+- **Rol** — **Yardımcı** veya birincil (primary).
+- **Ders** — Eğitmenin bu sınıfta gireceği ders (ör. Matematik, Fizik).
+- **\+ Ata** butonu ile atama tamamlanır.
+
+### Sınıftaki Öğrenciler
+
+Sınıfa kayıtlı öğrencilerin listesi. Her satırda ad, e-posta ve **× Çıkar** butonu bulunur.
+
+### Eklenebilir Öğrenciler
+
+Henüz sınıfa dahil olmayan öğrencileri gösterir. **\+ Ekle** butonu ile öğrenci sınıfa alınır.
+
+<Tip>
+  Ders programı ve yoklama işlemleri, sınıfa öğrenci ve eğitmen atandıktan sonra düzgün çalışır. Programı hızlıca kurmak için **Toplu plan** butonunu kullanabilirsiniz.
+</Tip>

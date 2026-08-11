@@ -4,27 +4,155 @@ sidebarTitle: "Ödevler"
 description: "Ödev oluşturun ve teslim tarihlerini yönetin."
 ---
 
-Ödevler ekranı, platformdaki tüm ödevleri yönetmek için kullanılır. Üst menüden **Ödev & Sınav → Ödevler** ile açılır.
-
-Menüde bekleyen teslim sayısını gösteren bir rozet bulunur.
+**Ödev & Sınav → Ödevler** menüsünden açılır. Platformdaki tüm ödevleri listeler, filtreler ve yönetirsiniz.
 
 ## Ödev Listesi
 
-- **Başlık**
-- **Kurs / Sınıf**
-- **Eğitmen**
-- **Teslim Tarihi**
-- **Teslim / Toplam** (ör. 12 / 30)
-- **Durum** (Aktif, Süresi Doldu, Taslak)
-- **İşlemler**
+![Ödevler listesi](/images/yonetici/odev-sinav/odevler/index.png)
+
+Sayfanın üstünde arama ve filtre araçları bulunur:
+
+- **Ödev başlığı ara**
+- **Tüm durumlar** (Yayında, Taslak)
+- **Tüm teslimler** (Bekleyen, Değerlendirilen)
+- **Tüm kategoriler** (ör. Yazım, Proje)
+- **Ara / Temizle** butonları
+- **Yeni Ödev** butonu
+
+Sağ üstteki **Değerlendirme Kuyruğu** butonu, bekleyen tüm teslimlerin toplu listesine götürür.
+
+### Özet Kartları
+
+- **Toplam Ödev**
+- **Yayında**
+- **Taslak**
+- **Bekleyen Teslim**
+
+### Tablo Sütunları
+
+| Sütun | Açıklama |
+| --- | --- |
+| **ID** | Ödev numarası |
+| **Ödev** | Başlık ve kısa açıklama |
+| **Kategori** | Etiket rozeti (ör. Yazım, Proje) |
+| **Son Tarih** | Teslim tarihi ve saati. Geçmişse **Süresi Doldu** rozeti çıkar |
+| **Puan** | Maksimum puan |
+| **Atanan / Teslim** | Hedef sayısına göre teslim ilerleme çubuğu |
+| **Bekleyen** | Değerlendirme bekleyen teslim sayısı |
+| **Durum** | Yayında veya Taslak |
+| **İşlemler** | Görüntüle, Düzenle, Sil |
 
 ## Yeni Ödev
 
-- **Başlık**
-- **Açıklama** (zengin metin)
-- **Kurs / Sınıf**
-- **Teslim Tarihi & Saati**
-- **Puanlama** (100 üzerinden vb.)
-- **Geç Teslim** (izin verilsin mi, ceza puanı vs.)
-- **Ekler** (PDF, doküman)
-- **Rubric** (opsiyonel değerlendirme kriterleri)
+Listedeki **Yeni Ödev** butonuna tıklayarak ödev oluşturma sayfasını açarsınız. Form dört sekmeye ayrılmıştır: **Temel Bilgiler**, **Ayarlar**, **Atama** ve **Kriterler**.
+
+<Tip>
+  Nasıl oluşturulur? 1) Temel bilgiler → 2) Teslim ayarları (son tarih, deneme) → 3) Sınıf veya öğrenci ataması → 4) İsteğe bağlı değerlendirme kriterleri → 5) Kaydet / Yayınla.
+</Tip>
+
+Sağ paneldeki **İpuçları** kartında hızlı hatırlatmalar, **Sekmeler** kartında her sekmenin özeti bulunur. Sağ üstteki **Kaydet** ile **Listeye Dön** butonları her sekmede erişilebilirdir.
+
+### Sekme 1 · Temel Bilgiler
+
+Öğrencinin listede göreceği başlık, özet ve talimatlar bu sekmede girilir.
+
+![Yeni ödev - Temel Bilgiler sekmesi](/images/yonetici/odev-sinav/odevler/create/temel-bilgiler.png)
+
+| Alan | Açıklama |
+| --- | --- |
+| **Ödev başlığı** \* | Ödev listesi ve bildirimlerde görünen başlık |
+| **Kategori** | Ödev kategorisi seçimi (opsiyonel) |
+| **Kısa açıklama** | Liste kartlarında kısa önizleme olarak kullanılır |
+| **Ödev talimatları** | Adım adım yönergeler; gerekirse HTML kullanılabilir |
+| **Ek dosyalar** | Öğrenciye verilecek şablon veya kaynak dosyalar (max 10 MB / dosya) |
+| **Maksimum puan** \* | Değerlendirmede üst puan sınırı (varsayılan 100) |
+
+### Sekme 2 · Ayarlar
+
+Son teslim tarihi, teslim şekli ve geç teslim kuralları bu sekmede belirlenir.
+
+![Yeni ödev - Ayarlar sekmesi](/images/yonetici/odev-sinav/odevler/create/ayarlar.png)
+
+| Alan | Açıklama |
+| --- | --- |
+| **Son teslim tarihi** \* | Bu tarihten sonra teslim "geç" sayılabilir |
+| **Teslim türü** \* | Öğrencinin nasıl teslim edeceği (ör. Dosya veya Metin) |
+| **Maksimum deneme** \* | Öğrencinin gönderebileceği teslim sayısı (1–10) |
+| **Geç teslim ceza oranı (%)** | Geç teslimde puandan düşülecek yüzde (0–100) |
+| **Geç teslime izin ver** | Kapalıysa süre bitince teslim kabul edilmez |
+| **Durum** | **Taslak** öğrencide görünmez; **Yayınla** ile açılır |
+
+### Sekme 3 · Atama
+
+Ödev sınıflara veya tek tek öğrencilere atanır. En az bir seçim zorunludur.
+
+![Yeni ödev - Atama sekmesi](/images/yonetici/odev-sinav/odevler/create/atama.png)
+
+- **Atama türü**: **Sınıflara Ata** veya **Öğrencilere Ata** olarak seçilir.
+- **Sınıflara Ata**: Seçilen sınıflardaki tüm öğrenciler ödevi otomatik alır.
+- **Öğrencilere Ata**: Yalnızca listeden seçilen öğrenciler ödevi görür.
+
+### Sekme 4 · Kriterler
+
+Opsiyonel değerlendirme rubriği. Not verirken kullanacağınız kriterleri ekleyin (ör. İçerik 40, Dil 30, Biçim 30).
+
+![Yeni ödev - Kriterler sekmesi](/images/yonetici/odev-sinav/odevler/create/kriterler.png)
+
+Her kriter için:
+
+| Alan | Açıklama |
+| --- | --- |
+| **Kriter adı** | Kriterin başlığı (ör. İçerik, Dil, Biçim) |
+| **Max puan** | Kriter için verilebilecek en yüksek puan |
+| **Sıra** | Kriterin listedeki gösterim sırası |
+| **Açıklama** | Kriterin nasıl değerlendirileceğine dair not |
+
+**Kriter Ekle** ile yeni kriter satırı açılır, **Sil** ile ilgili kriter kaldırılır.
+
+<Tip>
+  Önce **Taslak** olarak kaydedip önizleyebilir, kontrol ettikten sonra **Yayınla** durumuna alabilirsiniz. `*` işaretli alanlar zorunludur.
+</Tip>
+
+## Ödev Detayı
+
+Listedeki başlığa veya göz simgesine tıklayarak ödev detayına ulaşırsınız.
+
+![Ödev detay sayfası](/images/yonetici/odev-sinav/odevler/show.png)
+
+### Üst Bilgi
+
+- Durum rozeti (**Yayında** / **Taslak**), varsa kategori ve **Puan** rozeti
+- **Son teslim** tarihi (geçtiyse kırmızı) ve göreli zaman
+- **Oluşturan** bilgisi
+- Sağ üstte **Düzenle** ve **Sil** butonları
+
+### Ödev Detayları
+
+- **Açıklama**: Kısa metin
+- **Talimatlar**: Öğrencilere yönelik ayrıntılı yönerge
+- **Ek Dosyalar**: PDF, doküman ve görsel indirilebilir
+
+### Özet Paneli
+
+- **Tip**: `submission` (teslim), `exam` (sınav) veya `both` (her ikisi)
+- **Deneme**: İzin verilen deneme sayısı
+- **Geç teslim**: İzinli / İzinsiz
+- **Atanan hedefler**: Ödevin atandığı sınıflar veya bireysel öğrenciler
+
+### Teslimler Tablosu
+
+Sayfanın altında ödevi teslim eden öğrenciler listelenir.
+
+| Sütun | Açıklama |
+| --- | --- |
+| **Öğrenci** | Ad ve e-posta |
+| **Durum** | Bekliyor, Değerlendirildi, Geç Teslim |
+| **Puan** | Verilen puan |
+| **Teslim** | Teslim tarihi ve saati |
+| **İşlem** | **İncele** butonu ile değerlendirme ekranına gider |
+
+Sağ üstteki **Tümü** açılır menüsünden teslimleri duruma göre filtreleyebilirsiniz.
+
+<Tip>
+  Bekleyen teslimleri toplu değerlendirmek için üst menüdeki [Ödev Değerlendirme](/yonetici/odev-sinav/odev-degerlendirme) sayfasını kullanın.
+</Tip>

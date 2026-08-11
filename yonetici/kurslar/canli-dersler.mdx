@@ -4,27 +4,107 @@ sidebarTitle: "Canlı Dersler"
 description: "Canlı ders oturumlarını planlayın."
 ---
 
-Canlı Dersler ekranı, Zoom, Google Meet veya Microsoft Teams üzerinden yapılan canlı ders oturumlarını planlamanızı sağlar. Üst menüden **Kurs Yönetimi → Canlı Dersler** ile açılır.
+Canlı Dersler ekranı, Google Meet / Teams (veya özel link) ile canlı ders planlamanızı sağlar. Planlanan dersler sınıf, öğrenci veya kurs kayıtlılarına atanır; yayınlandığında alıcılara bildirim ve duyuru gider.
 
-## Oturum Listesi
+**Akış:** Kurs Yönetimi → Canlı Dersler → **Yeni Canlı Ders** → başlık ve zaman girilir → platform ve katılım linki eklenir → hedef kitle seçilir → kaydedilip yayınlanır.
 
-- **Başlık**
-- **Kurs / Sınıf**
-- **Eğitmen**
-- **Başlangıç Zamanı**
-- **Süre**
-- **Platform** (Zoom / Meet / Teams)
-- **Durum** (Planlandı, Devam Ediyor, Tamamlandı)
-- **İşlemler** (Katıl Linki, Düzenle, İptal)
+## Canlı Dersler Listesi
 
-## Yeni Oturum
+<Frame>
+  ![Canlı dersler listesi](/images/yonetici/kurslar/canli-dersler/index.png)
+</Frame>
 
-- **Başlık**
-- **Kurs / Sınıf**
-- **Eğitmen**
-- **Başlangıç Zamanı & Süre**
-- **Platform** (entegrasyon için Meet/Teams Bağlantısı kurulmuş olmalı)
-- **Açıklama**
-- **Kayıt** (opsiyonel)
+Üst kısımda toplam ders sayısı ve **Yeni Canlı Ders** butonu yer alır.
 
-Oturum planlandığında platformda otomatik toplantı oluşturulur ve katılımcılara e-posta / bildirim gönderilir.
+Tablo sütunları:
+
+| Sütun | Açıklama |
+| --- | --- |
+| **ID** | Canlı ders kaydının numarası. |
+| **Başlık** | Ders adı ve ilişkili kurs. |
+| **Zaman** | Başlangıç ve bitiş saati. |
+| **Platform** | Google Meet, Microsoft Teams veya özel link. |
+| **Hedef** | Atama tipi (kurs kayıtlıları, sınıf, öğrenci vb.). |
+| **Durum** | Planlandı, Devam Ediyor, Tamamlandı veya İptal. |
+| **İşlemler** | Görüntüle, Düzenle, Sil. |
+
+## Yeni Canlı Ders
+
+<Frame>
+  ![Yeni canlı ders formu](/images/yonetici/kurslar/canli-dersler/create.png)
+</Frame>
+
+### Temel Bilgiler
+
+- **Başlık** (zorunlu): Öğrenci listesinde ve bildirimde görünür.
+- **Eğitmen** (opsiyonel): Dersi yürütecek öğretmen.
+- **Açıklama**: Ders konusu, hazırlık notu veya ek bilgi.
+
+### Toplantı & Zaman
+
+- **Platform** (zorunlu): Google Meet, Microsoft Teams veya özel link.
+- **Katılım linki** (zorunlu): Manuel yapıştırılır veya API ile otomatik üretilir.
+- **API ile otomatik toplantı oluştur**: Google Meet / Teams entegrasyonu kuruluysa katılım linki sistem tarafından üretilir. Bu kutu işaretliyse katılım linki zorunlu değildir.
+- **Şifre / passcode**: Toplantı şifresi (opsiyonel).
+- **Başlangıç** (zorunlu) ve **Bitiş**: Bitiş boş bırakılırsa yaklaşık 3 saat varsayılır.
+- **Kayıt linki**: Ders sonrası eklenebilir.
+- **Durum**: Planlandı, Devam Ediyor, Tamamlandı, İptal.
+- **Hatırlatma**: Örn. 30 dakika önce.
+
+<Tip>
+  Google Meet / Teams otomatik oluşturma için [Canlı Entegrasyon](/yonetici/kurslar/canli-entegrasyon) bağlantısı gerekir. Formdaki **Entegrasyon Ayarları** butonu ile ayarlara hızlı erişim sağlanır.
+</Tip>
+
+### Hedef Kitle
+
+**Atama tipi** ile dersi kimin göreceğini ve bildirimi kimin alacağını belirlersiniz:
+
+- **Kursu satın alan / kayıtlı herkes** — seçilen kurstaki tüm aktif öğrencilere gider.
+- **Sınıf** — seçilen sınıflardaki öğrenciler.
+- **Öğrenci** — tek tek seçilen öğrenciler.
+- **Tüm kullanıcılar / eğitmenler** — geniş kapsamlı duyurular için.
+
+Seçime göre alt kısımda ilgili alan (Kurs, Sınıf veya Öğrenci seçimi) açılır.
+
+### Yayın Ayarları
+
+- **Yayında (öğrenci görsün)**: Kapalıysa taslak olarak saklanır.
+- **Bildirim \+ duyuru gönder**: Yayınlandığında alıcılara haber gider.
+
+Sağ üstteki **Kaydet** butonu ile ders oluşturulur; **Vazgeç** ile liste ekranına dönülür.
+
+## Canlı Ders Detayı
+
+<Frame>
+  ![Canlı ders detay ekranı](/images/yonetici/kurslar/canli-dersler/show.png)
+</Frame>
+
+Detay ekranında üst kısımda ders başlığı, durum etiketi, platform ve hedef kitle rozetleri; oluşturan kullanıcı ve tarih aralığı gösterilir. Sağ üstte **Linki Aç**, **Düzenle** ve **Sil** butonları bulunur.
+
+### Özet Kartları
+
+- **Alıcı**: Dersi görecek kullanıcı sayısı.
+- **Hedef kayıt**: Hedef atama sayısı.
+- **Platform**: Kullanılan toplantı platformu.
+- **Durum**: Planlandı / Devam Ediyor / Tamamlandı / İptal.
+
+### Katılım Bilgileri
+
+- **Katılım linki**: Toplantı URL'si; **Linki Aç** ile yeni sekmede açılır.
+- **Şifre**: Varsa toplantı şifresi.
+
+### Diğer Bölümler
+
+- **Açıklama**: Formda girilen ders açıklaması.
+- **Zaman & Ders**: Başlangıç, bitiş, ilişkili kurs ve eğitmen.
+- **Hedef Kitle**: Atama modu ve hedef sayısı.
+- **Bilgiler**: Oluşturan, yayın durumu, bildirim durumu, hatırlatma süresi ve oluşturma tarihi.
+
+## İpuçları
+
+- Başlangıçtan **15 dakika önce** katılım genelde açılır.
+- **Kurs hedefi**: o kursa kayıtlı herkese bildirim gider.
+- **Sınıf hedefi**: yalnızca seçilen sınıflardaki öğrenciler görür.
+- API kutusu işaretliyse katılım linki zorunlu değildir; sistem üretir.
+- Ders kaydı (video) sonradan **Kayıt linki** alanına eklenebilir; öğrenciler detaydan izleyebilir.
+- Hatırlatma değeri sayesinde katılımcılara ders başlamadan bildirim gönderilir.

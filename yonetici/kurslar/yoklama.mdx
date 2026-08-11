@@ -4,19 +4,113 @@ sidebarTitle: "Yoklama"
 description: "Sınıf bazında öğrenci yoklaması alın."
 ---
 
-Yoklama ekranı, sınıfların günlük / ders bazı devam durumunu işlemenizi sağlar. Üst menüden **Kurs Yönetimi → Yoklama** ile açılır.
+Yoklama ekranı, ders programındaki bir ders saati için öğrencilerin gelip gelmediğini kaydetmenizi sağlar. Üst menüden **Kurs Yönetimi → Yoklama** ile açılır.
 
-## Yoklama Alma
+<Info>
+  **Akış:** Dersler → Ders Saatleri → Ders Programları → **Yoklama (bu sayfa)**. Yoklama alınabilmesi için o sınıfın **ders programı dolu** olmalıdır.
+</Info>
 
-1. **Sınıf** ve **Tarih** seçin.
-2. Ders programına göre o günün dersleri listelenir.
-3. Her ders için öğrencilerin durumu işaretlenir: **Var**, **Yok**, **Geç Kaldı**, **İzinli**.
-4. **Kaydet** ile veriler saklanır.
+## Oturum Seçimi
 
-## Raporlar
+<Frame caption="Yoklama giriş ekranı">
+  ![Yoklama giriş ve oturum listesi](/images/yonetici/kurslar/yoklama/index.png)
+</Frame>
 
-- Öğrenci bazı devamsızlık özeti
-- Sınıf bazı katılım oranı
-- Tarih aralığı filtrelemesi
+Sayfanın üst kısmında **Tarih**, **Sınıf** ve **Ders saati** filtreleri bulunur.
 
-Devamsızlık belirli bir eşiği geçen öğrenciler için yöneticiye ve veliye otomatik bildirim gidebilir (Bildirim ayarları CMS → Header Bildirimler'de).
+**Adımlar**
+
+1. **Tarih** seçin (varsayılan bugün).
+2. **Sınıf** seçin (yalnızca aktif sınıflar listelenir).
+3. **Ders saati** seçin (o sınıfın seçili gün için programındaki dilimler gelir).
+4. **Yoklamayı Aç** butonuna basın.
+5. **Yenile** ile filtreleri sıfırlayabilirsiniz.
+
+Sayfanın altında **bu tarihte kayıtlı oturumlar** listelenir:
+
+| Sütun | Açıklama |
+| --- | --- |
+| **Saat** | Ders dilimi (örn. `09:00 – 09:40`) |
+| **Sınıf** | Sınıf kodu |
+| **Ders** | Programdaki ders adı |
+| **Öğretmen** | Görevli eğitmen |
+| **Durum** | **Bekliyor** (henüz alınmadı) / **Tamamlandı** |
+| **İşlemler** | **Al** (henüz alınmadıysa) veya **Düzenle** (alınmışsa) |
+
+<Tip>
+  Aynı ders saati için ikinci kez **Al** demek yerine **Düzenle** ile mevcut yoklamayı güncelleyin.
+</Tip>
+
+## Yoklama Formu
+
+**Al** / **Düzenle** butonuna bastığınızda o ders saatinin yoklama formu açılır.
+
+<Frame caption="Yoklama alma formu">
+  ![Öğrenci listesi ve durum seçimi](/images/yonetici/kurslar/yoklama/take.png)
+</Frame>
+
+**Üst bilgi çubuğu**
+
+- Sınıf ve başlık (örn. `7-A — Yoklama`)
+- Tarih (örn. `11 Ağustos 2026, Salı`)
+- Ders dilimi ve saat (örn. `1. Ders · 09:00 – 09:40`)
+- Ders adı (örn. `Fizik`)
+- Görevli öğretmen
+- Öğrenci sayısı rozeti
+
+Sağ üstte **Geri** ve **Yoklamayı Kaydet** butonları bulunur.
+
+### Öğrenci Listesi
+
+Her öğrenci için üç bilgi görünür:
+
+- Sıra numarası ve avatar
+- Ad Soyad
+- E-posta
+
+**Durum seçenekleri**
+
+| Durum | Renk | Anlam |
+| --- | --- | --- |
+| **Geldi** | Yeşil | Öğrenci derste hazır bulundu |
+| **Gelmedi** | Kırmızı | Devamsızlık |
+| **Geç** | Turuncu | Derse geç kaldı |
+| **İzinli** | Mavi | Önceden bildirilmiş izin |
+
+Her öğrencinin sağındaki **Not** alanına isteğe bağlı kısa açıklama girebilirsiniz (örn. "5 dk geç geldi", "veli aradı").
+
+### Toplu İşlemler
+
+Sağ üstte iki hızlı buton bulunur:
+
+- **Tümü geldi** — Tüm öğrencileri **Geldi** olarak işaretler.
+- **Tümü gelmedi** — Tüm öğrencileri **Gelmedi** olarak işaretler.
+
+Toplu işaretledikten sonra tek tek istisnaları değiştirmek en hızlı yöntemdir.
+
+### Genel Not
+
+Öğrenci listesinin altındaki **Genel not** alanı bu ders saati için genel bir açıklama girmenizi sağlar (örn. "Konu: Vektörler tekrarı", "Kısa sınav yapıldı").
+
+### Kaydetme
+
+Sağ üstteki **Yoklamayı Kaydet** butonuna basınca:
+
+- Yoklama oturumu **Tamamlandı** durumuna geçer.
+- Öğrenci ve veli panellerinde devamsızlık kayıtları güncellenir.
+- İlgili öğretmene ve yöneticiye özet bildirim gidebilir.
+
+## Raporlar ve İzleme
+
+- Öğrenci detayında **devamsızlık geçmişi** görünür.
+- Sınıf detayında **katılım oranı** hesaplanır.
+- Belirli bir eşiği geçen devamsızlıklar için yöneticiye ve veliye otomatik bildirim gidebilir (Bildirim ayarları CMS → Header Bildirimler'de).
+
+## İpuçları
+
+<Tip>
+  - Yoklama açmadan önce **Tarih**, **Sınıf** ve **Ders saati** üçlüsünün doğru olduğundan emin olun.
+  - Bir ders saatinde birden fazla yoklama olamaz; ikinci giriş için **Düzenle** kullanın.
+  - İzinli öğrenciler devamsızlık toplamına dahil edilmez.
+  - Notlar öğrenci detayında görünür; ebeveyn iletişiminde kullanılabilecek somut ifadeler tercih edin.
+</Tip>

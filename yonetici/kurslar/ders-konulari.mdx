@@ -4,25 +4,52 @@ sidebarTitle: "Ders Konuları"
 description: "Okul ders konularını (Matematik, Türkçe vb.) tanımlayın."
 ---
 
-Ders Konuları (Teaching Subjects), okul tipi kurumların Matematik, Türkçe, Fizik gibi akademik dersleri tanımlaması için kullanılır. Üst menüden **Kurs Yönetimi → Dersler (Ders Konuları)** ile erişirsiniz.
+Ders Kataloğu, okul tipi kurumların akademik derslerini (Matematik, Fizik, Kimya vb.) tanımlaması ve bu derslere öğretmen ataması için kullanılır. Üst menüden **Kurs Yönetimi → Dersler** ile erişirsiniz.
 
 <Note>
-  Bu menü "Dersler" başlığı ile görünür ancak online video derslerinden farklı olarak akademik ders konularını (subjects) temsil eder.
+  Bu menü "Dersler" başlığı ile görünür ancak online video kurslarından farklı olarak yüz yüze akademik dersleri (subjects) temsil eder. Tanımladığınız dersler daha sonra **ders programında** sınıflara atanır.
 </Note>
 
-## Liste
+**Akış:** Dersler (bu sayfa) → Ders saatleri → Ders programları → Yoklama
 
-- **Ders Adı**
-- **Kod**
-- **Seviye / Kademe**
-- **Renk**
-- **İşlemler**
+## Ders Kataloğu Listesi
 
-## Yeni Ders Konusu
+<Frame>
+  ![Ders Kataloğu listesi](/images/yonetici/kurslar/ders-konulari/liste.png)
+</Frame>
 
-- **Ad** (ör. Matematik)
-- **Kod** (MAT)
-- **Seviye**
-- **Renk** (ders programında renk kodlaması için)
+Sayfanın üst kısmında toplam ders sayısı, arama alanı (ders adı veya kod), durum filtresi ve **\+ Yeni Ders** butonu yer alır.
 
-Bu ders konuları, eğitmen profillerinde "verilen dersler" olarak ve ders programlarında kullanılır.
+Tablo sütunları:
+
+- **ID** — Ders numarası
+- **Ders** — Ders adı (renk noktası ile birlikte)
+- **Kod** — Kısa kod (ör. MAT, FİZ, KİM)
+- **Öğretmen** — Bu dersi verebilecek öğretmen sayısı
+- **Sıra** — Programda görünme sırası
+- **Durum** — Aktif / Pasif
+- **İşlemler** — Düzenle, Sil
+
+## Yeni Ders
+
+<Frame>
+  ![Yeni ders oluşturma formu](/images/yonetici/kurslar/ders-konulari/olustur.png)
+</Frame>
+
+**Ders Bilgileri:**
+
+- **Ders adı** (zorunlu) — ör. Matematik
+- **Kod** — Kısa kod, opsiyonel (ör. MAT)
+- **Program rengi** — Haftalık programda hücre rengi olarak kullanılır
+- **Sıra** — Listede görünme önceliği
+- **Aktif ders** — Kapalıysa yeni programlara eklenemez
+
+**Bu dersi verebilecek öğretmenler:**
+
+Arama yaparak birden fazla öğretmen seçebilirsiniz. Seçim zorunlu değildir; ancak öğretmen seçerseniz programda o derse öncelikli atanırlar.
+
+<Tip>
+  - Ders adı program ve yoklamada görünür.
+  - Renk, sınıf programında dersi ayırt etmeye yardım eder.
+  - Pasif dersler yeni programlara eklenemez.
+</Tip>

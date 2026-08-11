@@ -4,23 +4,159 @@ sidebarTitle: "Duyurular"
 description: "Kurs veya sınıf bazında öğrencilere duyuru oluşturun."
 ---
 
-Duyurular ekranı, belirli kurs veya sınıflara toplu duyuru göndermenizi sağlar. Öğrencilere hem panelde hem de e-posta / anlık bildirim olarak ulaşabilir.
+Duyurular ekranı, belirli sınıflara, kurslara veya tüm kullanıcılara toplu duyuru göndermenizi sağlar. Alıcılar hem panelde hem de bildirim olarak duyuruyu görür.
 
 Üst menüden **Kurs Yönetimi → Duyurular** ile açılır.
 
-## Duyuru Listesi
+<Info>
+  **Akış:** Duyurular listesi → **Yeni Duyuru** → içerik \+ hedef kitle → **Taslak Kaydet** ya da **Yayınla** → duyuru detayında okunma / alıcı istatistiklerini takip et.
+</Info>
 
-- **Başlık**
-- **Hedef Kitle** (kurs / sınıf / tüm platform)
-- **Yayın Tarihi**
-- **Durum** (Yayında / Taslak / Zamanlanmış)
-- **İşlemler**
+## Duyurular Listesi
+
+Sayfa açıldığında, oluşturulmuş tüm duyuruların özet görünümü listelenir.
+
+<Frame>
+  ![Duyurular listesi](/images/yonetici/kurslar/duyurular/index.png)
+</Frame>
+
+### Üst Alan
+
+- **Toplam sayaç** — kayıtlı duyuru sayısı.
+- **Başlık ara** — duyuru başlığına göre arama.
+- **Tüm durumlar** — Yayında / Taslak / Sabitlenmiş filtresi.
+- **Tüm türler** — Genel Duyuru / Canlı Ders / Materyal vb. filtresi.
+- **Ara** ve **Temizle** butonları.
+- **Yeni Duyuru** — oluşturma sayfasını açar.
+
+### Özet Kartları
+
+- **Toplam Duyuru**
+- **Yayında**
+- **Taslak**
+- **Sabitlenmiş**
+
+### Tablo Sütunları
+
+| Sütun | Açıklama |
+| --- | --- |
+| **ID** | Duyuru numarası. |
+| **Duyuru** | Başlık. |
+| **Tür** | Genel Duyuru / Canlı Ders / Materyal. |
+| **Durum** | Yayında / Taslak / Sabitlenmiş. |
+| **Hedef** | Sınıf / kurs / kullanıcı grubu. |
+| **Okunma** | Kaç alıcının okuduğu. |
+| **Tarih** | Yayın tarihi. |
+| **İşlemler** | Görüntüle / Düzenle / Sil. |
 
 ## Yeni Duyuru
 
+**Yeni Duyuru** butonuyla oluşturma formu açılır.
+
+<Frame>
+  ![Yeni duyuru oluşturma formu](/images/yonetici/kurslar/duyurular/create.png)
+</Frame>
+
+### İçerik
+
+- **Başlık** _(zorunlu)_.
+- **Tür** _(zorunlu)_ — **Genel Duyuru**, **Canlı Ders**, **Materyal**.
+- **Metin** — duyuru gövdesi.
+
+<Tip>
+  Türü **Canlı Ders** seçerseniz Zoom / Meet linki ve saat alanları açılır. **Materyal** türünde dosya ve link eklemeniz yeterlidir.
+</Tip>
+
+### Linkler
+
+**Link Ekle** ile duyuruya harici bağlantılar eklenir:
+
 - **Başlık**
-- **İçerik** (zengin metin editörü)
-- **Hedef** (Kurs, Sınıf, Tüm platform, Rol bazı)
-- **Yayın Tarihi** (şimdi veya ileri tarih)
-- **Bildirim Kanalları** (Panel, E-posta, Push)
-- **Önem** (Bilgi / Uyarı / Önemli)
+- **URL** (`https://...`)
+- **Tür** — Harici Link / Canlı Ders vb.
+- **Sil** — satırı kaldırır.
+
+### Dosya Ekleri
+
+**Dosyaları Seç** ile duyuruya ek dosyalar yüklenir.
+
+- Desteklenen formatlar: **PDF, Word, Excel, görsel, video vb.**
+- Maksimum boyut: **20 MB / dosya**.
+
+### Hedef Kitle _(zorunlu)_
+
+Duyurunun kimlere gideceğini belirleyen sekmeler:
+
+| Mod | Açıklama |
+| --- | --- |
+| **Sınıf öğrencileri** | Seçilen sınıflardaki öğrencilere gider. |
+| **Öğrenciler** | Tek tek seçilen öğrencilere. |
+| **Sınıf öğretmenleri** | Seçilen sınıfların öğretmenlerine. |
+| **Kurs kayıtlıları** | Belirli kurslara kayıtlı öğrencilere. |
+| **Tüm eğitmenler** | Platformdaki tüm eğitmenlere. |
+| **Tüm öğrenciler** | Platformdaki tüm öğrencilere. |
+| **Tüm kullanıcılar** | Rol ayrımı olmadan herkese. |
+
+Mod seçildikten sonra alt kısımda ilgili sınıf / kurs / kullanıcı seçim listesi görünür. Öğrenci sayısı parantez içinde belirtilir (örn. `7-A (2 öğr.)`).
+
+### Ayarlar
+
+Sağ paneldeki ek seçenekler:
+
+- **Öncelik** — Normal / Yüksek / Kritik.
+- **Yayın tarihi** — ileri tarihe zamanlama için.
+- **Bitiş / son geçerlilik** — duyurunun otomatik pasifleşme tarihi.
+- **Üste sabitle** — listede en üstte tutar.
+- **Alıcılara bildirim gönder** — panel bildirimi \+ e-posta / push tetikler.
+
+### Kaydetme
+
+- **Taslak Kaydet** — yayınlamadan kaydeder, listede **Taslak** görünür.
+- **Yayınla** — hemen (veya yayın tarihine göre) alıcılara gönderir.
+- **Listeye Dön** — değişiklikleri kaydetmeden geri döner.
+
+## Duyuru Detayı
+
+Listedeki bir duyuruya tıklayınca detay sayfası açılır.
+
+<Frame>
+  ![Duyuru detay sayfası](/images/yonetici/kurslar/duyurular/show.png)
+</Frame>
+
+### Üst Bilgi
+
+- **Başlık** ve breadcrumb (**Anasayfa / Duyurular / \[Başlık\]**).
+- **Etiketler:** Tür (ör. `Genel Duyuru`), Öncelik (`Normal`), Durum (`Yayında`).
+- **Oluşturan** ve **yayın tarihi**.
+- Sağ üstte **Listeye Dön**, **Düzenle**, **Sil** butonları.
+
+### İstatistik Kartları
+
+- **Alıcı** — hedef kitledeki kişi sayısı.
+- **Okundu** — kaç kişinin okuduğu.
+- **Dosya** — eklenen dosya sayısı.
+- **Link** — eklenen link sayısı.
+
+### İçerik
+
+Duyuru metni tam olarak gösterilir.
+
+### Hedef Kitle
+
+- **Mod** — seçilen dağıtım tipi (ör. `Sınıf öğrencileri`).
+- **Seçimler** — hedef sınıf / kurs / kullanıcı listesi (ör. `7-A`).
+
+### Bilgiler
+
+- **Oluşturan**
+- **Yayın** tarihi
+- **Oluşturma** tarihi
+- **Son geçerlilik**
+- **Bildirim** — Açık / Kapalı.
+
+## İpuçları
+
+- Sınav / etkinlik hatırlatmaları için **Yayın tarihi** ile ileri tarihe zamanlayın.
+- Önemli duyuruları **Üste sabitle** ile listenin başında tutun.
+- Canlı ders duyurusunda **Tür: Canlı Ders** seçerek Zoom / Meet linkini doğrudan alıcılara ulaştırın.
+- **Okundu** sayısı düşükse duyuruyu düzenleyip **Alıcılara bildirim gönder** ile tekrar tetikleyebilirsiniz.
